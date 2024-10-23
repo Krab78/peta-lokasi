@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_5bbf138e94a5a69875ac13fc87d539e3 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_5bbf138e94a5a69875ac13fc87d539e3" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_5bbf138e94a5a69875ac13fc87d539e3 = L.map(
+                "map_5bbf138e94a5a69875ac13fc87d539e3",
+                {
+                    center: [-7.788015042657253, 112.59917144389664],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_f577e80aca47c036f5e0276c1f799582 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_f577e80aca47c036f5e0276c1f799582.addTo(map_5bbf138e94a5a69875ac13fc87d539e3);
+        
+    
+            var marker_6085b59faee315e35db6826a89bdd7af = L.marker(
+                [-7.77157276315521, 112.29345234673188],
+                {}
+            ).addTo(map_5bbf138e94a5a69875ac13fc87d539e3);
+        
+    
+        var popup_ef8b684516781ad1be1ff466d9c1f584 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b282871cedf7fe932f04e2fd18d40566 = $(`<div id="html_b282871cedf7fe932f04e2fd18d40566" style="width: 100.0%; height: 100.0%;">AMIN SETYO LEKSONO</div>`)[0];
+                popup_ef8b684516781ad1be1ff466d9c1f584.setContent(html_b282871cedf7fe932f04e2fd18d40566);
+            
+        
+
+        marker_6085b59faee315e35db6826a89bdd7af.bindPopup(popup_ef8b684516781ad1be1ff466d9c1f584)
+        ;
+
+        
+    
+    
+            var marker_fbe2e957132889256da8d5e8640a5e7f = L.marker(
+                [-8.02036049074214, 112.83649944867943],
+                {}
+            ).addTo(map_5bbf138e94a5a69875ac13fc87d539e3);
+        
+    
+        var popup_24c37f39e64d96f1fe5d24cf62845d10 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_728c8a3a5cad7b67f2b310a69c1b6a49 = $(`<div id="html_728c8a3a5cad7b67f2b310a69c1b6a49" style="width: 100.0%; height: 100.0%;">ANANG SUJOKO</div>`)[0];
+                popup_24c37f39e64d96f1fe5d24cf62845d10.setContent(html_728c8a3a5cad7b67f2b310a69c1b6a49);
+            
+        
+
+        marker_fbe2e957132889256da8d5e8640a5e7f.bindPopup(popup_24c37f39e64d96f1fe5d24cf62845d10)
+        ;
+
+        
+    
+    
+            var marker_61bb33c3722878c15c8f91d53680fb40 = L.marker(
+                [-6.868217422806582, 112.28802688436154],
+                {}
+            ).addTo(map_5bbf138e94a5a69875ac13fc87d539e3);
+        
+    
+        var popup_3dda849e6178a18b009c05dad8192de3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8e548bcb36dca5a1db75e544e6fc93e7 = $(`<div id="html_8e548bcb36dca5a1db75e544e6fc93e7" style="width: 100.0%; height: 100.0%;">ANIES CHAMIDAH</div>`)[0];
+                popup_3dda849e6178a18b009c05dad8192de3.setContent(html_8e548bcb36dca5a1db75e544e6fc93e7);
+            
+        
+
+        marker_61bb33c3722878c15c8f91d53680fb40.bindPopup(popup_3dda849e6178a18b009c05dad8192de3)
+        ;
+
+        
+    
+    
+            var marker_d127a4450a190c41de042bebc8a86955 = L.marker(
+                [-7.746533105780166, 112.76081266194396],
+                {}
+            ).addTo(map_5bbf138e94a5a69875ac13fc87d539e3);
+        
+    
+        var popup_f5b3162bdcb4d3fabbe4f81ac268151c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_acfb1b7acf21e390278082c9ce6fa138 = $(`<div id="html_acfb1b7acf21e390278082c9ce6fa138" style="width: 100.0%; height: 100.0%;">ASUS MAIZAR SURYANTO H</div>`)[0];
+                popup_f5b3162bdcb4d3fabbe4f81ac268151c.setContent(html_acfb1b7acf21e390278082c9ce6fa138);
+            
+        
+
+        marker_d127a4450a190c41de042bebc8a86955.bindPopup(popup_f5b3162bdcb4d3fabbe4f81ac268151c)
+        ;
+
+        
+    
+    
+            var marker_a284b33bf21f686ed8e98ed2ff56fd03 = L.marker(
+                [-7.690921459641176, 113.52301049026316],
+                {}
+            ).addTo(map_5bbf138e94a5a69875ac13fc87d539e3);
+        
+    
+        var popup_6abbc040c3109dcdbc7ed5d4a4caa8e4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5a6e403c6ba6c7f3cc2f0d9cdd5740e5 = $(`<div id="html_5a6e403c6ba6c7f3cc2f0d9cdd5740e5" style="width: 100.0%; height: 100.0%;">DIAH AGUSTINA PUSPITASARI</div>`)[0];
+                popup_6abbc040c3109dcdbc7ed5d4a4caa8e4.setContent(html_5a6e403c6ba6c7f3cc2f0d9cdd5740e5);
+            
+        
+
+        marker_a284b33bf21f686ed8e98ed2ff56fd03.bindPopup(popup_6abbc040c3109dcdbc7ed5d4a4caa8e4)
+        ;
+
+        
+    
+    
+            var marker_d700c100f9b2c31eb8b6d0a81cdd2c70 = L.marker(
+                [-7.829996624656887, 112.8680984125636],
+                {}
+            ).addTo(map_5bbf138e94a5a69875ac13fc87d539e3);
+        
+    
+        var popup_345539c89aa4a67a35ca6a1173dd0b9b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f45560fcf5a7f0c82fb8010f24e9cff9 = $(`<div id="html_f45560fcf5a7f0c82fb8010f24e9cff9" style="width: 100.0%; height: 100.0%;">DWI KRISTANTO</div>`)[0];
+                popup_345539c89aa4a67a35ca6a1173dd0b9b.setContent(html_f45560fcf5a7f0c82fb8010f24e9cff9);
+            
+        
+
+        marker_d700c100f9b2c31eb8b6d0a81cdd2c70.bindPopup(popup_345539c89aa4a67a35ca6a1173dd0b9b)
+        ;
+
+        
+    
+    
+            var marker_f85bf7c87b860244602094b6f933c74f = L.marker(
+                [-7.9371484273300625, 112.53918185383472],
+                {}
+            ).addTo(map_5bbf138e94a5a69875ac13fc87d539e3);
+        
+    
+        var popup_af7bb352b619baa285ff416676a32bac = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_55e2f9590bf94fecbec48b2274b3814e = $(`<div id="html_55e2f9590bf94fecbec48b2274b3814e" style="width: 100.0%; height: 100.0%;">ENDANG ARISOESILANINGSIH</div>`)[0];
+                popup_af7bb352b619baa285ff416676a32bac.setContent(html_55e2f9590bf94fecbec48b2274b3814e);
+            
+        
+
+        marker_f85bf7c87b860244602094b6f933c74f.bindPopup(popup_af7bb352b619baa285ff416676a32bac)
+        ;
+
+        
+    
+    
+            var marker_6e8416fa84ab55925842f3b8e4298595 = L.marker(
+                [-8.379589891449534, 113.42173252130024],
+                {}
+            ).addTo(map_5bbf138e94a5a69875ac13fc87d539e3);
+        
+    
+        var popup_00c2163b51900535d4f672b586adb247 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4489a89056a7b9f9051f5dcf8e5ac107 = $(`<div id="html_4489a89056a7b9f9051f5dcf8e5ac107" style="width: 100.0%; height: 100.0%;">LILIK WAHYUNI</div>`)[0];
+                popup_00c2163b51900535d4f672b586adb247.setContent(html_4489a89056a7b9f9051f5dcf8e5ac107);
+            
+        
+
+        marker_6e8416fa84ab55925842f3b8e4298595.bindPopup(popup_00c2163b51900535d4f672b586adb247)
+        ;
+
+        
+    
+    
+            var marker_bec971e312b8479b3be0c818e734c174 = L.marker(
+                [-6.915950174628538, 112.55299670963625],
+                {}
+            ).addTo(map_5bbf138e94a5a69875ac13fc87d539e3);
+        
+    
+        var popup_19381ed8ce23324a440a43711d939aa1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2fcd1cc2fc97317da5ce318bf6240cad = $(`<div id="html_2fcd1cc2fc97317da5ce318bf6240cad" style="width: 100.0%; height: 100.0%;">MOCHAMAD ARIF ZAINUL FUAD</div>`)[0];
+                popup_19381ed8ce23324a440a43711d939aa1.setContent(html_2fcd1cc2fc97317da5ce318bf6240cad);
+            
+        
+
+        marker_bec971e312b8479b3be0c818e734c174.bindPopup(popup_19381ed8ce23324a440a43711d939aa1)
+        ;
+
+        
+    
+    
+            var marker_7312c7f37f2e485779a77c16182c4df0 = L.marker(
+                [-7.706589789888581, 112.11918267896024],
+                {}
+            ).addTo(map_5bbf138e94a5a69875ac13fc87d539e3);
+        
+    
+        var popup_c91757a2f6776e0ddd877aa933b7c3dd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_60939dbe1e4316035cb8d2d28648444f = $(`<div id="html_60939dbe1e4316035cb8d2d28648444f" style="width: 100.0%; height: 100.0%;">REZA YESICA</div>`)[0];
+                popup_c91757a2f6776e0ddd877aa933b7c3dd.setContent(html_60939dbe1e4316035cb8d2d28648444f);
+            
+        
+
+        marker_7312c7f37f2e485779a77c16182c4df0.bindPopup(popup_c91757a2f6776e0ddd877aa933b7c3dd)
+        ;
+
+        
+    
+    
+            var marker_aee34bebb751815f77572b811b5b8e46 = L.marker(
+                [-7.956421934296852, 112.6141081305588],
+                {}
+            ).addTo(map_5bbf138e94a5a69875ac13fc87d539e3);
+        
+    
+        var popup_82919f48d577274000157439081db999 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ca5b000e0cbc22f4858dbaa840cc12b5 = $(`<div id="html_ca5b000e0cbc22f4858dbaa840cc12b5" style="width: 100.0%; height: 100.0%;">RIYANTI ISASKAR</div>`)[0];
+                popup_82919f48d577274000157439081db999.setContent(html_ca5b000e0cbc22f4858dbaa840cc12b5);
+            
+        
+
+        marker_aee34bebb751815f77572b811b5b8e46.bindPopup(popup_82919f48d577274000157439081db999)
+        ;
+
+        
+    
+    
+            var marker_5daecf67bdf6be56775998fc12bba45e = L.marker(
+                [-7.120109531708822, 112.19495082106752],
+                {}
+            ).addTo(map_5bbf138e94a5a69875ac13fc87d539e3);
+        
+    
+        var popup_727e792083ed2e5cd424a6f99abecc9e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7cd26e8de624049fcabb1b8265876bef = $(`<div id="html_7cd26e8de624049fcabb1b8265876bef" style="width: 100.0%; height: 100.0%;">SHELLY KUSUMARINI R</div>`)[0];
+                popup_727e792083ed2e5cd424a6f99abecc9e.setContent(html_7cd26e8de624049fcabb1b8265876bef);
+            
+        
+
+        marker_5daecf67bdf6be56775998fc12bba45e.bindPopup(popup_727e792083ed2e5cd424a6f99abecc9e)
+        ;
+
+        
+    
+    
+            var marker_8f6830384070e0dc4d7b16cde38bdb7a = L.marker(
+                [-8.133733194655296, 112.72442507288964],
+                {}
+            ).addTo(map_5bbf138e94a5a69875ac13fc87d539e3);
+        
+    
+        var popup_b2579323b9c421076b5628807e8e48fc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_52a3b7c3a3f17e123878262596383605 = $(`<div id="html_52a3b7c3a3f17e123878262596383605" style="width: 100.0%; height: 100.0%;">SYAHIRUL ALIM </div>`)[0];
+                popup_b2579323b9c421076b5628807e8e48fc.setContent(html_52a3b7c3a3f17e123878262596383605);
+            
+        
+
+        marker_8f6830384070e0dc4d7b16cde38bdb7a.bindPopup(popup_b2579323b9c421076b5628807e8e48fc)
+        ;
+
+        
+    
+    
+            var marker_765749186fe0715dbc22f9b16da3486e = L.marker(
+                [-8.394381169927502, 112.51356358382152],
+                {}
+            ).addTo(map_5bbf138e94a5a69875ac13fc87d539e3);
+        
+    
+        var popup_600954ba8b03c99c9981b001ee7bf3e6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_48413d5b2aa76901082fa00698a571b1 = $(`<div id="html_48413d5b2aa76901082fa00698a571b1" style="width: 100.0%; height: 100.0%;">SYARIFAH HIKMAH JULINDA SARI</div>`)[0];
+                popup_600954ba8b03c99c9981b001ee7bf3e6.setContent(html_48413d5b2aa76901082fa00698a571b1);
+            
+        
+
+        marker_765749186fe0715dbc22f9b16da3486e.bindPopup(popup_600954ba8b03c99c9981b001ee7bf3e6)
+        ;
+
+        
+    
+    
+            var marker_c67589c84ef357d55ab74a84f64cedda = L.marker(
+                [-7.913753699051948, 112.58303843663631],
+                {}
+            ).addTo(map_5bbf138e94a5a69875ac13fc87d539e3);
+        
+    
+        var popup_a84f8661dc8f1c78a8cb7018cf7b3059 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7e78e6119037c2874deeab5a2854571f = $(`<div id="html_7e78e6119037c2874deeab5a2854571f" style="width: 100.0%; height: 100.0%;">TRISWANTORO PUTRO</div>`)[0];
+                popup_a84f8661dc8f1c78a8cb7018cf7b3059.setContent(html_7e78e6119037c2874deeab5a2854571f);
+            
+        
+
+        marker_c67589c84ef357d55ab74a84f64cedda.bindPopup(popup_a84f8661dc8f1c78a8cb7018cf7b3059)
+        ;
+
+        
+    
+    
+            var marker_b768f14078cf1e978ce2f8d7809789af = L.marker(
+                [-7.501813227173851, 111.53518216424698],
+                {}
+            ).addTo(map_5bbf138e94a5a69875ac13fc87d539e3);
+        
+    
+        var popup_c4a929c0236d58c1acd4a2faba6198b1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_445d1394a927aac3485c9649301ae74a = $(`<div id="html_445d1394a927aac3485c9649301ae74a" style="width: 100.0%; height: 100.0%;">WIDYA DWI RUKMI PUTRI</div>`)[0];
+                popup_c4a929c0236d58c1acd4a2faba6198b1.setContent(html_445d1394a927aac3485c9649301ae74a);
+            
+        
+
+        marker_b768f14078cf1e978ce2f8d7809789af.bindPopup(popup_c4a929c0236d58c1acd4a2faba6198b1)
+        ;
+
+        
+    
+    
+            var marker_dbbc3c8b6e3d5ed5a6c9e8cdb49b8dba = L.marker(
+                [-8.015442711639698, 112.84598212500006],
+                {}
+            ).addTo(map_5bbf138e94a5a69875ac13fc87d539e3);
+        
+    
+        var popup_c28bebc6fdeaefebf85e88c3bd78065d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c02ee2a8888d309bef0a5e6f2eb7de27 = $(`<div id="html_c02ee2a8888d309bef0a5e6f2eb7de27" style="width: 100.0%; height: 100.0%;">Dr. Setiyo Yuli Handono, S.P., M.BA., M.P.</div>`)[0];
+                popup_c28bebc6fdeaefebf85e88c3bd78065d.setContent(html_c02ee2a8888d309bef0a5e6f2eb7de27);
+            
+        
+
+        marker_dbbc3c8b6e3d5ed5a6c9e8cdb49b8dba.bindPopup(popup_c28bebc6fdeaefebf85e88c3bd78065d)
+        ;
+
+        
+    
+    
+            var marker_904388e117dd5ae3557e099d4851f562 = L.marker(
+                [-8.131679493623627, 112.57564099801922],
+                {}
+            ).addTo(map_5bbf138e94a5a69875ac13fc87d539e3);
+        
+    
+        var popup_ee56c16266b9fae5664f93e272efc492 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c5910ccd46caf46d3a0be6d1d493b62b = $(`<div id="html_c5910ccd46caf46d3a0be6d1d493b62b" style="width: 100.0%; height: 100.0%;">Dr. Mar'Atul Fauziyah, ST</div>`)[0];
+                popup_ee56c16266b9fae5664f93e272efc492.setContent(html_c5910ccd46caf46d3a0be6d1d493b62b);
+            
+        
+
+        marker_904388e117dd5ae3557e099d4851f562.bindPopup(popup_ee56c16266b9fae5664f93e272efc492)
+        ;
+
+        
+    
+    
+            var marker_1d4c32a388ee750ceb8f01596ba7747f = L.marker(
+                [-7.93807069833133, 112.594372093521],
+                {}
+            ).addTo(map_5bbf138e94a5a69875ac13fc87d539e3);
+        
+    
+        var popup_1b988bfbcc5a3c48e293781abbb5f31e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7f5ccf92d6f05bfb56870cfc6b6d0626 = $(`<div id="html_7f5ccf92d6f05bfb56870cfc6b6d0626" style="width: 100.0%; height: 100.0%;">Wa Ode Cakra Nirwana, S.T, M.T, PhD</div>`)[0];
+                popup_1b988bfbcc5a3c48e293781abbb5f31e.setContent(html_7f5ccf92d6f05bfb56870cfc6b6d0626);
+            
+        
+
+        marker_1d4c32a388ee750ceb8f01596ba7747f.bindPopup(popup_1b988bfbcc5a3c48e293781abbb5f31e)
+        ;
+
+        
+    
+</script>
+</html>
