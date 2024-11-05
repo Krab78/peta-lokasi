@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_7e8c8bae9beed326201bdfea5d059340 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_7e8c8bae9beed326201bdfea5d059340" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_7e8c8bae9beed326201bdfea5d059340 = L.map(
+                "map_7e8c8bae9beed326201bdfea5d059340",
+                {
+                    center: [-7.788802281623508, 112.57631152335647],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_9c4b40c1e81151a32abc18fdd5491f9a = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_9c4b40c1e81151a32abc18fdd5491f9a.addTo(map_7e8c8bae9beed326201bdfea5d059340);
+        
+    
+            var feature_group_ebf3dba9abbc8b71ba752ef7085c559e = L.featureGroup(
+                {}
+            );
+        
+    
+            var marker_c01e4a0b904f390d14b52c4a6c587ae8 = L.marker(
+                [-7.913753699051948, 112.58303843663631],
+                {}
+            ).addTo(feature_group_ebf3dba9abbc8b71ba752ef7085c559e);
+        
+    
+            var icon_12e9844abcbf92a985bd6032ec71b7bc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_c01e4a0b904f390d14b52c4a6c587ae8.setIcon(icon_12e9844abcbf92a985bd6032ec71b7bc);
+        
+    
+        var popup_95499cdee8dcf4d94aa2b4da9d8a0501 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ab0bc8f1f9edca66524dc2d6f11edcff = $(`<div id="html_ab0bc8f1f9edca66524dc2d6f11edcff" style="width: 100.0%; height: 100.0%;">     <div style="width: 200px; font-size: 14px;">         <strong>NAMA MITRA:</strong> SMK Pertanian Pembangunan Wiyata Bakti<br>         <strong>Alamat:</strong> 48196000<br>         <strong>Lokasi:</strong> KABUPATEN MALANG<br>         <strong>Nama Ketua:</strong> TRISWANTORO PUTRO<br>         <strong>Alamat Mitra:</strong> Jl. Manggar No. 24B belakang KUD Dau, Dau, Jawa Timur     </div>     </div>`)[0];
+                popup_95499cdee8dcf4d94aa2b4da9d8a0501.setContent(html_ab0bc8f1f9edca66524dc2d6f11edcff);
+            
+        
+
+        marker_c01e4a0b904f390d14b52c4a6c587ae8.bindPopup(popup_95499cdee8dcf4d94aa2b4da9d8a0501)
+        ;
+
+        
+    
+    
+            var marker_d69051680539c5c4fc43ef486660c2f8 = L.marker(
+                [-7.77157276315521, 112.29345234673188],
+                {}
+            ).addTo(feature_group_ebf3dba9abbc8b71ba752ef7085c559e);
+        
+    
+            var icon_a74eec59efc8efb7ae71c7ffa96199f4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_d69051680539c5c4fc43ef486660c2f8.setIcon(icon_a74eec59efc8efb7ae71c7ffa96199f4);
+        
+    
+        var popup_2cbe179ffb85c5f6f7ead294ab152df7 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_34e4e8ce54ce9dc877e1fc2a0e7e1a89 = $(`<div id="html_34e4e8ce54ce9dc877e1fc2a0e7e1a89" style="width: 100.0%; height: 100.0%;">     <div style="width: 200px; font-size: 14px;">         <strong>NAMA MITRA:</strong> Paguyuban Destinasi Usaha Kasembon<br>         <strong>Alamat:</strong> 48000000<br>         <strong>Lokasi:</strong> KABUPATEN MALANG<br>         <strong>Nama Ketua:</strong> AMIN SETYO LEKSONO<br>         <strong>Alamat Mitra:</strong> RT 04, RW 05, Dusun Mangir, Desa Sukosari, Kecamatan Kasembon, Kabupaten Malang     </div>     </div>`)[0];
+                popup_2cbe179ffb85c5f6f7ead294ab152df7.setContent(html_34e4e8ce54ce9dc877e1fc2a0e7e1a89);
+            
+        
+
+        marker_d69051680539c5c4fc43ef486660c2f8.bindPopup(popup_2cbe179ffb85c5f6f7ead294ab152df7)
+        ;
+
+        
+    
+    
+            var marker_1c0cda666b1079698117ea6df5978f2f = L.marker(
+                [-8.133733194655296, 112.72442507288964],
+                {}
+            ).addTo(feature_group_ebf3dba9abbc8b71ba752ef7085c559e);
+        
+    
+            var icon_79bac7702361cb53b208cb59e82764d7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_1c0cda666b1079698117ea6df5978f2f.setIcon(icon_79bac7702361cb53b208cb59e82764d7);
+        
+    
+        var popup_6e4b299e549cd76ad3a28b49029f7418 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c83f5588828d4e648f8fcb49e9628c51 = $(`<div id="html_c83f5588828d4e648f8fcb49e9628c51" style="width: 100.0%; height: 100.0%;">     <div style="width: 200px; font-size: 14px;">         <strong>NAMA MITRA:</strong> Pokdarwis Rela Desa Sukolilo<br>         <strong>Alamat:</strong> 43685000<br>         <strong>Lokasi:</strong> KABUPATEN MALANG<br>         <strong>Nama Ketua:</strong> SYAHIRUL ALIM <br>         <strong>Alamat Mitra:</strong> Jl. Diponegoro No.5, Dusun Napel, Sukolilo, Kec. Wajak, Kabupaten Malang, Jawa Timur 65173     </div>     </div>`)[0];
+                popup_6e4b299e549cd76ad3a28b49029f7418.setContent(html_c83f5588828d4e648f8fcb49e9628c51);
+            
+        
+
+        marker_1c0cda666b1079698117ea6df5978f2f.bindPopup(popup_6e4b299e549cd76ad3a28b49029f7418)
+        ;
+
+        
+    
+    
+            var marker_88cb7477ef025182f68dc0ddace32eaf = L.marker(
+                [-8.131679493623627, 112.57564099801922],
+                {}
+            ).addTo(feature_group_ebf3dba9abbc8b71ba752ef7085c559e);
+        
+    
+            var icon_cf6586131788bb4a414cca3f53b58e67 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_88cb7477ef025182f68dc0ddace32eaf.setIcon(icon_cf6586131788bb4a414cca3f53b58e67);
+        
+    
+        var popup_705b1be88b294a2cf0fbb9f3b6bfa856 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d03cbf3201ee8aac7ff9bdfa55eec17f = $(`<div id="html_d03cbf3201ee8aac7ff9bdfa55eec17f" style="width: 100.0%; height: 100.0%;">     <div style="width: 200px; font-size: 14px;">         <strong>NAMA MITRA:</strong> SMK Muhammadiyah 1 Kepanjen<br>         <strong>Alamat:</strong> 45000000<br>         <strong>Lokasi:</strong> KABUPATEN MALANG<br>         <strong>Nama Ketua:</strong> Dr. Mar'Atul Fauziyah, ST<br>         <strong>Alamat Mitra:</strong> SMK Muhammadiyah 1 Kepanjen Jalan KH. Ahmad Dahlan No. 34 Kepanjen, Kabupaten Malang, Jawa Timur     </div>     </div>`)[0];
+                popup_705b1be88b294a2cf0fbb9f3b6bfa856.setContent(html_d03cbf3201ee8aac7ff9bdfa55eec17f);
+            
+        
+
+        marker_88cb7477ef025182f68dc0ddace32eaf.bindPopup(popup_705b1be88b294a2cf0fbb9f3b6bfa856)
+        ;
+
+        
+    
+    
+            var marker_72cd434acb3ec67e6378d09494c5da5c = L.marker(
+                [-8.015442711639698, 112.84598212500006],
+                {}
+            ).addTo(feature_group_ebf3dba9abbc8b71ba752ef7085c559e);
+        
+    
+            var icon_973d86a6ef1756d9973ea1e1ff0335de = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_72cd434acb3ec67e6378d09494c5da5c.setIcon(icon_973d86a6ef1756d9973ea1e1ff0335de);
+        
+    
+        var popup_b9f781c7710e636f0259654e8ad8a22f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_483377ccfe4c092bc9f5f819b2acc83e = $(`<div id="html_483377ccfe4c092bc9f5f819b2acc83e" style="width: 100.0%; height: 100.0%;">     <div style="width: 200px; font-size: 14px;">         <strong>NAMA MITRA:</strong> CV. Lawangsari<br>         <strong>Alamat:</strong> 42075000<br>         <strong>Lokasi:</strong> KABUPATEN MALANG<br>         <strong>Nama Ketua:</strong> Dr. Setiyo Yuli Handono, S.P., M.BA., M.P.<br>         <strong>Alamat Mitra:</strong> Jln. Raya Gubugklakah, Gubugklakah, Poncokusumo 65157     </div>     </div>`)[0];
+                popup_b9f781c7710e636f0259654e8ad8a22f.setContent(html_483377ccfe4c092bc9f5f819b2acc83e);
+            
+        
+
+        marker_72cd434acb3ec67e6378d09494c5da5c.bindPopup(popup_b9f781c7710e636f0259654e8ad8a22f)
+        ;
+
+        
+    
+    
+            var marker_07a3feadc0dd62894c4f4cb346acd74e = L.marker(
+                [-8.394381169927502, 112.51356358382152],
+                {}
+            ).addTo(feature_group_ebf3dba9abbc8b71ba752ef7085c559e);
+        
+    
+            var icon_b5dbf90d9ae46c0ed5a809a4495c7ae7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_07a3feadc0dd62894c4f4cb346acd74e.setIcon(icon_b5dbf90d9ae46c0ed5a809a4495c7ae7);
+        
+    
+        var popup_ccee1a6df2763ff2ce06b9e99aa456b7 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a3b95dc76409d3c5d4269f03f71b5fb5 = $(`<div id="html_a3b95dc76409d3c5d4269f03f71b5fb5" style="width: 100.0%; height: 100.0%;">     <div style="width: 200px; font-size: 14px;">         <strong>NAMA MITRA:</strong> Pengelola Pantai Kondangmerak<br>         <strong>Alamat:</strong> 41750000<br>         <strong>Lokasi:</strong> KABUPATEN MALANG<br>         <strong>Nama Ketua:</strong> SYARIFAH HIKMAH JULINDA SARI<br>         <strong>Alamat Mitra:</strong> Desa Kondangmerak, Sumberbening, Kecamatan Bantur, Kabupaten Malang     </div>     </div>`)[0];
+                popup_ccee1a6df2763ff2ce06b9e99aa456b7.setContent(html_a3b95dc76409d3c5d4269f03f71b5fb5);
+            
+        
+
+        marker_07a3feadc0dd62894c4f4cb346acd74e.bindPopup(popup_ccee1a6df2763ff2ce06b9e99aa456b7)
+        ;
+
+        
+    
+    
+            var marker_baea1f97aa674f8ee5271e8017d106ad = L.marker(
+                [-8.02036049074214, 112.83649944867943],
+                {}
+            ).addTo(feature_group_ebf3dba9abbc8b71ba752ef7085c559e);
+        
+    
+            var icon_cf2c884bb1513cb56af9dedad14148b8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_baea1f97aa674f8ee5271e8017d106ad.setIcon(icon_cf2c884bb1513cb56af9dedad14148b8);
+        
+    
+        var popup_ce3aca9f58488163fdfceb9d527bf0d3 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_82005db5aecee116b1fdac2948010ce4 = $(`<div id="html_82005db5aecee116b1fdac2948010ce4" style="width: 100.0%; height: 100.0%;">     <div style="width: 200px; font-size: 14px;">         <strong>NAMA MITRA:</strong> Kelompok Sadar Wisata (Pokdarwis)<br>         <strong>Alamat:</strong> 43250000<br>         <strong>Lokasi:</strong> KABUPATEN MALANG<br>         <strong>Nama Ketua:</strong> ANANG SUJOKO<br>         <strong>Alamat Mitra:</strong> Desa Gubugklakah, Kabupaten Malang, Jawa Timur     </div>     </div>`)[0];
+                popup_ce3aca9f58488163fdfceb9d527bf0d3.setContent(html_82005db5aecee116b1fdac2948010ce4);
+            
+        
+
+        marker_baea1f97aa674f8ee5271e8017d106ad.bindPopup(popup_ce3aca9f58488163fdfceb9d527bf0d3)
+        ;
+
+        
+    
+    
+            var marker_519379e237d0f7ace1d8be3174e8a6a1 = L.marker(
+                [-7.9371484273300625, 112.53918185383472],
+                {}
+            ).addTo(feature_group_ebf3dba9abbc8b71ba752ef7085c559e);
+        
+    
+            var icon_4c88b60bcaf82104336ce35259b8d412 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_519379e237d0f7ace1d8be3174e8a6a1.setIcon(icon_4c88b60bcaf82104336ce35259b8d412);
+        
+    
+        var popup_3c116dbd4a48905d7c51013c0d49a0c0 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_bf083013864de6afd55b1791da5845ee = $(`<div id="html_bf083013864de6afd55b1791da5845ee" style="width: 100.0%; height: 100.0%;">     <div style="width: 200px; font-size: 14px;">         <strong>NAMA MITRA:</strong> Pengelola Bumi Perkemahan Bedengan<br>         <strong>Alamat:</strong> 45000000<br>         <strong>Lokasi:</strong> KABUPATEN MALANG<br>         <strong>Nama Ketua:</strong> ENDANG ARISOESILANINGSIH<br>         <strong>Alamat Mitra:</strong> Jl. Raya Selokerto, Godehan, Desa Selorejo, Kec. Dau., Kab. Malang     </div>     </div>`)[0];
+                popup_3c116dbd4a48905d7c51013c0d49a0c0.setContent(html_bf083013864de6afd55b1791da5845ee);
+            
+        
+
+        marker_519379e237d0f7ace1d8be3174e8a6a1.bindPopup(popup_3c116dbd4a48905d7c51013c0d49a0c0)
+        ;
+
+        
+    
+    
+            feature_group_ebf3dba9abbc8b71ba752ef7085c559e.addTo(map_7e8c8bae9beed326201bdfea5d059340);
+        
+    
+            var feature_group_d6e50fafc151159dc0780bda991b5da5 = L.featureGroup(
+                {}
+            );
+        
+    
+            var marker_22ce070ec2e38449ecb996f5b46d0407 = L.marker(
+                [-7.746533105780166, 112.76081266194396],
+                {}
+            ).addTo(feature_group_d6e50fafc151159dc0780bda991b5da5);
+        
+    
+            var icon_a89bf3f497c8d48bcebb86b2befd5389 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_22ce070ec2e38449ecb996f5b46d0407.setIcon(icon_a89bf3f497c8d48bcebb86b2befd5389);
+        
+    
+        var popup_78d59de2067eebd8bdfcd57ba72a8b54 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_fc0e31ded90bc33a6647e3ccdb82a776 = $(`<div id="html_fc0e31ded90bc33a6647e3ccdb82a776" style="width: 100.0%; height: 100.0%;">     <div style="width: 200px; font-size: 14px;">         <strong>NAMA MITRA:</strong> Kelompok Pembudidaya Ikan dan Pusat Konservasi Iwak Kali (PAK WALI)<br>         <strong>Alamat:</strong> 48250000<br>         <strong>Lokasi:</strong> KABUPATEN PASURUAN<br>         <strong>Nama Ketua:</strong> ASUS MAIZAR SURYANTO H<br>         <strong>Alamat Mitra:</strong> Jl. Sukun, Desa Bakalan, Kec. Purwosari, Kab. Pasuruan     </div>     </div>`)[0];
+                popup_78d59de2067eebd8bdfcd57ba72a8b54.setContent(html_fc0e31ded90bc33a6647e3ccdb82a776);
+            
+        
+
+        marker_22ce070ec2e38449ecb996f5b46d0407.bindPopup(popup_78d59de2067eebd8bdfcd57ba72a8b54)
+        ;
+
+        
+    
+    
+            var marker_710076d4a0b675c11c56205030ba181c = L.marker(
+                [-7.829996624656887, 112.8680984125636],
+                {}
+            ).addTo(feature_group_d6e50fafc151159dc0780bda991b5da5);
+        
+    
+            var icon_3d4cf51aee576d663b4c80d4d6131bb4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_710076d4a0b675c11c56205030ba181c.setIcon(icon_3d4cf51aee576d663b4c80d4d6131bb4);
+        
+    
+        var popup_9768d896d8ad75a2874cba6dd0d4818c = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_0221c2096ade8c2e71ee18ae2544d9a0 = $(`<div id="html_0221c2096ade8c2e71ee18ae2544d9a0" style="width: 100.0%; height: 100.0%;">     <div style="width: 200px; font-size: 14px;">         <strong>NAMA MITRA:</strong> Koperasi Unit Desa (KUD) Sembada Puspo<br>         <strong>Alamat:</strong> 38750000<br>         <strong>Lokasi:</strong> KABUPATEN PASURUAN<br>         <strong>Nama Ketua:</strong> DWI KRISTANTO<br>         <strong>Alamat Mitra:</strong> Dusun Krajan Kulon, Desa Puspo, Kecamatan Puspo, Kabupaten Pasuruan, Jawa Timur     </div>     </div>`)[0];
+                popup_9768d896d8ad75a2874cba6dd0d4818c.setContent(html_0221c2096ade8c2e71ee18ae2544d9a0);
+            
+        
+
+        marker_710076d4a0b675c11c56205030ba181c.bindPopup(popup_9768d896d8ad75a2874cba6dd0d4818c)
+        ;
+
+        
+    
+    
+            var marker_ee772906657f591ec1ba7ec62045424d = L.marker(
+                [-7.705879, 113.088672],
+                {}
+            ).addTo(feature_group_d6e50fafc151159dc0780bda991b5da5);
+        
+    
+            var icon_069dfdc35ce9868ac18c4ae491ebefac = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_ee772906657f591ec1ba7ec62045424d.setIcon(icon_069dfdc35ce9868ac18c4ae491ebefac);
+        
+    
+        var popup_b3fe019e2f7c55bf3f8d798cec0dd76e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a8449c6372ac3ddf0aa9567c776a0c6f = $(`<div id="html_a8449c6372ac3ddf0aa9567c776a0c6f" style="width: 100.0%; height: 100.0%;">     <div style="width: 200px; font-size: 14px;">         <strong>NAMA MITRA:</strong> Poklahsar Sumber Rejeki<br>         <strong>Alamat:</strong> 41250000<br>         <strong>Lokasi:</strong> KABUPATEN PASURUAN<br>         <strong>Nama Ketua:</strong> DIAH AGUSTINA PUSPITASARI<br>         <strong>Alamat Mitra:</strong> Dusun Pesisir, RT02, RW 02 Desa Penunggul, Kecamatan Nguling, Kabupaten Pasuruan, Jawa Timur     </div>     </div>`)[0];
+                popup_b3fe019e2f7c55bf3f8d798cec0dd76e.setContent(html_a8449c6372ac3ddf0aa9567c776a0c6f);
+            
+        
+
+        marker_ee772906657f591ec1ba7ec62045424d.bindPopup(popup_b3fe019e2f7c55bf3f8d798cec0dd76e)
+        ;
+
+        
+    
+    
+            feature_group_d6e50fafc151159dc0780bda991b5da5.addTo(map_7e8c8bae9beed326201bdfea5d059340);
+        
+    
+            var feature_group_1de095928844047124006ed398355f4b = L.featureGroup(
+                {}
+            );
+        
+    
+            var marker_df72e26bf8db3161c1649f811a29d9f1 = L.marker(
+                [-6.868217422806582, 112.28802688436154],
+                {}
+            ).addTo(feature_group_1de095928844047124006ed398355f4b);
+        
+    
+            var icon_1415f71b2bd2d08e8d0ecfb2ba605d22 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_df72e26bf8db3161c1649f811a29d9f1.setIcon(icon_1415f71b2bd2d08e8d0ecfb2ba605d22);
+        
+    
+        var popup_859b41795aa474ee790488d9d612bd97 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_025e125fff77d31d09d942e89663f778 = $(`<div id="html_025e125fff77d31d09d942e89663f778" style="width: 100.0%; height: 100.0%;">     <div style="width: 200px; font-size: 14px;">         <strong>NAMA MITRA:</strong> UD. Putra Kresna<br>         <strong>Alamat:</strong> 43750000<br>         <strong>Lokasi:</strong> KABUPATEN LAMONGAN<br>         <strong>Nama Ketua:</strong> ANIES CHAMIDAH<br>         <strong>Alamat Mitra:</strong> Jl. Trunojoyo Jompong, Kecamatan Brondong, Kabupaten Lamongan     </div>     </div>`)[0];
+                popup_859b41795aa474ee790488d9d612bd97.setContent(html_025e125fff77d31d09d942e89663f778);
+            
+        
+
+        marker_df72e26bf8db3161c1649f811a29d9f1.bindPopup(popup_859b41795aa474ee790488d9d612bd97)
+        ;
+
+        
+    
+    
+            var marker_2e38d2054f50d505c65a7f5601811265 = L.marker(
+                [-7.120109531708822, 112.19495082106752],
+                {}
+            ).addTo(feature_group_1de095928844047124006ed398355f4b);
+        
+    
+            var icon_edfdc91562b295a64aaf41fb078696fe = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_2e38d2054f50d505c65a7f5601811265.setIcon(icon_edfdc91562b295a64aaf41fb078696fe);
+        
+    
+        var popup_f5a3b3c362ab5dfec2105c44d68d1f18 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_dbaeea6d00e6d99e47d4348af57328f6 = $(`<div id="html_dbaeea6d00e6d99e47d4348af57328f6" style="width: 100.0%; height: 100.0%;">     <div style="width: 200px; font-size: 14px;">         <strong>NAMA MITRA:</strong> BUMDes Hapsari<br>         <strong>Alamat:</strong> 46500000<br>         <strong>Lokasi:</strong> KABUPATEN LAMONGAN<br>         <strong>Nama Ketua:</strong> SHELLY KUSUMARINI R<br>         <strong>Alamat Mitra:</strong> Jl Dr Soetomo, RT 3 RW 3 Dusun Podang Desa Karang kembang Kecamatan Babat Kabupaten Lamongan     </div>     </div>`)[0];
+                popup_f5a3b3c362ab5dfec2105c44d68d1f18.setContent(html_dbaeea6d00e6d99e47d4348af57328f6);
+            
+        
+
+        marker_2e38d2054f50d505c65a7f5601811265.bindPopup(popup_f5a3b3c362ab5dfec2105c44d68d1f18)
+        ;
+
+        
+    
+    
+            feature_group_1de095928844047124006ed398355f4b.addTo(map_7e8c8bae9beed326201bdfea5d059340);
+        
+    
+            var feature_group_5f797109e55b2a93faa2772e42701721 = L.featureGroup(
+                {}
+            );
+        
+    
+            var marker_e31080108dca7dd1be074a85980150da = L.marker(
+                [-7.956421934296852, 112.6141081305588],
+                {}
+            ).addTo(feature_group_5f797109e55b2a93faa2772e42701721);
+        
+    
+            var icon_da258a6f793da33fdfe80dfd8ba0e208 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_e31080108dca7dd1be074a85980150da.setIcon(icon_da258a6f793da33fdfe80dfd8ba0e208);
+        
+    
+        var popup_037b21cd701eab96b134c053fea317f4 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e8e8537660f9689ccd2517209a5a6cf2 = $(`<div id="html_e8e8537660f9689ccd2517209a5a6cf2" style="width: 100.0%; height: 100.0%;">     <div style="width: 200px; font-size: 14px;">         <strong>NAMA MITRA:</strong> Dinas Pendidikan Kota Malang<br>         <strong>Alamat:</strong> 72800000<br>         <strong>Lokasi:</strong> KOTA MALANG<br>         <strong>Nama Ketua:</strong> RIYANTI ISASKAR<br>         <strong>Alamat Mitra:</strong> Dinas pendidika Kota Malang     </div>     </div>`)[0];
+                popup_037b21cd701eab96b134c053fea317f4.setContent(html_e8e8537660f9689ccd2517209a5a6cf2);
+            
+        
+
+        marker_e31080108dca7dd1be074a85980150da.bindPopup(popup_037b21cd701eab96b134c053fea317f4)
+        ;
+
+        
+    
+    
+            var marker_76631d6d72dc3e309c17c7f7da8f2db6 = L.marker(
+                [-7.93807069833133, 112.594372093521],
+                {}
+            ).addTo(feature_group_5f797109e55b2a93faa2772e42701721);
+        
+    
+            var icon_9f7077451d39c8e98f233c17be9318b6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_76631d6d72dc3e309c17c7f7da8f2db6.setIcon(icon_9f7077451d39c8e98f233c17be9318b6);
+        
+    
+        var popup_e3fe3ebd25215e839c043488bf5a7397 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f3a0896248d07c091067080635e851c2 = $(`<div id="html_f3a0896248d07c091067080635e851c2" style="width: 100.0%; height: 100.0%;">     <div style="width: 200px; font-size: 14px;">         <strong>NAMA MITRA:</strong> SMA Bahrul Maghfiroh Malang<br>         <strong>Alamat:</strong> 35000000<br>         <strong>Lokasi:</strong> KOTA MALANG<br>         <strong>Nama Ketua:</strong> Wa Ode Cakra Nirwana, S.T, M.T, PhD<br>         <strong>Alamat Mitra:</strong> SMA Bahrul Maghfiroh Jalan Joyo Agung No. 2, Desa Tlogomas, Kecamatan Lowokwaru,Kota Malang     </div>     </div>`)[0];
+                popup_e3fe3ebd25215e839c043488bf5a7397.setContent(html_f3a0896248d07c091067080635e851c2);
+            
+        
+
+        marker_76631d6d72dc3e309c17c7f7da8f2db6.bindPopup(popup_e3fe3ebd25215e839c043488bf5a7397)
+        ;
+
+        
+    
+    
+            feature_group_5f797109e55b2a93faa2772e42701721.addTo(map_7e8c8bae9beed326201bdfea5d059340);
+        
+    
+            var feature_group_432929ef6f8b616b255541be5418aa87 = L.featureGroup(
+                {}
+            );
+        
+    
+            var marker_22bdeb2eeff2be88ed0b30df4664af6d = L.marker(
+                [-7.706589789888581, 112.11918267896024],
+                {}
+            ).addTo(feature_group_432929ef6f8b616b255541be5418aa87);
+        
+    
+            var icon_7d7123eda4447b4563ee443a55bb0b4b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_22bdeb2eeff2be88ed0b30df4664af6d.setIcon(icon_7d7123eda4447b4563ee443a55bb0b4b);
+        
+    
+        var popup_d365e621c6c5e4810272e46b34e9201f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_57709a3f18672f1b29827d1720f1037c = $(`<div id="html_57709a3f18672f1b29827d1720f1037c" style="width: 100.0%; height: 100.0%;">     <div style="width: 200px; font-size: 14px;">         <strong>NAMA MITRA:</strong> Badan Usaha Milik Desa (BUMDES) "HAPSARI"<br>         <strong>Alamat:</strong> 43750000<br>         <strong>Lokasi:</strong> KABUPATEN KEDIRI<br>         <strong>Nama Ketua:</strong> REZA YESICA<br>         <strong>Alamat Mitra:</strong>  Jalan Raya Papar Pare No. 229 Desa Mejono Kecamatan Plemahan Kabupaten Kediri     </div>     </div>`)[0];
+                popup_d365e621c6c5e4810272e46b34e9201f.setContent(html_57709a3f18672f1b29827d1720f1037c);
+            
+        
+
+        marker_22bdeb2eeff2be88ed0b30df4664af6d.bindPopup(popup_d365e621c6c5e4810272e46b34e9201f)
+        ;
+
+        
+    
+    
+            feature_group_432929ef6f8b616b255541be5418aa87.addTo(map_7e8c8bae9beed326201bdfea5d059340);
+        
+    
+            var feature_group_cb2ae4247f67b8ca6f10b43682d60997 = L.featureGroup(
+                {}
+            );
+        
+    
+            var marker_45167785a99a0435411715b39963a28a = L.marker(
+                [-8.379589891449534, 113.42173252130024],
+                {}
+            ).addTo(feature_group_cb2ae4247f67b8ca6f10b43682d60997);
+        
+    
+            var icon_0bbd6b68b642fe7f9f95ceda6eee1f77 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_45167785a99a0435411715b39963a28a.setIcon(icon_0bbd6b68b642fe7f9f95ceda6eee1f77);
+        
+    
+        var popup_33cd57f38f43b5ab3c140e2d97b416a2 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_553b0858edfd8929450ea02fbffd5fee = $(`<div id="html_553b0858edfd8929450ea02fbffd5fee" style="width: 100.0%; height: 100.0%;">     <div style="width: 200px; font-size: 14px;">         <strong>NAMA MITRA:</strong> KSB Nusabarong<br>         <strong>Alamat:</strong> 40750000<br>         <strong>Lokasi:</strong> KABUPATEN JEMBER<br>         <strong>Nama Ketua:</strong> LILIK WAHYUNI<br>         <strong>Alamat Mitra:</strong> Jl. Lintas Selatan, Kalimalang, Mojomulyo, Kec. Puger, Kabupaten Jember, Jawa Timur 68164     </div>     </div>`)[0];
+                popup_33cd57f38f43b5ab3c140e2d97b416a2.setContent(html_553b0858edfd8929450ea02fbffd5fee);
+            
+        
+
+        marker_45167785a99a0435411715b39963a28a.bindPopup(popup_33cd57f38f43b5ab3c140e2d97b416a2)
+        ;
+
+        
+    
+    
+            feature_group_cb2ae4247f67b8ca6f10b43682d60997.addTo(map_7e8c8bae9beed326201bdfea5d059340);
+        
+    
+            var feature_group_7a35e8848b8e33e0702bfd740db7bf3d = L.featureGroup(
+                {}
+            );
+        
+    
+            var marker_821ab2afc7acccf5a8d5b9169a3f76af = L.marker(
+                [-7.501813227173851, 111.53518216424698],
+                {}
+            ).addTo(feature_group_7a35e8848b8e33e0702bfd740db7bf3d);
+        
+    
+            var icon_5e6b9381c0515b2da7434a5470301a01 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_821ab2afc7acccf5a8d5b9169a3f76af.setIcon(icon_5e6b9381c0515b2da7434a5470301a01);
+        
+    
+        var popup_45670ec5717813d2cb43259009c1fed4 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d2be92370be3bf54ec7d5b543ba03dab = $(`<div id="html_d2be92370be3bf54ec7d5b543ba03dab" style="width: 100.0%; height: 100.0%;">     <div style="width: 200px; font-size: 14px;">         <strong>NAMA MITRA:</strong> CV Sumber Pangan Lestari Jaya,CV Surya Berkah Globalindo,Dinas Perdagangan Perindustrian dan Tenaga Kerja ( DPPTK ) Kabupaten Ngawi<br>         <strong>Alamat:</strong> 143650000<br>         <strong>Lokasi:</strong> KABUPATEN NGAWI<br>         <strong>Nama Ketua:</strong> WIDYA DWI RUKMI PUTRI<br>         <strong>Alamat Mitra:</strong> Desa Kedung, Kecamatan Kwadungan, Kabupaten Ngawi     </div>     </div>`)[0];
+                popup_45670ec5717813d2cb43259009c1fed4.setContent(html_d2be92370be3bf54ec7d5b543ba03dab);
+            
+        
+
+        marker_821ab2afc7acccf5a8d5b9169a3f76af.bindPopup(popup_45670ec5717813d2cb43259009c1fed4)
+        ;
+
+        
+    
+    
+            feature_group_7a35e8848b8e33e0702bfd740db7bf3d.addTo(map_7e8c8bae9beed326201bdfea5d059340);
+        
+    
+            var feature_group_dbc0faf711a27c954ae7a41a2b3e3728 = L.featureGroup(
+                {}
+            );
+        
+    
+            var marker_0cbb18b42ed502432cf83ebf4afb8c40 = L.marker(
+                [-6.915950174628538, 112.55299670963625],
+                {}
+            ).addTo(feature_group_dbc0faf711a27c954ae7a41a2b3e3728);
+        
+    
+            var icon_dfe4d6c2ca20d43251c0ff45746ca12e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_0cbb18b42ed502432cf83ebf4afb8c40.setIcon(icon_dfe4d6c2ca20d43251c0ff45746ca12e);
+        
+    
+        var popup_f5465786b4afbad9421d2d89e688b589 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_cd5b09ddb4b123bffe4a03b6924706c5 = $(`<div id="html_cd5b09ddb4b123bffe4a03b6924706c5" style="width: 100.0%; height: 100.0%;">     <div style="width: 200px; font-size: 14px;">         <strong>NAMA MITRA:</strong> Pokmaswas Pangkahkulon	<br>         <strong>Alamat:</strong> 47556000<br>         <strong>Lokasi:</strong> KABUPATEN GRESIK<br>         <strong>Nama Ketua:</strong> MOCHAMAD ARIF ZAINUL FUAD<br>         <strong>Alamat Mitra:</strong> Jalan Suaka Burung No 1a Ujungpangkah Kab. Gresik     </div>     </div>`)[0];
+                popup_f5465786b4afbad9421d2d89e688b589.setContent(html_cd5b09ddb4b123bffe4a03b6924706c5);
+            
+        
+
+        marker_0cbb18b42ed502432cf83ebf4afb8c40.bindPopup(popup_f5465786b4afbad9421d2d89e688b589)
+        ;
+
+        
+    
+    
+            feature_group_dbc0faf711a27c954ae7a41a2b3e3728.addTo(map_7e8c8bae9beed326201bdfea5d059340);
+        
+    
+            var layer_control_26a4920b173ef7f430516e9c6b4bc4f9_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_9c4b40c1e81151a32abc18fdd5491f9a,
+                },
+                overlays :  {
+                    "KABUPATEN MALANG" : feature_group_ebf3dba9abbc8b71ba752ef7085c559e,
+                    "KABUPATEN PASURUAN" : feature_group_d6e50fafc151159dc0780bda991b5da5,
+                    "KABUPATEN LAMONGAN" : feature_group_1de095928844047124006ed398355f4b,
+                    "KOTA MALANG" : feature_group_5f797109e55b2a93faa2772e42701721,
+                    "KABUPATEN KEDIRI" : feature_group_432929ef6f8b616b255541be5418aa87,
+                    "KABUPATEN JEMBER" : feature_group_cb2ae4247f67b8ca6f10b43682d60997,
+                    "KABUPATEN NGAWI" : feature_group_7a35e8848b8e33e0702bfd740db7bf3d,
+                    "KABUPATEN GRESIK" : feature_group_dbc0faf711a27c954ae7a41a2b3e3728,
+                },
+            };
+            let layer_control_26a4920b173ef7f430516e9c6b4bc4f9 = L.control.layers(
+                layer_control_26a4920b173ef7f430516e9c6b4bc4f9_layers.base_layers,
+                layer_control_26a4920b173ef7f430516e9c6b4bc4f9_layers.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_7e8c8bae9beed326201bdfea5d059340);
+
+        
+</script>
+</html>
