@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #container {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: row;
+        }
+        #chart_div {
+            width: 70%;
+            height: 600px;
+        }
+        #dropdown {
+            margin-bottom: 20px;
+        }
+    </style>
+    <script type="text/javascript">
+        google.charts.load('current', {packages:['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        var allData = [];
+        allData.push(['FAKULTAS ILMU BUDAYA', 40750000]);
+        allData.push(['FAKULTAS ILMU SOSIAL DAN POLITIK', 86935000]);
+        allData.push(['FAKULTAS KEDOKTERAN GIGI', 43750000]);
+        allData.push(['FAKULTAS KEDOKTERAN HEWAN', 85250000]);
+        allData.push(['FAKULTAS PERIKANAN & ILMU KELAUTAN', 181306000]);
+        allData.push(['FAKULTAS PERTANIAN', 42075000]);
+        allData.push(['FAKULTAS PETERNAKAN', 72800000]);
+        allData.push(['FAKULTAS TEKNIK', 121250000]);
+        allData.push(['FAKULTAS TEKNOLOGI PERTANIAN', 143650000]);
+        allData.push(['MIPA', 141196000]);
+
+        function drawChart(filter = null) {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Fakultas Ketua');
+            data.addColumn('number', 'JUMLAH');
+
+            // Menambahkan data ke grafik
+            var filteredData = allData.filter(row => filter ? row[0] === filter : true);
+            data.addRows(filteredData);
+
+            var options = {
+                title: 'Proporsi Jumlah Dana per Fakultas Ketua',
+                pieHole: 0.4, // Membuat grafik menjadi donut chart
+                legend: { position: 'right' }
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+
+            // Menambahkan legend kustom
+            var legendDiv = document.getElementById('legend_div');
+            legendDiv.innerHTML = '<h3>Legend</h3>';
+            for (var i = 0; i < data.getNumberOfRows(); i++) {
+                var jumlahDana = data.getValue(i, 1).toLocaleString();
+                legendDiv.innerHTML += '<div class="legend-item">' + data.getValue(i, 0) + ': ' + jumlahDana + '</div>';
+            }
+        }
+
+        function updateChart() {
+            var filter = document.getElementById('dropdown').value;
+            drawChart(filter);
+        }
+    </script>
+</head>
+<body>
+    <div id="container">
+        <select id="dropdown" onchange="updateChart()">
+            <option value="">Semua Fakultas Ketua</option>
+            <option value="FAKULTAS ILMU BUDAYA">FAKULTAS ILMU BUDAYA</option>
+            <option value="FAKULTAS ILMU SOSIAL DAN POLITIK">FAKULTAS ILMU SOSIAL DAN POLITIK</option>
+            <option value="FAKULTAS KEDOKTERAN GIGI">FAKULTAS KEDOKTERAN GIGI</option>
+            <option value="FAKULTAS KEDOKTERAN HEWAN">FAKULTAS KEDOKTERAN HEWAN</option>
+            <option value="FAKULTAS PERIKANAN & ILMU KELAUTAN">FAKULTAS PERIKANAN & ILMU KELAUTAN</option>
+            <option value="FAKULTAS PERTANIAN">FAKULTAS PERTANIAN</option>
+            <option value="FAKULTAS PETERNAKAN">FAKULTAS PETERNAKAN</option>
+            <option value="FAKULTAS TEKNIK">FAKULTAS TEKNIK</option>
+            <option value="FAKULTAS TEKNOLOGI PERTANIAN">FAKULTAS TEKNOLOGI PERTANIAN</option>
+            <option value="MIPA">MIPA</option>
+
+        </select>
+        <div id="chart_div"></div>
+    </div>
+</body>
+</html>
