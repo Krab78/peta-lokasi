@@ -1,0 +1,3089 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_be4837645ba341208726dcab5e37863c {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+    <div style='
+        position: absolute; 
+        bottom: 50px; 
+        left: 10px; 
+        z-index: 1000; 
+        background: lightblue; 
+        padding: 10px; 
+        border-radius: 5px;
+        box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+        width: 250px;
+    '>
+        <b>Statistik Peta:</b><br>
+    <b>Total Judul:</b> 109<br><br><b>Jumlah Skema Pengabdian Internal:</b><br><span style='color:red;'>●</span> Doktor Mengabdi (DM): 61<br><span style='color:blue;'>●</span> Pengabdian Strategis: 44<br><span style='color:gray;'>●</span> Doktor Mengabdi Pengembangan Kemitraan: 4<br></div>
+    
+    <style>
+    .leaflet-control-layers {
+        background: white;
+        border-radius: 5px;
+        padding: 10px;
+        width: 250px;
+        box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+    }
+    .leaflet-control-layers-list {
+        max-height: 300px;
+        overflow-y: auto;
+    }
+    .leaflet-control-layers-selector {
+        margin-right: 5px;
+    }
+    </style>
+    
+    
+            <div class="folium-map" id="map_be4837645ba341208726dcab5e37863c" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_be4837645ba341208726dcab5e37863c = L.map(
+                "map_be4837645ba341208726dcab5e37863c",
+                {
+                    center: [-8.451131371524475, 114.19519063710592],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_761d6801dfdfb7156aaf35c8079458d8 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_761d6801dfdfb7156aaf35c8079458d8.addTo(map_be4837645ba341208726dcab5e37863c);
+        
+    
+            var feature_group_c9e1a4999e48637122477b2cdefa8741 = L.featureGroup(
+                {}
+            );
+        
+    
+            var marker_ef4cdb4abc3ef98ab3ef53c7c9c680dd = L.marker(
+                [-7.87483492838358, 112.67624329537024],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_7f5757a8b543bc78ae1afcc282591031 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_ef4cdb4abc3ef98ab3ef53c7c9c680dd.setIcon(icon_7f5757a8b543bc78ae1afcc282591031);
+        
+    
+        var popup_2c4061b4d21119f987bd5c25cbf1e16f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_12475d5ad99bf2da1c63447de383acf1 = $(`<div id="html_12475d5ad99bf2da1c63447de383acf1" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Aplikasi Konsep Sustainable Eco-Community dalam Pemanfaatan Sampah Rumah Tangga sebagai Pupuk Organik di Desa Ardimulyo untuk Mendukung KEK Singosari</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Dr. Ir. ARY MUSTOFA AHMAD, M.P.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> Jl. Diponegoro No.65, Karangjati, Ardimulyo, Kec. Singosari, Kabupaten Malang, Jawa Timur 65153<br>             <b>Lokasi Mitra:</b> Singosari, KAB. MALANG<br>             <b>Koordinat:</b> -7.87483492838358, 112.67624329537024         </div>         </div>`)[0];
+                popup_2c4061b4d21119f987bd5c25cbf1e16f.setContent(html_12475d5ad99bf2da1c63447de383acf1);
+            
+        
+
+        marker_ef4cdb4abc3ef98ab3ef53c7c9c680dd.bindPopup(popup_2c4061b4d21119f987bd5c25cbf1e16f)
+        ;
+
+        
+    
+    
+            var marker_645b425f2edeaaa2ac32b1ac09f6a074 = L.marker(
+                [-7.783950531478366, 112.31121808290484],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_953328fd8396999ec87b30bdeda5d6f9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_645b425f2edeaaa2ac32b1ac09f6a074.setIcon(icon_953328fd8396999ec87b30bdeda5d6f9);
+        
+    
+        var popup_4273412af5e09c280d0d203d85aabdcf = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_4bd530576faa17b1b72c85980fe12815 = $(`<div id="html_4bd530576faa17b1b72c85980fe12815" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>APLIKASI REAKTOR BIOGAS SEBAGAI UPAYA STABILISASI KUALITAS LINGKUNGAN DI KECAMATAN KASEMBON</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Dr. YUNI KILAWATI, S.Pi., M.Si<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> Jln. Raya Nomor: 7 Kasembon 65393<br>             <b>Lokasi Mitra:</b> Kasembon, KAB. MALANG<br>             <b>Koordinat:</b> -7.783950531478366, 112.31121808290484         </div>         </div>`)[0];
+                popup_4273412af5e09c280d0d203d85aabdcf.setContent(html_4bd530576faa17b1b72c85980fe12815);
+            
+        
+
+        marker_645b425f2edeaaa2ac32b1ac09f6a074.bindPopup(popup_4273412af5e09c280d0d203d85aabdcf)
+        ;
+
+        
+    
+    
+            var marker_4fec682022f0fc3a9479c414a4ea6980 = L.marker(
+                [-7.981187, 112.909193],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_4bb78d8e2ee8dd2a83473328e18b02f7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_4fec682022f0fc3a9479c414a4ea6980.setIcon(icon_4bb78d8e2ee8dd2a83473328e18b02f7);
+        
+    
+        var popup_bbf1650f73cb58dda7655ae22d1b57a2 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_4ce194fef3ac6012dcc34d7ef80e2b41 = $(`<div id="html_4ce194fef3ac6012dcc34d7ef80e2b41" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Aplikasi Teknologi Kemasan pada Usaha Mikro Kecil dan Menengah (PKK MANGLUNG DESA NGADAS) Produk Sari Terong sebagai Produk Unggulan Desa Adat Ngadas, Kecamatan Poncokusumo, Kabupaten Malang</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> ENDRIKA WIDYASTUTI, S.Pt., M.Sc., M.P., Ph.D.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> Desa Ngadas<br>             <b>Lokasi Mitra:</b> Poncokusumo, KAB. MALANG<br>             <b>Koordinat:</b> -7.981187, 112.909193         </div>         </div>`)[0];
+                popup_bbf1650f73cb58dda7655ae22d1b57a2.setContent(html_4ce194fef3ac6012dcc34d7ef80e2b41);
+            
+        
+
+        marker_4fec682022f0fc3a9479c414a4ea6980.bindPopup(popup_bbf1650f73cb58dda7655ae22d1b57a2)
+        ;
+
+        
+    
+    
+            var marker_4d009f29bf3b9fc39729b048bcd95c71 = L.marker(
+                [-7.959591, 112.638877],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_b52c0fb4958bda5e5f9e0e0cb5969be0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_4d009f29bf3b9fc39729b048bcd95c71.setIcon(icon_b52c0fb4958bda5e5f9e0e0cb5969be0);
+        
+    
+        var popup_296ad0e663ac03877565445920828459 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7acf8ee08d2a857e9d11f2a75b998847 = $(`<div id="html_7acf8ee08d2a857e9d11f2a75b998847" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>ASESMEN PEMBINAAN KEMANDIRIAN BAGI NAPITER SEBAGAI UPAYA PROGRAM DERADIKALISASI (STUDI DI BAPAS MALANG)</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Dr. SETIAWAN NOERDAJASAKTI, S.H., M.H.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> Jl. Barito No.1, Bunulrejo, Kec. Blimbing, Kota Malang, Jawa Timur 65126<br>             <b>Lokasi Mitra:</b> Blimbing, KOTA MALANG<br>             <b>Koordinat:</b> -7.959591, 112.638877         </div>         </div>`)[0];
+                popup_296ad0e663ac03877565445920828459.setContent(html_7acf8ee08d2a857e9d11f2a75b998847);
+            
+        
+
+        marker_4d009f29bf3b9fc39729b048bcd95c71.bindPopup(popup_296ad0e663ac03877565445920828459)
+        ;
+
+        
+    
+    
+            var marker_b7752ee038e64e0715b7fdb34a2aed5b = L.marker(
+                [-7.743659982949143, 112.15425789356232],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_a98eab9c4c657c4dc5afce221c7466fa = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_b7752ee038e64e0715b7fdb34a2aed5b.setIcon(icon_a98eab9c4c657c4dc5afce221c7466fa);
+        
+    
+        var popup_9850bdab4bd8bec7f228d6351e1a9de0 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_35374b07c4409fee9f1507171041b954 = $(`<div id="html_35374b07c4409fee9f1507171041b954" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Disease Warning System dan Pengembangan Awal Profiling pada Ternak Berbasis AI serta Optimalisasi Pemanfaatan Limbah Jagung sebagai Silase di Desa Tegowangi, Kec. Plemahan. Kab. Kediri</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> drh. GRETANIA RESIDIWATI, M.Si., Ph.D.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> Harjobinangun, Tegowangi, Kec. Plemahan, Kabupaten Kediri, Jawa Timur 64155<br>             <b>Lokasi Mitra:</b> Plemahan, KAB. KEDIRI<br>             <b>Koordinat:</b> -7.743659982949143, 112.15425789356232         </div>         </div>`)[0];
+                popup_9850bdab4bd8bec7f228d6351e1a9de0.setContent(html_35374b07c4409fee9f1507171041b954);
+            
+        
+
+        marker_b7752ee038e64e0715b7fdb34a2aed5b.bindPopup(popup_9850bdab4bd8bec7f228d6351e1a9de0)
+        ;
+
+        
+    
+    
+            var marker_50e01d51be88434d77d5ac34be187f86 = L.marker(
+                [-7.950392450436718, 112.61249899853286],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_317c0292ea93b8f3e282428774888af1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_50e01d51be88434d77d5ac34be187f86.setIcon(icon_317c0292ea93b8f3e282428774888af1);
+        
+    
+        var popup_4e133c6eae6fa7ccd934e0294ed47e60 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_cc1ba5e5df2ee526355b5cf8f2de9e70 = $(`<div id="html_cc1ba5e5df2ee526355b5cf8f2de9e70" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>IMPLEMENTASI PENGELOLAAN HAMA TERPADU EKOLOGIS TANAMAN KENTANG PADA PETANI MILENIAL ABINAYA KOTA BATU</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> LUQMAN QURATA AINI, S.P., M.Si., Ph.D.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> Jl. Raya Sumberbrantas RT 03/RW 06 Dusun Jurang Kuali Desa Sumberbrantas<br>             <b>Lokasi Mitra:</b> Bumiaji, KOTA BATU<br>             <b>Koordinat:</b> -7.950392450436718, 112.61249899853286         </div>         </div>`)[0];
+                popup_4e133c6eae6fa7ccd934e0294ed47e60.setContent(html_cc1ba5e5df2ee526355b5cf8f2de9e70);
+            
+        
+
+        marker_50e01d51be88434d77d5ac34be187f86.bindPopup(popup_4e133c6eae6fa7ccd934e0294ed47e60)
+        ;
+
+        
+    
+    
+            var marker_494837b632d094cac2488adc72bf0338 = L.marker(
+                [-7.866430024142051, 112.51330912113193],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_628d057a8016c4e82ef56cd41facab59 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_494837b632d094cac2488adc72bf0338.setIcon(icon_628d057a8016c4e82ef56cd41facab59);
+        
+    
+        var popup_b4fb5defe6be9fe702bbd95cce65d1f8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2a952897faa90729d0b2349ad5dc92ce = $(`<div id="html_2a952897faa90729d0b2349ad5dc92ce" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>IMPLEMENTASI SCHOOL WATCHING UNTUK MITIGASI DAN PENDIDIKAN KEBENCANAAN USIA DINI DI KOTA BATU</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Prof. SUKIR MARYANTO, S.Si., M.Si., Ph.D.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> Balai Kota Amongtani, Jl. Panglima Sudirman No.507, Pesanggrahan, Kec. Batu, Kota Batu, Jawa Timur 65313<br>             <b>Lokasi Mitra:</b> Batu, KOTA BATU<br>             <b>Koordinat:</b> -7.866430024142051, 112.51330912113193         </div>         </div>`)[0];
+                popup_b4fb5defe6be9fe702bbd95cce65d1f8.setContent(html_2a952897faa90729d0b2349ad5dc92ce);
+            
+        
+
+        marker_494837b632d094cac2488adc72bf0338.bindPopup(popup_b4fb5defe6be9fe702bbd95cce65d1f8)
+        ;
+
+        
+    
+    
+            var marker_7faf58ee867a6861102cf8edfddef918 = L.marker(
+                [-2.5, -2.5],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_c8b2d1d726aa8e278911fbd48607254a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_7faf58ee867a6861102cf8edfddef918.setIcon(icon_c8b2d1d726aa8e278911fbd48607254a);
+        
+    
+        var popup_895cebdc35a137f8f951e2abaea63067 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_5f2ec879518a18a0f17be228a6d3f4d5 = $(`<div id="html_5f2ec879518a18a0f17be228a6d3f4d5" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Induksi Kombinasi Teknologi Sistem Pompa Venturi dan Protein Skimmer dalam Pengelolaan Kualitas Air pada Budaya Udang Vaname dengan Sistem Kolam Bundar</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Dr. FUAD, S.Pi., M.T.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> Perumahan Grand Executive A9  RT/RW :004/004 Kelurahan Perbon&nbsp;Kecamatan&nbsp;Tuban<br>             <b>Lokasi Mitra:</b> Tuban, KAB. TUBAN<br>             <b>Koordinat:</b> -2.5, -2.5         </div>         </div>`)[0];
+                popup_895cebdc35a137f8f951e2abaea63067.setContent(html_5f2ec879518a18a0f17be228a6d3f4d5);
+            
+        
+
+        marker_7faf58ee867a6861102cf8edfddef918.bindPopup(popup_895cebdc35a137f8f951e2abaea63067)
+        ;
+
+        
+    
+    
+            var marker_4fb1c7d07d909496e8d26a0921b62649 = L.marker(
+                [-5.816220509122644, 112.70118713378908],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_dfc271c68ef1da849fc2199346be1a0f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_4fb1c7d07d909496e8d26a0921b62649.setIcon(icon_dfc271c68ef1da849fc2199346be1a0f);
+        
+    
+        var popup_d93706de1c3e3484dc03059f44a60714 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_320d1fc8373f5c5b3dbff00892afd175 = $(`<div id="html_320d1fc8373f5c5b3dbff00892afd175" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>INISIASI HIJAU DAUN MARINE LEARNING CENTER, PUSAT PEMBELAJARAN PESISIR BERBASIS CITIZEN SCIENCE UNTUK PENGEMBANGAN EDUWISATA HIJAU DAUN, PULAU BAWEAN</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Ir. BAMBANG SEMEDI, M.Sc., Ph.D.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> Dusun Daun Laut<br>             <b>Lokasi Mitra:</b> Sangkapura, KAB. GRESIK<br>             <b>Koordinat:</b> -5.816220509122644, 112.70118713378908         </div>         </div>`)[0];
+                popup_d93706de1c3e3484dc03059f44a60714.setContent(html_320d1fc8373f5c5b3dbff00892afd175);
+            
+        
+
+        marker_4fb1c7d07d909496e8d26a0921b62649.bindPopup(popup_d93706de1c3e3484dc03059f44a60714)
+        ;
+
+        
+    
+    
+            var marker_236b82b02db77f141127b11930c3657f = L.marker(
+                [-7.834183269091754, 112.36923577927348],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_b4c1a004cdd573df1fa8fae5bc5e77ce = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_236b82b02db77f141127b11930c3657f.setIcon(icon_b4c1a004cdd573df1fa8fae5bc5e77ce);
+        
+    
+        var popup_c4aa24145028b5efb525138e2372a2ef = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_562d75b83b706a6e8b323d27a49518ea = $(`<div id="html_562d75b83b706a6e8b323d27a49518ea" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>INTRODUKSI SAPI JERSEY DAN INTEGRATED FARMING SYSTEM DI  DI KOPERASI SUMBER MAKMUR NGANTANG</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Prof. Dr. Ir. TRINIL SUSILAWATI, MS., IPU., ASEAN Eng.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> Jl. Raya No 1, Jl. Raya Ngantang, Watukidul, Waturejo, Kec. Ngantang, Kabupaten Malang, Jawa Timur 65392<br>             <b>Lokasi Mitra:</b> Ngantang, KAB. MALANG<br>             <b>Koordinat:</b> -7.834183269091754, 112.36923577927348         </div>         </div>`)[0];
+                popup_c4aa24145028b5efb525138e2372a2ef.setContent(html_562d75b83b706a6e8b323d27a49518ea);
+            
+        
+
+        marker_236b82b02db77f141127b11930c3657f.bindPopup(popup_c4aa24145028b5efb525138e2372a2ef)
+        ;
+
+        
+    
+    
+            var marker_f82673f8fb8fabaf0c8e2bc1e9d9e834 = L.marker(
+                [-6.998384, 112.169239],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_52e916f75367d8f2703bab9e2ae52115 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_f82673f8fb8fabaf0c8e2bc1e9d9e834.setIcon(icon_52e916f75367d8f2703bab9e2ae52115);
+        
+    
+        var popup_586802ac2a94da6193f6dd9e4519b2b9 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e2f45704d95a3b08f3e21472593a4364 = $(`<div id="html_e2f45704d95a3b08f3e21472593a4364" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Introduksi Teknologi Pengolahan Pakan Serat untuk Ternak Ruminansia Menuju Peternakan Berkelanjutan di Kelompok Ternak Gembalang, Kecamatan Widang, Kabupaten Tuban</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Prof. Dr. Ir. IFAR SUBAGIYO, M.Agr.St.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> Desa Sumberjo, Kecamatan Widang, Kab Tuban<br>             <b>Lokasi Mitra:</b> Widang, KAB. TUBAN<br>             <b>Koordinat:</b> -6.998384, 112.169239         </div>         </div>`)[0];
+                popup_586802ac2a94da6193f6dd9e4519b2b9.setContent(html_e2f45704d95a3b08f3e21472593a4364);
+            
+        
+
+        marker_f82673f8fb8fabaf0c8e2bc1e9d9e834.bindPopup(popup_586802ac2a94da6193f6dd9e4519b2b9)
+        ;
+
+        
+    
+    
+            var marker_63392a0dd55753f1cbb3cb58c69066cd = L.marker(
+                [-7.912773603045816, 112.5831162929535],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_54359eccb81f520a189e9d9812770ed8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_63392a0dd55753f1cbb3cb58c69066cd.setIcon(icon_54359eccb81f520a189e9d9812770ed8);
+        
+    
+        var popup_ce6c768fcf4ee79f051f3a7996ea9073 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_5ed622fe21e9d2a8de66db784b161cc0 = $(`<div id="html_5ed622fe21e9d2a8de66db784b161cc0" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>MEKANISASI PETERNAKAN UNGGAS DI PONDOK PESANTREN WIRAUSAHA  DARUL MUTAQIN UNTUK MENINGKATKAN HIGIENISITAS DAN KEMANDIRIAN EKONOMI</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> TEGUH DWI WIDODO, ST., M.Eng., Ph.D<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> Jl. Manggar no 7 Mulyoagung Dau Malang Jawa Timur Indonesia<br>             <b>Lokasi Mitra:</b> Dau, KAB. MALANG<br>             <b>Koordinat:</b> -7.912773603045816, 112.5831162929535         </div>         </div>`)[0];
+                popup_ce6c768fcf4ee79f051f3a7996ea9073.setContent(html_5ed622fe21e9d2a8de66db784b161cc0);
+            
+        
+
+        marker_63392a0dd55753f1cbb3cb58c69066cd.bindPopup(popup_ce6c768fcf4ee79f051f3a7996ea9073)
+        ;
+
+        
+    
+    
+            var marker_aeb9d608fe63d16d126f373df50f657d = L.marker(
+                [-7.922932090203998, 112.57417917251588],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_5a31ca2ac17ba252b9f63c71f3c264ea = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_aeb9d608fe63d16d126f373df50f657d.setIcon(icon_5a31ca2ac17ba252b9f63c71f3c264ea);
+        
+    
+        var popup_75d00fa7825fed0cc25e7981203d8409 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3ccd94aafd01e0151b3145aa715d0c39 = $(`<div id="html_3ccd94aafd01e0151b3145aa715d0c39" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Membangun Kemandirian Pangan dan Pengelolaan Kampung Wisata Berbasis Urban Farming</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Dr. TRI WAHYU NUGROHO, S.P., M.Si.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> Jl. Raya Mulyoagung 143. Malang<br>             <b>Lokasi Mitra:</b> Dau, KAB. MALANG<br>             <b>Koordinat:</b> -7.922932090203998, 112.57417917251588         </div>         </div>`)[0];
+                popup_75d00fa7825fed0cc25e7981203d8409.setContent(html_3ccd94aafd01e0151b3145aa715d0c39);
+            
+        
+
+        marker_aeb9d608fe63d16d126f373df50f657d.bindPopup(popup_75d00fa7825fed0cc25e7981203d8409)
+        ;
+
+        
+    
+    
+            var marker_d83847383327ba33181749ab27c5aa94 = L.marker(
+                [-7.974621423467755, 112.63744336735502],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_248505dc3ec381f31d557e1fff723e2a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_d83847383327ba33181749ab27c5aa94.setIcon(icon_248505dc3ec381f31d557e1fff723e2a);
+        
+    
+        var popup_d0f1a4e1d47c114cddee3ed5fbec6584 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e82ee5aafca209b580ebe069f15f82b1 = $(`<div id="html_e82ee5aafca209b580ebe069f15f82b1" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>MODEL PELIBATAN TOKOH AGAMA UNTUK PENCEGAHAN DAN PENANGANAN PERKARA PINJAMAN ONLINE ILEGAL DI MALANG RAYA</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Dr. FACHRIZAL AFANDI, S.Psi., SH., MH.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> Jl. K.H. Hasyim Ashari No. 21, Kauman, Kec. Klojen, Kota Malang, Jawa Timur 65119<br>             <b>Lokasi Mitra:</b> Klojen, KOTA MALANG<br>             <b>Koordinat:</b> -7.974621423467755, 112.63744336735502         </div>         </div>`)[0];
+                popup_d0f1a4e1d47c114cddee3ed5fbec6584.setContent(html_e82ee5aafca209b580ebe069f15f82b1);
+            
+        
+
+        marker_d83847383327ba33181749ab27c5aa94.bindPopup(popup_d0f1a4e1d47c114cddee3ed5fbec6584)
+        ;
+
+        
+    
+    
+            var marker_c7afd627dc1950bd0ebbad68f557f574 = L.marker(
+                [-6.897761393175913, 112.07565307617188],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_f3f151c2afaaef9b1dc4e96b4ad4afed = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_c7afd627dc1950bd0ebbad68f557f574.setIcon(icon_f3f151c2afaaef9b1dc4e96b4ad4afed);
+        
+    
+        var popup_89a53d70b7cac8f9c9f7027196027f3d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_0af990e00463796234ff4292b1b1a4b0 = $(`<div id="html_0af990e00463796234ff4292b1b1a4b0" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>OPTIMALISASI PRODUKSI BENIH UDANG VANAMEI (Litopenaeus vannamei) MELALUI STIMULASI KUALITAS PAKAN ALAMI DI KECAMATAN TUBAN KABUPATEN TUBAN PROVINSI JAWA TIMUR</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Dr. NANIK RETNO BUWONO, S.Pi., MP.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> Kel Sukolilo Gang III, Kec Tuban, Kab Tuban<br>             <b>Lokasi Mitra:</b> Tuban, KAB. TUBAN<br>             <b>Koordinat:</b> -6.897761393175913, 112.07565307617188         </div>         </div>`)[0];
+                popup_89a53d70b7cac8f9c9f7027196027f3d.setContent(html_0af990e00463796234ff4292b1b1a4b0);
+            
+        
+
+        marker_c7afd627dc1950bd0ebbad68f557f574.bindPopup(popup_89a53d70b7cac8f9c9f7027196027f3d)
+        ;
+
+        
+    
+    
+            var marker_84c215e12478fde6e56f6c3ad170a64c = L.marker(
+                [-8.120566209310118, 112.5757276119905],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_950c4359420adca24da8a3014c7b61db = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_84c215e12478fde6e56f6c3ad170a64c.setIcon(icon_950c4359420adca24da8a3014c7b61db);
+        
+    
+        var popup_44561e5486e9e5ce423d246c47eefcd8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_bfa7baa128b36d073b2277a7eeee20e5 = $(`<div id="html_bfa7baa128b36d073b2277a7eeee20e5" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Participatory Action Research: Pendampingan Guru-Guru di Singosari, Kabupaten Malang dalam Meningkatkan Profesionalisme Pengajaran melalui In Service Trainning dalam menyongsong Kawasan Ekonomi Kreatif</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Dr. IVE EMALIANA, S.Pd., M.Pd.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> Jl. Adiwacana No.19 Ardirejo Kepanjen<br>             <b>Lokasi Mitra:</b> Singosari, KAB. MALANG<br>             <b>Koordinat:</b> -8.120566209310118, 112.5757276119905         </div>         </div>`)[0];
+                popup_44561e5486e9e5ce423d246c47eefcd8.setContent(html_bfa7baa128b36d073b2277a7eeee20e5);
+            
+        
+
+        marker_84c215e12478fde6e56f6c3ad170a64c.bindPopup(popup_44561e5486e9e5ce423d246c47eefcd8)
+        ;
+
+        
+    
+    
+            var marker_2048d507f0e1707e5169871563c18399 = L.marker(
+                [-6.874144739930428, 112.39437890046248],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_4f84feb2849ccd85a34250d82954e79f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_2048d507f0e1707e5169871563c18399.setIcon(icon_4f84feb2849ccd85a34250d82954e79f);
+        
+    
+        var popup_765b861d8dd7dfce21b02b82573c30fa = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7189ad07ad5b328c868ec5c363f9984c = $(`<div id="html_7189ad07ad5b328c868ec5c363f9984c" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>PEMANFAATAN LIMBAH KAYU SISA PEMBANGUNAN DAN PERBAIKAN KAPAL IKAN MENJADI KERAJINAN KAYU BERNILAI TINGGI</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Dr. ALI MUNTAHA, A, Pi, S.Pi., MT.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> Jl. Semangu No. 15 Kel. Blimbing Kec. Paciran Kab.  Lamongan, Jawa Timur,<br>             <b>Lokasi Mitra:</b> Paciran, KAB. LAMONGAN<br>             <b>Koordinat:</b> -6.874144739930428, 112.39437890046248         </div>         </div>`)[0];
+                popup_765b861d8dd7dfce21b02b82573c30fa.setContent(html_7189ad07ad5b328c868ec5c363f9984c);
+            
+        
+
+        marker_2048d507f0e1707e5169871563c18399.bindPopup(popup_765b861d8dd7dfce21b02b82573c30fa)
+        ;
+
+        
+    
+    
+            var marker_644cef6c44df295c39b9df98fe12f82d = L.marker(
+                [-7.972809988028002, 112.68198251724245],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_2e8878b8e59d199a67a48ba56cc2db01 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_644cef6c44df295c39b9df98fe12f82d.setIcon(icon_2e8878b8e59d199a67a48ba56cc2db01);
+        
+    
+        var popup_62f81e2e5073fcbd0d938a3491e7b161 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_6f3e328155a65e8009adadbe088503b5 = $(`<div id="html_6f3e328155a65e8009adadbe088503b5" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>PEMANFAATAN PRODUK SAMPING PRODUKSI CUKA APEL SEBAGAI SEDIAAN BAHAN BAKU DAN PRODUK COOKIES di CV. SINAR TIRTA INDONESIA DALAM  UPAYA PENINGKATAN KINERJA EKONOMI MALANG RAYA</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> NURJANNAH, S.Si., M.Phil., Ph.D.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> jalan Danau Genali C3 J7 Perum Sawojajar<br>             <b>Lokasi Mitra:</b> Kedungkandang, KOTA MALANG<br>             <b>Koordinat:</b> -7.972809988028002, 112.68198251724245         </div>         </div>`)[0];
+                popup_62f81e2e5073fcbd0d938a3491e7b161.setContent(html_6f3e328155a65e8009adadbe088503b5);
+            
+        
+
+        marker_644cef6c44df295c39b9df98fe12f82d.bindPopup(popup_62f81e2e5073fcbd0d938a3491e7b161)
+        ;
+
+        
+    
+    
+            var marker_89b7d23678dda20f94d976d6b329427c = L.marker(
+                [-8.347111, 112.842021],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_e21c7c0873dc106b6c0513d0b1ad8161 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_89b7d23678dda20f94d976d6b329427c.setIcon(icon_e21c7c0873dc106b6c0513d0b1ad8161);
+        
+    
+        var popup_8174276d7b0db5f09a45d1c4c4d0325c = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_cbd96c94b4405cb0f24d127d1206b396 = $(`<div id="html_cbd96c94b4405cb0f24d127d1206b396" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Pembentukan Digital Creative Team: Kolaborasi Aktor Masyarakat dan Aktor Potensial dalam Pengembangan Desa Wisata Bahari Bowele</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> REZA SAFITRI, S.Sos., M.Si., Ph.D.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> Jalan Raya Purwodadi Nomor 12 Tirtoyudo, Kab. Malang<br>             <b>Lokasi Mitra:</b> Tirtoyudo, KAB. MALANG<br>             <b>Koordinat:</b> -8.347111, 112.842021         </div>         </div>`)[0];
+                popup_8174276d7b0db5f09a45d1c4c4d0325c.setContent(html_cbd96c94b4405cb0f24d127d1206b396);
+            
+        
+
+        marker_89b7d23678dda20f94d976d6b329427c.bindPopup(popup_8174276d7b0db5f09a45d1c4c4d0325c)
+        ;
+
+        
+    
+    
+            var marker_553bbd865e2a64ebb8d4b5dae54bd150 = L.marker(
+                [-7.042744222918429, 112.76650053879314],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_b3f48a494bec21af31f8bae74643324f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_553bbd865e2a64ebb8d4b5dae54bd150.setIcon(icon_b3f48a494bec21af31f8bae74643324f);
+        
+    
+        var popup_44610d6758e4e8eb21ddcde5e4a0ff93 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_de9375c64dfca1e4506a61d1adf2e430 = $(`<div id="html_de9375c64dfca1e4506a61d1adf2e430" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Pemberdayaan Ekonomi Peternak Plasma PT Arda dan Omid Farm  melalui Aktifitas Feed Entrepreneur di Desa Pangpong, Kecamatan Labang, Kabupaten Bangkalan</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Prof. Dr. Ir. KUSMARTONO<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> JL SAMUDRA NO 44<br>             <b>Lokasi Mitra:</b> Labang, KAB. BANGKALAN<br>             <b>Koordinat:</b> -7.042744222918429, 112.76650053879314         </div>         </div>`)[0];
+                popup_44610d6758e4e8eb21ddcde5e4a0ff93.setContent(html_de9375c64dfca1e4506a61d1adf2e430);
+            
+        
+
+        marker_553bbd865e2a64ebb8d4b5dae54bd150.bindPopup(popup_44610d6758e4e8eb21ddcde5e4a0ff93)
+        ;
+
+        
+    
+    
+            var marker_9cb3e7754518a861c92fbbc9c9ebdfb0 = L.marker(
+                [-7.020165903193704, 112.74886970851256],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_7d74152db4b300840db716fb68c6b4e5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_9cb3e7754518a861c92fbbc9c9ebdfb0.setIcon(icon_7d74152db4b300840db716fb68c6b4e5);
+        
+    
+        var popup_0227717dcb02436c0c1128b279200411 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_5bb486dc28650a11bf96c8497c5e95f5 = $(`<div id="html_5bb486dc28650a11bf96c8497c5e95f5" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>PEMBERDAYAAN KADER PEREMPUAN KOPERASI NELAYAN DALAM MENGOLAH LIMBAH CANGKANG KERANG KORKOR DAN GELATIK MENJADI TEPUNG KAYA KALSIUM</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Dr. ANISYAH ACHMAD, S.Si., Apt., Sp.FRS.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> Pertempuran Pejagan Bangkalan<br>             <b>Lokasi Mitra:</b> Bangkalan, KAB. BANGKALAN<br>             <b>Koordinat:</b> -7.020165903193704, 112.74886970851256         </div>         </div>`)[0];
+                popup_0227717dcb02436c0c1128b279200411.setContent(html_5bb486dc28650a11bf96c8497c5e95f5);
+            
+        
+
+        marker_9cb3e7754518a861c92fbbc9c9ebdfb0.bindPopup(popup_0227717dcb02436c0c1128b279200411)
+        ;
+
+        
+    
+    
+            var marker_5c8d7c4de1ea6d0896c3b3d5d3f8c5fb = L.marker(
+                [-7.954343093596726, 112.61045336723328],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_b8598439144729b15a2d92055c09c090 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_5c8d7c4de1ea6d0896c3b3d5d3f8c5fb.setIcon(icon_b8598439144729b15a2d92055c09c090);
+        
+    
+        var popup_7676ae0d9fe5ae23c9dd4f89badd7895 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a3f75a74b68712982898a292c2732cf2 = $(`<div id="html_a3f75a74b68712982898a292c2732cf2" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Pemberdayaan Kader Persyarikatan Muhammadiyah Kota Malang melalui Penguatan Sistem Informasi Berbasis Web</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Prof. ANANG SUJOKO, S.Sos., M.Si., D.COMM.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> Jl. Gajayana 28 B Malang<br>             <b>Lokasi Mitra:</b> Lowokwaru, KOTA MALANG<br>             <b>Koordinat:</b> -7.954343093596726, 112.61045336723328         </div>         </div>`)[0];
+                popup_7676ae0d9fe5ae23c9dd4f89badd7895.setContent(html_a3f75a74b68712982898a292c2732cf2);
+            
+        
+
+        marker_5c8d7c4de1ea6d0896c3b3d5d3f8c5fb.bindPopup(popup_7676ae0d9fe5ae23c9dd4f89badd7895)
+        ;
+
+        
+    
+    
+            var marker_ad21dbc3a28ebb84365c86360e4c3570 = L.marker(
+                [-7.914065732484984, 112.57684188112684],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_e1e468e9439b57a08991b3862175aa84 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_ad21dbc3a28ebb84365c86360e4c3570.setIcon(icon_e1e468e9439b57a08991b3862175aa84);
+        
+    
+        var popup_e98fbf0d36f9eb5f37d750fa0ba95c25 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a2f6d19d4dab472daf75fad6466933ce = $(`<div id="html_a2f6d19d4dab472daf75fad6466933ce" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Pemberdayaan Komunitas PKK Produktif melalui Produksi Pelet Ikan Lele sebagai Pakan Alternatif serta Olahan Ikan Lele di RW 09 Dusun Karang mloko, Kelurahan Dadaprejo, Kecamatan Junrejo, Kota Batu</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Prof. Dr. Ir. BAMBANG DWI ARGO, DEA.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> RW. 09, Dusun Karangmloko, Kecamatan Junrejo, Kota Batu, Jawa Timur<br>             <b>Lokasi Mitra:</b> Junrejo, KOTA BATU<br>             <b>Koordinat:</b> -7.914065732484984, 112.57684188112684         </div>         </div>`)[0];
+                popup_e98fbf0d36f9eb5f37d750fa0ba95c25.setContent(html_a2f6d19d4dab472daf75fad6466933ce);
+            
+        
+
+        marker_ad21dbc3a28ebb84365c86360e4c3570.bindPopup(popup_e98fbf0d36f9eb5f37d750fa0ba95c25)
+        ;
+
+        
+    
+    
+            var marker_acf8609e2e4e45344cddf0bbb522535d = L.marker(
+                [-7.804532786614343, 111.994613885945],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_ad42fa2ff9fd93c7cab8693ad03aa223 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_acf8609e2e4e45344cddf0bbb522535d.setIcon(icon_ad42fa2ff9fd93c7cab8693ad03aa223);
+        
+    
+        var popup_08e172c6d0e6fc613e8ec27ed7d66373 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7fdcb37947c3d3501dd23660d201e8d1 = $(`<div id="html_7fdcb37947c3d3501dd23660d201e8d1" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>PEMBERDAYAAN PEREMPUAN MELALUI PENINGKATAN KOMPETENSI  PENGOLAHAN DAN MANAJEMEN BANK SAMPAH DI KELURAHAN BUJEL KOTA KEDIRI</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Prof. Dr. SUKARMI, SH., M.Hum.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> Jl. Suparjan Mangun Wijaya No.79, Bujel, Mojoroto,<br>             <b>Lokasi Mitra:</b> Mojoroto, KOTA KEDIRI<br>             <b>Koordinat:</b> -7.804532786614343, 111.994613885945         </div>         </div>`)[0];
+                popup_08e172c6d0e6fc613e8ec27ed7d66373.setContent(html_7fdcb37947c3d3501dd23660d201e8d1);
+            
+        
+
+        marker_acf8609e2e4e45344cddf0bbb522535d.bindPopup(popup_08e172c6d0e6fc613e8ec27ed7d66373)
+        ;
+
+        
+    
+    
+            var marker_139d7f93a3f001763b2c99152ae04716 = L.marker(
+                [-7.986467746037101, 112.6985263824463],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_e2c25af4557316fe4b6751473b1a9dc3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_139d7f93a3f001763b2c99152ae04716.setIcon(icon_e2c25af4557316fe4b6751473b1a9dc3);
+        
+    
+        var popup_f8696424f4371ecd75984dfbc4b2aa2c = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_5c15899fd6c0a0e8abe4fe7465224d02 = $(`<div id="html_5c15899fd6c0a0e8abe4fe7465224d02" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>PENATAAN KELEMBAGAAN TERPADU BERBASIS RESIPROSITAS (P-KTR)  PADA KAWASAN PEDESAAN</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Dr. AHMAD IMRON ROZULI, S.E., M.Si.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> Jl. Raya Kedungrejo No. 145, Kecamatan Pakis, Kabupaten Malang<br>             <b>Lokasi Mitra:</b> Pakis, KAB. MALANG<br>             <b>Koordinat:</b> -7.986467746037101, 112.6985263824463         </div>         </div>`)[0];
+                popup_f8696424f4371ecd75984dfbc4b2aa2c.setContent(html_5c15899fd6c0a0e8abe4fe7465224d02);
+            
+        
+
+        marker_139d7f93a3f001763b2c99152ae04716.bindPopup(popup_f8696424f4371ecd75984dfbc4b2aa2c)
+        ;
+
+        
+    
+    
+            var marker_8487b2fcdb2cfa88a17e6455c1be7cc4 = L.marker(
+                [-7.924052346074051, 112.46438026428224],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_303330701406e3cdb1d2e0589443184f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_8487b2fcdb2cfa88a17e6455c1be7cc4.setIcon(icon_303330701406e3cdb1d2e0589443184f);
+        
+    
+        var popup_1d4eb543c7a3fdb988943cd43555664e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_0494aff193e0f38446bfddda5584b08f = $(`<div id="html_0494aff193e0f38446bfddda5584b08f" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>PENDAMPINGAN INOVASI TEKNOLOGI UNTUK PENINGKATAN PRODUKSI PUPUK ORGANIK KELOMPOK TANI SRINTHIL SUBUR MANDIRI DI DESA KUCUR, KECAMATAN DAU, KABUPATEN MALANG</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Dr. Ir. SETYONO YUDO TYASMORO, M.S.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> Desa Kucur, Kecamatan Dau, Kabupaten Malang<br>             <b>Lokasi Mitra:</b> Dau, KAB. MALANG<br>             <b>Koordinat:</b> -7.924052346074051, 112.46438026428224         </div>         </div>`)[0];
+                popup_1d4eb543c7a3fdb988943cd43555664e.setContent(html_0494aff193e0f38446bfddda5584b08f);
+            
+        
+
+        marker_8487b2fcdb2cfa88a17e6455c1be7cc4.bindPopup(popup_1d4eb543c7a3fdb988943cd43555664e)
+        ;
+
+        
+    
+    
+            var marker_62871fffb4bad6defd00d8c975d9bd7c = L.marker(
+                [-7.903236173533267, 112.6631115431614],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_485cb575e31df738e3cf1a0e2cc72629 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_62871fffb4bad6defd00d8c975d9bd7c.setIcon(icon_485cb575e31df738e3cf1a0e2cc72629);
+        
+    
+        var popup_d0a74410e4d138a8c4d616a9056a03fe = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_084f0fab95b64df4961a15f4f31787d7 = $(`<div id="html_084f0fab95b64df4961a15f4f31787d7" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>PENDAMPINGAN MASYARAKAT DALAM PENGELOLAAN LIMBAH PERTANIAN MENUJU MANDIRI SAMPAH DI DESA TULUNGREJO KOTA BATU</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Prof. Dr. Ir. KEPPI SUKESI, M.S.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> Perum Persada Bhayangkara Blok L-K Pagentan, Kec. Singosari, Kab. Malang<br>             <b>Lokasi Mitra:</b> Singosari, KAB. MALANG<br>             <b>Koordinat:</b> -7.903236173533267, 112.6631115431614         </div>         </div>`)[0];
+                popup_d0a74410e4d138a8c4d616a9056a03fe.setContent(html_084f0fab95b64df4961a15f4f31787d7);
+            
+        
+
+        marker_62871fffb4bad6defd00d8c975d9bd7c.bindPopup(popup_d0a74410e4d138a8c4d616a9056a03fe)
+        ;
+
+        
+    
+    
+            var marker_69393377f15f5375ad4b7a1511714c46 = L.marker(
+                [-6.894749096437501, 112.08877980709076],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_4f77668d7c2039dc16c614ab37f4adbf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_69393377f15f5375ad4b7a1511714c46.setIcon(icon_4f77668d7c2039dc16c614ab37f4adbf);
+        
+    
+        var popup_e2518706d7aafe1999d193bbcbe8e3fd = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_44251330899fa833f6b645021de5cf3e = $(`<div id="html_44251330899fa833f6b645021de5cf3e" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>PENDAMPINGAN PEMAHAMAN HUKUM DAN MITIGASI PERMASALAHAN HUKUM DI KAWASAN WISATA PANTAI KELAPA</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> RIKA KURNIATY, SH., MA., Ph.D..<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> Jl. Raya Gresik KM 1 Kel. Payuran, Kec. Palang Tuban<br>             <b>Lokasi Mitra:</b> Palang, KAB. TUBAN<br>             <b>Koordinat:</b> -6.894749096437501, 112.08877980709076         </div>         </div>`)[0];
+                popup_e2518706d7aafe1999d193bbcbe8e3fd.setContent(html_44251330899fa833f6b645021de5cf3e);
+            
+        
+
+        marker_69393377f15f5375ad4b7a1511714c46.bindPopup(popup_e2518706d7aafe1999d193bbcbe8e3fd)
+        ;
+
+        
+    
+    
+            var marker_06d875c384e5ad105fcc4541bc126081 = L.marker(
+                [-8.031554, 112.799063],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_7784d8f53437e5992c2d8bfb049eff3a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_06d875c384e5ad105fcc4541bc126081.setIcon(icon_7784d8f53437e5992c2d8bfb049eff3a);
+        
+    
+        var popup_ef6b3c017bb8a6057555f07e17884718 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_de74ec798443dd87e58fca0e9a7156bd = $(`<div id="html_de74ec798443dd87e58fca0e9a7156bd" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>PENDAMPINGAN PEMANFAATAN KOTORAN AYAM MENJADI PAKAN TERNAK DAN  PUPUK ORGANIK MELALUI BUDIDAYA MAGGOT DI UKM SIGMA TELUR,  KECAMATAN PONCOKUSUMO, KABUPATEN MALANG</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Prof. Dr. Ir. NUR HIDAYAT, MP.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> Jalan Kunci Utara<br>             <b>Lokasi Mitra:</b> Poncokusumo, KAB. MALANG<br>             <b>Koordinat:</b> -8.031554, 112.799063         </div>         </div>`)[0];
+                popup_ef6b3c017bb8a6057555f07e17884718.setContent(html_de74ec798443dd87e58fca0e9a7156bd);
+            
+        
+
+        marker_06d875c384e5ad105fcc4541bc126081.bindPopup(popup_ef6b3c017bb8a6057555f07e17884718)
+        ;
+
+        
+    
+    
+            var marker_8d12f012cde908d35ffc03b279bdb582 = L.marker(
+                [-7.9036945884210175, 112.84198212878056],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_056b6c7f899bf1ec5e3e395a5cc8cd26 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_8d12f012cde908d35ffc03b279bdb582.setIcon(icon_056b6c7f899bf1ec5e3e395a5cc8cd26);
+        
+    
+        var popup_7710a0eebaa615440b5c7ede181efb28 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_03130d00b6ca927a408287036c2bd51b = $(`<div id="html_03130d00b6ca927a408287036c2bd51b" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Pendampingan Perbaikan Keamanan, Kualitas, dan Kehalalan Kerupuk  Produksi UMK di Desa Andonosari, Kecamatan Tutur, Kabupaten Pasuruan</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Prof. Dr. SUCIPTO, S.TP., M.P.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> Jl. Raya Andonosari Dusun Krajan III RT 004 RW 002<br>             <b>Lokasi Mitra:</b> Tutur, KAB. PASURUAN<br>             <b>Koordinat:</b> -7.9036945884210175, 112.84198212878056         </div>         </div>`)[0];
+                popup_7710a0eebaa615440b5c7ede181efb28.setContent(html_03130d00b6ca927a408287036c2bd51b);
+            
+        
+
+        marker_8d12f012cde908d35ffc03b279bdb582.bindPopup(popup_7710a0eebaa615440b5c7ede181efb28)
+        ;
+
+        
+    
+    
+            var marker_9a8aa9cb78677b99495f669f471d640f = L.marker(
+                [-7.879706021125525, 112.36404418945314],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_8a82b4df52d636d8b7935bc6b85b6348 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_9a8aa9cb78677b99495f669f471d640f.setIcon(icon_8a82b4df52d636d8b7935bc6b85b6348);
+        
+    
+        var popup_cc5d5c607e8c909804d66e987ce97547 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_26f3bceb4edd9fc19fbb8f60d11c3688 = $(`<div id="html_26f3bceb4edd9fc19fbb8f60d11c3688" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>PENDIRIAN BANK KOTORAN SAPI PERAH UNTUK PRODUKSI PUPUK KOMPOS  SEBAGAI MODEL MENGATASI MASALAH LIMBAH PETERNAKAN SAPI PERAH</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Dr. Ir. MARJUKI, M.Sc.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> JI. Raya Waturejo Ngantang Kabupaten Malang<br>             <b>Lokasi Mitra:</b> Ngantang, KAB. MALANG<br>             <b>Koordinat:</b> -7.879706021125525, 112.36404418945314         </div>         </div>`)[0];
+                popup_cc5d5c607e8c909804d66e987ce97547.setContent(html_26f3bceb4edd9fc19fbb8f60d11c3688);
+            
+        
+
+        marker_9a8aa9cb78677b99495f669f471d640f.bindPopup(popup_cc5d5c607e8c909804d66e987ce97547)
+        ;
+
+        
+    
+    
+            var marker_b6c4780bc88f4250944ebcc1850a06d7 = L.marker(
+                [-8.155411815504905, 111.57875060685912],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_90b3c2b425fb2eada81d835119b3378e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_b6c4780bc88f4250944ebcc1850a06d7.setIcon(icon_90b3c2b425fb2eada81d835119b3378e);
+        
+    
+        var popup_23549342ab6110593c8523fa5ed269eb = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_da7056d86423debc319b2f9ccae55636 = $(`<div id="html_da7056d86423debc319b2f9ccae55636" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Penerapan Slow Sand Filter dan Pemetaan Jaringan Air Bersih Untuk Mencukupi Kebutuhan Air Bagi Masyarakat Sumberbening Trenggalek</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Ir. DIAN SISINGGIH, ST., MT., Ph.D.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> Jl. Raya Trenggalek - Dongko KM. 27 Sumberbening<br>             <b>Lokasi Mitra:</b> Dongko, KAB. TRENGGALEK<br>             <b>Koordinat:</b> -8.155411815504905, 111.57875060685912         </div>         </div>`)[0];
+                popup_23549342ab6110593c8523fa5ed269eb.setContent(html_da7056d86423debc319b2f9ccae55636);
+            
+        
+
+        marker_b6c4780bc88f4250944ebcc1850a06d7.bindPopup(popup_23549342ab6110593c8523fa5ed269eb)
+        ;
+
+        
+    
+    
+            var marker_6e414093bcb458c49142bbe8d2f2c62d = L.marker(
+                [-8.268004872329731, 111.42785858659668],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_aac2fe810590141e42eb05e39c02becb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_6e414093bcb458c49142bbe8d2f2c62d.setIcon(icon_aac2fe810590141e42eb05e39c02becb);
+        
+    
+        var popup_0e689d986e7b09110b56fd13c2b90398 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2b6629c2e03b8d345b9eedc7225ff2a5 = $(`<div id="html_2b6629c2e03b8d345b9eedc7225ff2a5" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>PENGELOLAAN JASA WISATA BAHARI  SEBAGAI DAYA TARIK WISATAWAN DI KONSERVASI PENYU TAMAN KILIKILI KABUPATEN TRENGGALEK</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Dr.Ir. GATUT BINTORO, M.Sc.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> Dusun Bendogolor, Desa Wonocoyo Kecamatan Panggul Kabupaten Trenggalek<br>             <b>Lokasi Mitra:</b> Panggul, KAB. TRENGGALEK<br>             <b>Koordinat:</b> -8.268004872329731, 111.42785858659668         </div>         </div>`)[0];
+                popup_0e689d986e7b09110b56fd13c2b90398.setContent(html_2b6629c2e03b8d345b9eedc7225ff2a5);
+            
+        
+
+        marker_6e414093bcb458c49142bbe8d2f2c62d.bindPopup(popup_0e689d986e7b09110b56fd13c2b90398)
+        ;
+
+        
+    
+    
+            var marker_999c4f4a04d89bef8be0d968c5bd1710 = L.marker(
+                [-7.696543296793535, 112.30465522985293],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_208d18b2e28896b8c9b9f66c29a570fd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_999c4f4a04d89bef8be0d968c5bd1710.setIcon(icon_208d18b2e28896b8c9b9f66c29a570fd);
+        
+    
+        var popup_d7dc057356a6f99d057d8789bf42410a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_5ae7aee3faa72e3d9f150be761792e76 = $(`<div id="html_5ae7aee3faa72e3d9f150be761792e76" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Pengelolaan Sampah Melalui pemberdayaan komunitas masyarakat di desa wisata pandansili dalam upaya mengurangi penumpukan limbah dan pencemaran lingkungan</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Dr. ROSIHAN ASMARA, S.E., M.P.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> Dusun Sumberdadi RT 01/ RW 05 Desa Ngampungan Kecamatan Bareng Kabupaten Jombang<br>             <b>Lokasi Mitra:</b> Bareng, KAB. JOMBANG<br>             <b>Koordinat:</b> -7.696543296793535, 112.30465522985293         </div>         </div>`)[0];
+                popup_d7dc057356a6f99d057d8789bf42410a.setContent(html_5ae7aee3faa72e3d9f150be761792e76);
+            
+        
+
+        marker_999c4f4a04d89bef8be0d968c5bd1710.bindPopup(popup_d7dc057356a6f99d057d8789bf42410a)
+        ;
+
+        
+    
+    
+            var marker_32d654c97f0a6a5ede0fdf1f9c5cb465 = L.marker(
+                [-8.088888, 111.451437],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_f8f16569000ade9701be50ff7f6b923b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_32d654c97f0a6a5ede0fdf1f9c5cb465.setIcon(icon_f8f16569000ade9701be50ff7f6b923b);
+        
+    
+        var popup_988d13e55f30eae9a7c487db1835ade4 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3954e6a649d73699109b026ef2ab9759 = $(`<div id="html_3954e6a649d73699109b026ef2ab9759" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>PENGEMBANGAN AGROINDUSTRI PORANG SEBAGAI KOMODITAS UNGGULAN KABUPATEN PONOROGO</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Prof. Dr. Ir. MUSTHOFA LUTFI, M.P.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> Baosan Kidul<br>             <b>Lokasi Mitra:</b> Ngrayun, KAB. PONOROGO<br>             <b>Koordinat:</b> -8.088888, 111.451437         </div>         </div>`)[0];
+                popup_988d13e55f30eae9a7c487db1835ade4.setContent(html_3954e6a649d73699109b026ef2ab9759);
+            
+        
+
+        marker_32d654c97f0a6a5ede0fdf1f9c5cb465.bindPopup(popup_988d13e55f30eae9a7c487db1835ade4)
+        ;
+
+        
+    
+    
+            var marker_faeb8ca9d2c66ff1b6a7ec793f7664a9 = L.marker(
+                [-8.223371445151686, 111.93750381586143],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_b8af0f3c6cb4dddbe3ebf7b3a1d6bb43 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_faeb8ca9d2c66ff1b6a7ec793f7664a9.setIcon(icon_b8af0f3c6cb4dddbe3ebf7b3a1d6bb43);
+        
+    
+        var popup_bc25bbc70d9f9088dbf330c796ee2c7a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e3c362cf40f05612accee0cb57ef5bda = $(`<div id="html_e3c362cf40f05612accee0cb57ef5bda" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>PENGEMBANGAN DAN MITIGASI RISIKO KAWASAN EKOWISATA  DESA KALIBATUR DALAM MENDUKUNG PEREKONOMIAN  MASYARAKAT PESISIR PANTAI SELATAN  KABUPATEN TULUNGAGUNG</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Prof. Dr. Ir. QOMARIYATUS SHOLIHAH, S.T., M.Kes.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> Dusun Dawung RT.03 RW.03<br>             <b>Lokasi Mitra:</b> Kalidawir, KAB. TULUNGAGUNG<br>             <b>Koordinat:</b> -8.223371445151686, 111.93750381586143         </div>         </div>`)[0];
+                popup_bc25bbc70d9f9088dbf330c796ee2c7a.setContent(html_e3c362cf40f05612accee0cb57ef5bda);
+            
+        
+
+        marker_faeb8ca9d2c66ff1b6a7ec793f7664a9.bindPopup(popup_bc25bbc70d9f9088dbf330c796ee2c7a)
+        ;
+
+        
+    
+    
+            var marker_0d40f91c8a25ff3f5a87107fde355091 = L.marker(
+                [-8.013796320894402, 112.18774179541911],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_184fcbe0b7a6ad6f261e284e3c82edb4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_0d40f91c8a25ff3f5a87107fde355091.setIcon(icon_184fcbe0b7a6ad6f261e284e3c82edb4);
+        
+    
+        var popup_9143e322aebbb1b5ecc8ce56c2aa3278 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_fb230adcab01c901ad365a9f34d0782c = $(`<div id="html_fb230adcab01c901ad365a9f34d0782c" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Pengembangan Ekonomi Kreatif BUMDes melalui Pengolahan Produk Buah Manggis dengan Pendekatan Zero Waste Processing</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Dr. DODYK PRANOWO, STP., M.Si.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> Jl. Mastrip no. 12<br>             <b>Lokasi Mitra:</b> Nglegok, KAB. BLITAR<br>             <b>Koordinat:</b> -8.013796320894402, 112.18774179541911         </div>         </div>`)[0];
+                popup_9143e322aebbb1b5ecc8ce56c2aa3278.setContent(html_fb230adcab01c901ad365a9f34d0782c);
+            
+        
+
+        marker_0d40f91c8a25ff3f5a87107fde355091.bindPopup(popup_9143e322aebbb1b5ecc8ce56c2aa3278)
+        ;
+
+        
+    
+    
+            var marker_94e2b4e10ef1b3416fd2f3521ae5cce4 = L.marker(
+                [-7.752321623925384, 113.51750135421752],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_84161b98dc7a838a717bee52bf85bc98 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_94e2b4e10ef1b3416fd2f3521ae5cce4.setIcon(icon_84161b98dc7a838a717bee52bf85bc98);
+        
+    
+        var popup_f129f5927ea237e793b82559a06119df = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_354101f678b2ba15801e940a453a6686 = $(`<div id="html_354101f678b2ba15801e940a453a6686" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Pengembangan Home Garden Dengan Sistem Drip Irigasi Sebagai Upaya Pengingkatan Ketahanan Pangan Masyarakat Pedesaan Di Kabupaten Probolinggo</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Prof. Dr. Ir. NUHFIL HANANI AR., M.S.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> Desa Kedung Rejoso, Kecamatan Kotaanyar, Kabupaten Probolinggo<br>             <b>Lokasi Mitra:</b> Kotaanyar, KAB. PROBOLINGGO<br>             <b>Koordinat:</b> -7.752321623925384, 113.51750135421752         </div>         </div>`)[0];
+                popup_f129f5927ea237e793b82559a06119df.setContent(html_354101f678b2ba15801e940a453a6686);
+            
+        
+
+        marker_94e2b4e10ef1b3416fd2f3521ae5cce4.bindPopup(popup_f129f5927ea237e793b82559a06119df)
+        ;
+
+        
+    
+    
+            var marker_37ed5ba9792e309eb7a61aa350243c2f = L.marker(
+                [-7.8934153145136765, 112.90878295549192],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_f2b1c90bc8bb63ffa9d0c9bd0b945c57 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_37ed5ba9792e309eb7a61aa350243c2f.setIcon(icon_f2b1c90bc8bb63ffa9d0c9bd0b945c57);
+        
+    
+        var popup_ebb3a928676588df965a27de77607722 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_32e473fa3b19c49ee3eecfa8b10609d1 = $(`<div id="html_32e473fa3b19c49ee3eecfa8b10609d1" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>PENGEMBANGAN KAWASAN PARIWISATA STRATEGIS NASIONAL:  Edelweiss Sebagai Media Konservasi dan Budaya Masyarakat Tengger</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Prof. Dr. MOH. FADLI, SH., M.Hum.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> Desa Wonokitri<br>             <b>Lokasi Mitra:</b> Tosari, KAB. PASURUAN<br>             <b>Koordinat:</b> -7.8934153145136765, 112.90878295549192         </div>         </div>`)[0];
+                popup_ebb3a928676588df965a27de77607722.setContent(html_32e473fa3b19c49ee3eecfa8b10609d1);
+            
+        
+
+        marker_37ed5ba9792e309eb7a61aa350243c2f.bindPopup(popup_ebb3a928676588df965a27de77607722)
+        ;
+
+        
+    
+    
+            var marker_444e8f84160b485b1e461508160624e2 = L.marker(
+                [-8.1891285, 113.6952322],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_3a7347e136d58de096bdad0fe1a94464 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_444e8f84160b485b1e461508160624e2.setIcon(icon_3a7347e136d58de096bdad0fe1a94464);
+        
+    
+        var popup_46f91cb370cd2c46504e5e5d03030fc2 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_0f829f727cc11d2018275ad38d5cdbe9 = $(`<div id="html_0f829f727cc11d2018275ad38d5cdbe9" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>PENGEMBANGAN PRODUK UNGGULAN KREATIF  BERBASIS  KEARIFAN LOKAL MELALUI INOVASI DAN  DISEMINASI TEKNOLOGI PRODUKSI DAN LIMBAH BATIK DI DESA PENYANGGA MERU BETIRI,KAB. JEMBER</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Dr. EUIS ELIH NURLAELIH, SP., M.Si.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> Jl Sriwijaya 53 Jember<br>             <b>Lokasi Mitra:</b> Sumbersari, KAB. JEMBER<br>             <b>Koordinat:</b> -8.1891285, 113.6952322         </div>         </div>`)[0];
+                popup_46f91cb370cd2c46504e5e5d03030fc2.setContent(html_0f829f727cc11d2018275ad38d5cdbe9);
+            
+        
+
+        marker_444e8f84160b485b1e461508160624e2.bindPopup(popup_46f91cb370cd2c46504e5e5d03030fc2)
+        ;
+
+        
+    
+    
+            var marker_8b7885fac41aef2451c32d9300a8185d = L.marker(
+                [-7.935630996208197, 112.61951593068906],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_b97a7f9c9408d4d5feb6575582b4b7da = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_8b7885fac41aef2451c32d9300a8185d.setIcon(icon_b97a7f9c9408d4d5feb6575582b4b7da);
+        
+    
+        var popup_1472539d00b61d1069b300113292aacc = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e43276cd34e5f77c1fef38a04281a213 = $(`<div id="html_e43276cd34e5f77c1fef38a04281a213" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Pengembangan Sistem Infomasi Profil Pondok Pesantren Mondok Yuk di Kota Malang</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Dr. ABD. QADIR MUSLIM, S.Pd.I., M.Pd.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> Jl. Candi Panggung No.58, Mojolangu, Kec. Lowokwaru, Kota Malang, Jawa Timur 65142<br>             <b>Lokasi Mitra:</b> Lowokwaru, KOTA MALANG<br>             <b>Koordinat:</b> -7.935630996208197, 112.61951593068906         </div>         </div>`)[0];
+                popup_1472539d00b61d1069b300113292aacc.setContent(html_e43276cd34e5f77c1fef38a04281a213);
+            
+        
+
+        marker_8b7885fac41aef2451c32d9300a8185d.bindPopup(popup_1472539d00b61d1069b300113292aacc)
+        ;
+
+        
+    
+    
+            var marker_6c539f7e0c07a353fe53137c414cab02 = L.marker(
+                [-7.180739465073054, 113.05219103878667],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_1347111467638f2b9b9332169f6ede96 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_6c539f7e0c07a353fe53137c414cab02.setIcon(icon_1347111467638f2b9b9332169f6ede96);
+        
+    
+        var popup_e70086e3bffba261f991dfa3a3f8e13e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_cb71861cc2980361a330e63384e0fc18 = $(`<div id="html_cb71861cc2980361a330e63384e0fc18" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>PENGEMBANGAN SKEMA RANGKAIAN KELISTRIKAN PADA SISTEM PENYEDIA AIR BERSIH BERBASIS TEKNOLOGI PHOTOVOLTAIC UNTUK MENDUKUNG PENINGKATAN IPM (INDEX PEMBANGUNAN MANUSIA) BAGI MASYARAKAT DUSUN ASEMBERIT KABUPATEN SAMPANG MADURA</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Dr. FAKHRIY HARIO PARTIANSYAH, ST., MT., IPM.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> Dusun Asemberit, Desa Bundah<br>             <b>Lokasi Mitra:</b> Sreseh, KAB. SAMPANG<br>             <b>Koordinat:</b> -7.180739465073054, 113.05219103878667         </div>         </div>`)[0];
+                popup_e70086e3bffba261f991dfa3a3f8e13e.setContent(html_cb71861cc2980361a330e63384e0fc18);
+            
+        
+
+        marker_6c539f7e0c07a353fe53137c414cab02.bindPopup(popup_e70086e3bffba261f991dfa3a3f8e13e)
+        ;
+
+        
+    
+    
+            var marker_e548ef82def196093783bf185e6a689c = L.marker(
+                [-7.847310035147948, 112.53232061862948],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_88cd0bc0b50b77a301e63e729f92000b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_e548ef82def196093783bf185e6a689c.setIcon(icon_88cd0bc0b50b77a301e63e729f92000b);
+        
+    
+        var popup_5adf2d06fc7818a0e3ebb70f03e3b1dd = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_dd66fc2557c54b381779f280e2f10d46 = $(`<div id="html_dd66fc2557c54b381779f280e2f10d46" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Pengembangan Sumber Daya Keluarga dan Penguatan Kader Posyandu dalam Upaya Pencegahan dan Penanggulangan Stunting di Desa Bulukerto, Kecamatan Bumiaji, Kota Batu</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> ANIF FATMA CHAWA, S.Sos., M.Si., Ph.D.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> Jl. Kenanga No. 15 Bulukerto, Kota Batu, Jawa Timur<br>             <b>Lokasi Mitra:</b> Bumiaji, KOTA BATU<br>             <b>Koordinat:</b> -7.847310035147948, 112.53232061862948         </div>         </div>`)[0];
+                popup_5adf2d06fc7818a0e3ebb70f03e3b1dd.setContent(html_dd66fc2557c54b381779f280e2f10d46);
+            
+        
+
+        marker_e548ef82def196093783bf185e6a689c.bindPopup(popup_5adf2d06fc7818a0e3ebb70f03e3b1dd)
+        ;
+
+        
+    
+    
+            var marker_2428292bef402f712d31824f7583440d = L.marker(
+                [-7.9622816204078255, 112.61227369305745],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_cddbe6d820510e800c92c25a7f3205af = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_2428292bef402f712d31824f7583440d.setIcon(icon_cddbe6d820510e800c92c25a7f3205af);
+        
+    
+        var popup_afd46f674e466b3858e8d3f469de92c7 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_01539ec6a7084e97eb12483c24ac6c44 = $(`<div id="html_01539ec6a7084e97eb12483c24ac6c44" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>PENGUATAN KEGIATAN URBAN FARMING DI SEKOLAH DASAR DAN MENENGAH DI KOTA MALANG MELALUI SISTEM PEMBANGKIT LISTRIK TENAGA SURYA</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Dr. Ir. PUTU HADI SETYARINI, ST., MT.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> Jl Bendungan Wonorejo 1A<br>             <b>Lokasi Mitra:</b> Sukun, KOTA MALANG<br>             <b>Koordinat:</b> -7.9622816204078255, 112.61227369305745         </div>         </div>`)[0];
+                popup_afd46f674e466b3858e8d3f469de92c7.setContent(html_01539ec6a7084e97eb12483c24ac6c44);
+            
+        
+
+        marker_2428292bef402f712d31824f7583440d.bindPopup(popup_afd46f674e466b3858e8d3f469de92c7)
+        ;
+
+        
+    
+    
+            var marker_6caec27bb4efb57b6f6b41ec58763460 = L.marker(
+                [-7.851939658296122, 112.2998738917654],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_9394b054ef25cbfa11add2985d5d5cfd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_6caec27bb4efb57b6f6b41ec58763460.setIcon(icon_9394b054ef25cbfa11add2985d5d5cfd);
+        
+    
+        var popup_7f635af2afc30e71d4359d91975e5689 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a12faa0f08940877873c7c282ada9b24 = $(`<div id="html_a12faa0f08940877873c7c282ada9b24" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>PENGUATAN KELEMBAGAAN PETERNAK DAN INTENSIFIKASI PEMELIHARAAN DOMBA DENGAN PEMANFAATAN SUMBERDAYA ALAM DI DESA BESOWO, KECAMATAN KEPUNG, KABUPATEN KEDIRI</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Dr. ACHADIAH RACHMAWATI, S.Pt., M.Si.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> Desa Besowo, Kecamatan Kepung, Kabupaten Kediri<br>             <b>Lokasi Mitra:</b> Kepung, KAB. KEDIRI<br>             <b>Koordinat:</b> -7.851939658296122, 112.2998738917654         </div>         </div>`)[0];
+                popup_7f635af2afc30e71d4359d91975e5689.setContent(html_a12faa0f08940877873c7c282ada9b24);
+            
+        
+
+        marker_6caec27bb4efb57b6f6b41ec58763460.bindPopup(popup_7f635af2afc30e71d4359d91975e5689)
+        ;
+
+        
+    
+    
+            var marker_331f41183e5055ffe06f7dbcf9b0c1cc = L.marker(
+                [-8.159209788299858, 112.80046820727875],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_c4d57a03e07bab19c78980ad61bf41ec = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_331f41183e5055ffe06f7dbcf9b0c1cc.setIcon(icon_c4d57a03e07bab19c78980ad61bf41ec);
+        
+    
+        var popup_c0c37d4dcbaa87f22bbfea6208f97dc5 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_46507e7da70247881f2eb384640bbf97 = $(`<div id="html_46507e7da70247881f2eb384640bbf97" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Penguatan Kelembagaan Pokdarwis Desa Sumberputih dalam Pengelolaan Hutan Pinus Semeru (HPS) Berbasis Identifikasi dan Pemetaan Harmonisasi Kelembagaan</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Dr. Ir. SOLIMUN, M.S.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> Jl. Arjuno No 67 RT 18 RW 05<br>             <b>Lokasi Mitra:</b> Wajak, KAB. MALANG<br>             <b>Koordinat:</b> -8.159209788299858, 112.80046820727875         </div>         </div>`)[0];
+                popup_c0c37d4dcbaa87f22bbfea6208f97dc5.setContent(html_46507e7da70247881f2eb384640bbf97);
+            
+        
+
+        marker_331f41183e5055ffe06f7dbcf9b0c1cc.bindPopup(popup_c0c37d4dcbaa87f22bbfea6208f97dc5)
+        ;
+
+        
+    
+    
+            var marker_40ca3d66ebd355fcf22990e723959abd = L.marker(
+                [-7.108160542359741, 112.777865705819],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_21bc881d3b95c04bd4620020a967a15a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_40ca3d66ebd355fcf22990e723959abd.setIcon(icon_21bc881d3b95c04bd4620020a967a15a);
+        
+    
+        var popup_75f8d6b382138408f78c54ef91f99a83 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_77846b6091922371504d7a60004c2eaa = $(`<div id="html_77846b6091922371504d7a60004c2eaa" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>PENGUATAN MANAJEMEN PAKAN PADA KELOMPOK PETERNAK SAPI POTONG TANI AGUNG DI DESA DUMAJAH KECAMATAN TANAH MERAH KABUPATEN BANGKALAN</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> MASHUDI,  M.Agr.Sc.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> Desa Dumajah, Kecamatan Tanah Merah, Kabupaten Bangkalan<br>             <b>Lokasi Mitra:</b> Tanah Merah, KAB. BANGKALAN<br>             <b>Koordinat:</b> -7.108160542359741, 112.777865705819         </div>         </div>`)[0];
+                popup_75f8d6b382138408f78c54ef91f99a83.setContent(html_77846b6091922371504d7a60004c2eaa);
+            
+        
+
+        marker_40ca3d66ebd355fcf22990e723959abd.bindPopup(popup_75f8d6b382138408f78c54ef91f99a83)
+        ;
+
+        
+    
+    
+            var marker_9519702844c4ba1bd0242e6cfda68b2d = L.marker(
+                [-7.987809672706208, 112.67830476175732],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_d8bf49f66f50d697ca5b0abadfedb215 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_9519702844c4ba1bd0242e6cfda68b2d.setIcon(icon_d8bf49f66f50d697ca5b0abadfedb215);
+        
+    
+        var popup_f0f057a264baf37169e9619f61062d38 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e170b50ad9caa8d01ccd8bc0a04b485e = $(`<div id="html_e170b50ad9caa8d01ccd8bc0a04b485e" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Penguatan Produktivitas Virgin Coconut Oil melalui Pendampingan Uji Kualitas dan Peningkatan Sarana Prasarana Ruang Produksi KWT Vigur Asri</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Dr. Ir. ERNI YUDANINGTYAS, MT.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> Jl. Bandara Juanda I/AA no. 20A<br>             <b>Lokasi Mitra:</b> Kedungkandang, KOTA MALANG<br>             <b>Koordinat:</b> -7.987809672706208, 112.67830476175732         </div>         </div>`)[0];
+                popup_f0f057a264baf37169e9619f61062d38.setContent(html_e170b50ad9caa8d01ccd8bc0a04b485e);
+            
+        
+
+        marker_9519702844c4ba1bd0242e6cfda68b2d.bindPopup(popup_f0f057a264baf37169e9619f61062d38)
+        ;
+
+        
+    
+    
+            var marker_a76baca5e57bdb22220f4e9a19b06a46 = L.marker(
+                [-7.999688, 112.598739],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_206526a3c872b6e334e7883112c35362 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_a76baca5e57bdb22220f4e9a19b06a46.setIcon(icon_206526a3c872b6e334e7883112c35362);
+        
+    
+        var popup_e688b0e2285747833f49041454901a97 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_21cbf1ceb6cf2f68110162c76477cdc2 = $(`<div id="html_21cbf1ceb6cf2f68110162c76477cdc2" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Peningkatan Efisiensi Urban Farming  untuk Meningkatkan Kesehatan dan Kualitas Hidup Lansia pada  Kelompok Tani Kurnia Lestari Kelurahan Bakalankrajan Sukun Kota Malang</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Dr. YATI SRI HAYATI, S.Kp., M.Kes.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> Jl. Pelabuhan Tanjung Emas RT 4 RW 7 Bakalankrajan<br>             <b>Lokasi Mitra:</b> Sukun, KOTA MALANG<br>             <b>Koordinat:</b> -7.999688, 112.598739         </div>         </div>`)[0];
+                popup_e688b0e2285747833f49041454901a97.setContent(html_21cbf1ceb6cf2f68110162c76477cdc2);
+            
+        
+
+        marker_a76baca5e57bdb22220f4e9a19b06a46.bindPopup(popup_e688b0e2285747833f49041454901a97)
+        ;
+
+        
+    
+    
+            var marker_3bf886dd97893df5ed4d25ee720d3850 = L.marker(
+                [-8.184486, 113.668076],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_b7c8f08c93c88fcd1702a3e516617ba8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_3bf886dd97893df5ed4d25ee720d3850.setIcon(icon_b7c8f08c93c88fcd1702a3e516617ba8);
+        
+    
+        var popup_6ddf3c76c27f663774e90b59989d13e3 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7c4c6aca2fb52651563d2e29951a7cf9 = $(`<div id="html_7c4c6aca2fb52651563d2e29951a7cf9" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>PENINGKATAN KAPABILITAS, EFISIENSI PRODUKSI DAN KUALITAS KACANG METE  DAN PRODUK OLAHANNYA MELALUI  PENDAMPINGAN TEKNIS MESIN PENGUPAS OTOMATIS PADA KELOMPOK MASYARAKAT DESA PENYANGGA MERU BETIRI DI KABUPATEN JEMBER</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> RINI YULIANINGSIH, STP., MT., Ph.D.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> Jl Sriwijaya 53 Jember<br>             <b>Lokasi Mitra:</b> Tempurejo, KAB. JEMBER<br>             <b>Koordinat:</b> -8.184486, 113.668076         </div>         </div>`)[0];
+                popup_6ddf3c76c27f663774e90b59989d13e3.setContent(html_7c4c6aca2fb52651563d2e29951a7cf9);
+            
+        
+
+        marker_3bf886dd97893df5ed4d25ee720d3850.bindPopup(popup_6ddf3c76c27f663774e90b59989d13e3)
+        ;
+
+        
+    
+    
+            var marker_a68ea77df55eb674b05a48be1902901e = L.marker(
+                [-7.938364106013952, 112.56052672863008],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_9260b512faa3dc9ffddac0cc0c1c1d5e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_a68ea77df55eb674b05a48be1902901e.setIcon(icon_9260b512faa3dc9ffddac0cc0c1c1d5e);
+        
+    
+        var popup_03664c594804eb7f31939e3c79cbf6e9 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_576e303610595ceef932ca0f666c7749 = $(`<div id="html_576e303610595ceef932ca0f666c7749" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Peningkatan Kapasitas BUMDes Tegalweru Melalui Diseminasi Teknologi Pengolahan Limbah Organik sebagai Pupuk dan Ecoenzym untuk Mendukung Rencana TPS3R di Kecamatan Dau, Kabupaten Malang</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Dr. Ir. ALEXANDER TUNGGUL SUTAN HAJI, M.T.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> Jl. Brawijaya No. 90<br>             <b>Lokasi Mitra:</b> Dau, KAB. MALANG<br>             <b>Koordinat:</b> -7.938364106013952, 112.56052672863008         </div>         </div>`)[0];
+                popup_03664c594804eb7f31939e3c79cbf6e9.setContent(html_576e303610595ceef932ca0f666c7749);
+            
+        
+
+        marker_a68ea77df55eb674b05a48be1902901e.bindPopup(popup_03664c594804eb7f31939e3c79cbf6e9)
+        ;
+
+        
+    
+    
+            var marker_d02eedc97e7be40e5189bba48a9b4e59 = L.marker(
+                [-7.796366450567102, 111.63772344589236],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_1b17e073ef5cb79e13791574109dc48f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_d02eedc97e7be40e5189bba48a9b4e59.setIcon(icon_1b17e073ef5cb79e13791574109dc48f);
+        
+    
+        var popup_2d14d62baec9372911c9d6b1fedcc318 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_be69cd233c4f1b60a22ac37ece6e18f5 = $(`<div id="html_be69cd233c4f1b60a22ac37ece6e18f5" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Peningkatan Kapasitas Produksi Kopi Wilis  Milik Bumdesa Barokah Desa Ngebel</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Ir. ANGGARA WIYONO WIT SAPUTRA, ST., M.TECH., IPM., ASEAN Eng., Ph.D.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> Jalan Pahlawan no. 1<br>             <b>Lokasi Mitra:</b> Ngebel, KAB. PONOROGO<br>             <b>Koordinat:</b> -7.796366450567102, 111.63772344589236         </div>         </div>`)[0];
+                popup_2d14d62baec9372911c9d6b1fedcc318.setContent(html_be69cd233c4f1b60a22ac37ece6e18f5);
+            
+        
+
+        marker_d02eedc97e7be40e5189bba48a9b4e59.bindPopup(popup_2d14d62baec9372911c9d6b1fedcc318)
+        ;
+
+        
+    
+    
+            var marker_8205e716e40c5c4c4d8d5f82c08bf246 = L.marker(
+                [-7.926775342334346, 112.01765505634702],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_6de966f9ea164df83b90a273e35bef3f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_8205e716e40c5c4c4d8d5f82c08bf246.setIcon(icon_6de966f9ea164df83b90a273e35bef3f);
+        
+    
+        var popup_6a78db00c71a44035b91ddb595894a37 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e3f9d88c0f36436c529e06df856848be = $(`<div id="html_e3f9d88c0f36436c529e06df856848be" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>PENINGKATAN KEMANDIRIAN PRODUKSI OLAHAN TEBU IJO OLEH KELOMPOK PEMUDA PRODUKTIF DI DESA CENDONO, KECAMATAN KANDAT, KABUPATEN KEDIRI</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Dr. RETNO ASTUTI, STP., MT.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> RT.05 RW.02 Dusun Cendono, Desa Cendono, Kecamatan Kandat, Kabupaten Kediri.<br>             <b>Lokasi Mitra:</b> Kandat, KAB. KEDIRI<br>             <b>Koordinat:</b> -7.926775342334346, 112.01765505634702         </div>         </div>`)[0];
+                popup_6a78db00c71a44035b91ddb595894a37.setContent(html_e3f9d88c0f36436c529e06df856848be);
+            
+        
+
+        marker_8205e716e40c5c4c4d8d5f82c08bf246.bindPopup(popup_6a78db00c71a44035b91ddb595894a37)
+        ;
+
+        
+    
+    
+            var marker_51cb7c824a6a21097def3889d35c8b0e = L.marker(
+                [-8.206802962014727, 112.46558189392093],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_55eb80242660935c4960c1f6262402a9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_51cb7c824a6a21097def3889d35c8b0e.setIcon(icon_55eb80242660935c4960c1f6262402a9);
+        
+    
+        var popup_a29a162bace37194dfa31e84b22332f9 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c39a3401d765c3779531db77fbcbacfe = $(`<div id="html_c39a3401d765c3779531db77fbcbacfe" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>PENINGKATAN KUALITAS DAN PRODUKTIVITAS BAGLOG JAMUR TIRAM COKELAT MELALUI FASILITASI STEAM STERILIZER DALAM MENDUKUNG  PERTUMBUHAN EKONOMI DI UNIT PRODUKSI JAMUR TIRAM COKELAT  KECAMATAN KALIPARE KABUPATEN MALANG</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> ARIF HIDAYAT, STP., M.AIT., Ph.D.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> Dusun Bulurejo, RT 05 RW 05, Desa Tumpakrejo, Kecamatan Kalipare<br>             <b>Lokasi Mitra:</b> Kalipare, KAB. MALANG<br>             <b>Koordinat:</b> -8.206802962014727, 112.46558189392093         </div>         </div>`)[0];
+                popup_a29a162bace37194dfa31e84b22332f9.setContent(html_c39a3401d765c3779531db77fbcbacfe);
+            
+        
+
+        marker_51cb7c824a6a21097def3889d35c8b0e.bindPopup(popup_a29a162bace37194dfa31e84b22332f9)
+        ;
+
+        
+    
+    
+            var marker_ad28e2fb4f729bd4c444f2c47fb443fb = L.marker(
+                [-8.073868, -2.5],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_66c54b4063857c947ee80c2b229fa94f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_ad28e2fb4f729bd4c444f2c47fb443fb.setIcon(icon_66c54b4063857c947ee80c2b229fa94f);
+        
+    
+        var popup_c4fabb3ce1c35126876ed298ad76517d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1a54a591ebb34fecf3eccc277ff955e3 = $(`<div id="html_1a54a591ebb34fecf3eccc277ff955e3" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Peningkatan Kualitas Produk dan Pemasaran  Susu Kambing di Kelompok Peternak Koperasi Pendowo Jatimulyo Kecamatan Wonosari Kabupaten Malang</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Prof. Dr. GATOT CIPTADI, DESS.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> Jl. Raya Tumpangrejo No.1<br>             <b>Lokasi Mitra:</b> Wonosari, KAB. MALANG<br>             <b>Koordinat:</b> -8.073868, -2.5         </div>         </div>`)[0];
+                popup_c4fabb3ce1c35126876ed298ad76517d.setContent(html_1a54a591ebb34fecf3eccc277ff955e3);
+            
+        
+
+        marker_ad28e2fb4f729bd4c444f2c47fb443fb.bindPopup(popup_c4fabb3ce1c35126876ed298ad76517d)
+        ;
+
+        
+    
+    
+            var marker_629f4d7570c586bde7863456dfe3b446 = L.marker(
+                [-7.938810287871067, 112.59385585784914],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_94d6bbba6551ae459783e1c5cb9a21ff = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_629f4d7570c586bde7863456dfe3b446.setIcon(icon_94d6bbba6551ae459783e1c5cb9a21ff);
+        
+    
+        var popup_97c7133444058d2dc7c76b24437bba59 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_002469ff1475a8df792c06ada25e6278 = $(`<div id="html_002469ff1475a8df792c06ada25e6278" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Peningkatan Nilai Ekonomi Maggot dengan Alat Pengering Tipe Tray di SMA Bahrul Maghfiroh Malang</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Prof. Dr. Ir. SUKARDI, MS.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> Pd. Pesantren Bahrul Maghfiroh,, Tlogomas, Kec. Lowokwaru, Kota Malang, Jawa Timur 65144<br>             <b>Lokasi Mitra:</b> Lowokwaru, KOTA MALANG<br>             <b>Koordinat:</b> -7.938810287871067, 112.59385585784914         </div>         </div>`)[0];
+                popup_97c7133444058d2dc7c76b24437bba59.setContent(html_002469ff1475a8df792c06ada25e6278);
+            
+        
+
+        marker_629f4d7570c586bde7863456dfe3b446.bindPopup(popup_97c7133444058d2dc7c76b24437bba59)
+        ;
+
+        
+    
+    
+            var marker_78a0b51b1711b319ff43641fb47420d6 = L.marker(
+                [-8.059702189061902, 112.08747988112948],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_9cfc641dbaa2b2f69ef8858c14e35b1d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_78a0b51b1711b319ff43641fb47420d6.setIcon(icon_9cfc641dbaa2b2f69ef8858c14e35b1d);
+        
+    
+        var popup_37f0be59c2af402279d7ba6058274969 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_693a2f4b63f9cd5936f579c57c8ab689 = $(`<div id="html_693a2f4b63f9cd5936f579c57c8ab689" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>PENINGKATAN POTENSI DESA MELALUI COLLABORATIVE GOVERNANCE-  COMMUNITY: DESA BAGELENAN KABUPATEN BLITAR</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Dr. SUSILO, SE., MS.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> Jl. Soekarno-Hatta No.46, Bagelenan, Kec. Srengat, Kab. Blitar<br>             <b>Lokasi Mitra:</b> Srengat, KAB. BLITAR<br>             <b>Koordinat:</b> -8.059702189061902, 112.08747988112948         </div>         </div>`)[0];
+                popup_37f0be59c2af402279d7ba6058274969.setContent(html_693a2f4b63f9cd5936f579c57c8ab689);
+            
+        
+
+        marker_78a0b51b1711b319ff43641fb47420d6.bindPopup(popup_37f0be59c2af402279d7ba6058274969)
+        ;
+
+        
+    
+    
+            var marker_a5285bc9c2264af64cd92c95fee09e8c = L.marker(
+                [-7.885586118298538, 112.9015728271583],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_129038846911bbd5d6f7df89519e00b7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_a5285bc9c2264af64cd92c95fee09e8c.setIcon(icon_129038846911bbd5d6f7df89519e00b7);
+        
+    
+        var popup_d8454bd26ca36078adff026f811016a2 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_6892b468c86d81dfb9aeadf364d6f02b = $(`<div id="html_6892b468c86d81dfb9aeadf364d6f02b" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>PERENCANAAN &amp;amp; PENGEMBANGAN DESTINASI  WISATA TRAIL ADVENTURE  DESA PODOKOYO</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> EDRIANA PANGESTUTI, S.E., M.Si., DBA.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> Jl Jetak No.1<br>             <b>Lokasi Mitra:</b> Tosari, KAB. PASURUAN<br>             <b>Koordinat:</b> -7.885586118298538, 112.9015728271583         </div>         </div>`)[0];
+                popup_d8454bd26ca36078adff026f811016a2.setContent(html_6892b468c86d81dfb9aeadf364d6f02b);
+            
+        
+
+        marker_a5285bc9c2264af64cd92c95fee09e8c.bindPopup(popup_d8454bd26ca36078adff026f811016a2)
+        ;
+
+        
+    
+    
+            var marker_232876a7cc5d2353db6a910dc98fd4c3 = L.marker(
+                [-8.1338192, -2.5],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_0b62c1cd3cea6892358dd8f7d667165e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_232876a7cc5d2353db6a910dc98fd4c3.setIcon(icon_0b62c1cd3cea6892358dd8f7d667165e);
+        
+    
+        var popup_7b26af02acdeec94d679f673fc9f4044 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1ff732d8deeab7f4bf3ebb15bc15cf3e = $(`<div id="html_1ff732d8deeab7f4bf3ebb15bc15cf3e" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>POJOK KASIH LANSIA: Optimalisasi Kualitas Hidup Lansia Bersama Bunda Lansia di Kabupaten Lumajang Melalui Pembangunan Taman Ramah Lansia</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Dr. KUMBOYONO, S.Kep., M.Kep., Sp.Kom.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> Yosowilangun Lor<br>             <b>Lokasi Mitra:</b> Yosowilangun, KAB. LUMAJANG<br>             <b>Koordinat:</b> -8.1338192, -2.5         </div>         </div>`)[0];
+                popup_7b26af02acdeec94d679f673fc9f4044.setContent(html_1ff732d8deeab7f4bf3ebb15bc15cf3e);
+            
+        
+
+        marker_232876a7cc5d2353db6a910dc98fd4c3.bindPopup(popup_7b26af02acdeec94d679f673fc9f4044)
+        ;
+
+        
+    
+    
+            var marker_0592686f2d9af10c2b6a2dfafe9a54e2 = L.marker(
+                [-8.232842988678183, 113.30970637663712],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_0b1a555e7a51aca5e700353b54558ef1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_0592686f2d9af10c2b6a2dfafe9a54e2.setIcon(icon_0b1a555e7a51aca5e700353b54558ef1);
+        
+    
+        var popup_dad9934a060c12dce3a6fa30f8c2819d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8f978e29071c221d63facf18be628922 = $(`<div id="html_8f978e29071c221d63facf18be628922" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Upaya Peningkatan Manajemen Kesehatan dan Pencegahan Komplikasi Penderita Hipertensi melalui Optimalisasi Peran Kader KOMPETEN (Komunitas Peduli Hipertensi) di Wilayah Puskesmas Yosowilangun Kabupaten Lumajang</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Prof. Dr. TITIN ANDRI WIHASTUTI, S.Kp., M.Kes.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> Jalan Stadion Jl. Krajan No.334, RT.10/RW.03, Jombang, Yosowilangun Lor, Kec. Yosowilangun, Kabupaten Lumajang,<br>             <b>Lokasi Mitra:</b> Yosowilangun, KAB. LUMAJANG<br>             <b>Koordinat:</b> -8.232842988678183, 113.30970637663712         </div>         </div>`)[0];
+                popup_dad9934a060c12dce3a6fa30f8c2819d.setContent(html_8f978e29071c221d63facf18be628922);
+            
+        
+
+        marker_0592686f2d9af10c2b6a2dfafe9a54e2.bindPopup(popup_dad9934a060c12dce3a6fa30f8c2819d)
+        ;
+
+        
+    
+    
+            var marker_4b20b31724dd317de4c867032afc8e87 = L.marker(
+                [-7.829556854298053, 112.72951483721046],
+                {}
+            ).addTo(feature_group_c9e1a4999e48637122477b2cdefa8741);
+        
+    
+            var icon_aff338ed6c4226ec93abf5ea4f749e2a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_4b20b31724dd317de4c867032afc8e87.setIcon(icon_aff338ed6c4226ec93abf5ea4f749e2a);
+        
+    
+        var popup_0021ab1eecabe15170331fee46f401ea = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_41de2b427431ed84e37c510dc0f7b69c = $(`<div id="html_41de2b427431ed84e37c510dc0f7b69c" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Upaya peningkatan nilai beras organik dengan labelling manfaat bagi kesehatan dan lingkungan melalui platform digital di Kecamatan Lawang Kabupaten Malang</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Dr. Ir. SUHARTINI, M.P.<br>             <b>Skema:</b> Doktor Mengabdi (DM)<br>             <b>Alamat Mitra:</b> Dusun Barek<br>             <b>Lokasi Mitra:</b> Lawang, KAB. MALANG<br>             <b>Koordinat:</b> -7.829556854298053, 112.72951483721046         </div>         </div>`)[0];
+                popup_0021ab1eecabe15170331fee46f401ea.setContent(html_41de2b427431ed84e37c510dc0f7b69c);
+            
+        
+
+        marker_4b20b31724dd317de4c867032afc8e87.bindPopup(popup_0021ab1eecabe15170331fee46f401ea)
+        ;
+
+        
+    
+    
+            feature_group_c9e1a4999e48637122477b2cdefa8741.addTo(map_be4837645ba341208726dcab5e37863c);
+        
+    
+            var feature_group_514a62c28a1e5b8028bb8d18d5269ba9 = L.featureGroup(
+                {}
+            );
+        
+    
+            var marker_1fd72d121ecafb3112f9f33f4b033902 = L.marker(
+                [3.006655578331729, 101.71991531748532],
+                {}
+            ).addTo(feature_group_514a62c28a1e5b8028bb8d18d5269ba9);
+        
+    
+            var icon_4b598380f454b2801596ea314692dd19 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "gray", "prefix": "glyphicon"}
+            );
+            marker_1fd72d121ecafb3112f9f33f4b033902.setIcon(icon_4b598380f454b2801596ea314692dd19);
+        
+    
+        var popup_7b4e476b598161e64603fdb1cdfb38d0 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_4a640e064c987864054699e711e2b700 = $(`<div id="html_4a640e064c987864054699e711e2b700" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Edukasi dan Introduksi Teknologi Pengomposan  Limbah Makanan Berbasis Maggot BSF di Selangor, Malaysia (Program Pengabdian Masyarakat Kolaborasi Internasional dengan Universiti Putra Malaysia)</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Prof. SRI SUHARTINI, STP., M.Env.Mgt., Ph.D.<br>             <b>Skema:</b> Doktor Mengabdi Pengembangan Kemitraan<br>             <b>Alamat Mitra:</b> Fakulti Kejuruteraan, Universiti Putra Malaysia, 43400 UPM Serdang, Selangor Darul Ehsan, Malaysia<br>             <b>Lokasi Mitra:</b>  Selangor, Lain-lain<br>             <b>Koordinat:</b> 3.006655578331729, 101.71991531748532         </div>         </div>`)[0];
+                popup_7b4e476b598161e64603fdb1cdfb38d0.setContent(html_4a640e064c987864054699e711e2b700);
+            
+        
+
+        marker_1fd72d121ecafb3112f9f33f4b033902.bindPopup(popup_7b4e476b598161e64603fdb1cdfb38d0)
+        ;
+
+        
+    
+    
+            var marker_fdc850eb0a860bad588f0410a21223d9 = L.marker(
+                [-7.60595045629352, 110.23452758090572],
+                {}
+            ).addTo(feature_group_514a62c28a1e5b8028bb8d18d5269ba9);
+        
+    
+            var icon_07e5d71a5bed3bb5803f64b4119f37eb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "gray", "prefix": "glyphicon"}
+            );
+            marker_fdc850eb0a860bad588f0410a21223d9.setIcon(icon_07e5d71a5bed3bb5803f64b4119f37eb);
+        
+    
+        var popup_2344d1fa06dedf4806334fe6b3d819bc = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_6bd04eb3262e98cfa782e5106d532869 = $(`<div id="html_6bd04eb3262e98cfa782e5106d532869" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Mitigasi Dan Pengelolaan Kualitas Air Serta Pendampingan Pemasaran Berbasis Web Dan Marketplace Bagi Pembudidaya Ikan Kabupaten Magelang</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Dr. ASUS MAIZAR SURYANTO H., S.Pi., M.P.<br>             <b>Skema:</b> Doktor Mengabdi Pengembangan Kemitraan<br>             <b>Alamat Mitra:</b> Jl. Raya Magelang-Jogya Km. 12 Palbapang, Bojong, Mungkid, Magelang<br>             <b>Lokasi Mitra:</b> Mungkid, KAB. MAGELANG<br>             <b>Koordinat:</b> -7.60595045629352, 110.23452758090572         </div>         </div>`)[0];
+                popup_2344d1fa06dedf4806334fe6b3d819bc.setContent(html_6bd04eb3262e98cfa782e5106d532869);
+            
+        
+
+        marker_fdc850eb0a860bad588f0410a21223d9.bindPopup(popup_2344d1fa06dedf4806334fe6b3d819bc)
+        ;
+
+        
+    
+    
+            var marker_e1d5d179b2c4fca30ac64647a4a04887 = L.marker(
+                [-7.518863416062287, 110.19180119252204],
+                {}
+            ).addTo(feature_group_514a62c28a1e5b8028bb8d18d5269ba9);
+        
+    
+            var icon_8a695daa7ce70a8bd53841d8f4d8599f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "gray", "prefix": "glyphicon"}
+            );
+            marker_e1d5d179b2c4fca30ac64647a4a04887.setIcon(icon_8a695daa7ce70a8bd53841d8f4d8599f);
+        
+    
+        var popup_8578a4a56fbfd16f8a78244fc5f0cea2 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_562fce8f156cecd12f040f0e849f9c8f = $(`<div id="html_562fce8f156cecd12f040f0e849f9c8f" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>PENCAPAIAN SDG GOALS MELALUI OPTIMALISASI PROSES PRODUKSI DAN PENGUATAN INOVASI BISNIS UMKM COKELAT SEHAT</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> SAPARILA WOROKINASIH, S.Sos., M.Si., Ph.D.<br>             <b>Skema:</b> Doktor Mengabdi Pengembangan Kemitraan<br>             <b>Alamat Mitra:</b> PERUMAHAN BUMI NUSANTARA 2 BLOK A18 METAWANGI, Desa/Kelurahan Banjarnegoro, Kec. Mertoyudan, Kab. Magelang, Provinsi Jawa Tengah,<br>             <b>Lokasi Mitra:</b> Mertoyudan, KAB. MAGELANG<br>             <b>Koordinat:</b> -7.518863416062287, 110.19180119252204         </div>         </div>`)[0];
+                popup_8578a4a56fbfd16f8a78244fc5f0cea2.setContent(html_562fce8f156cecd12f040f0e849f9c8f);
+            
+        
+
+        marker_e1d5d179b2c4fca30ac64647a4a04887.bindPopup(popup_8578a4a56fbfd16f8a78244fc5f0cea2)
+        ;
+
+        
+    
+    
+            var marker_2e523e54d1f06a60114fa11cbbc78f34 = L.marker(
+                [0.5040745043850547, 117.49859869477406],
+                {}
+            ).addTo(feature_group_514a62c28a1e5b8028bb8d18d5269ba9);
+        
+    
+            var icon_ca4f2b9c286214cd88fa97448f8a148f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "gray", "prefix": "glyphicon"}
+            );
+            marker_2e523e54d1f06a60114fa11cbbc78f34.setIcon(icon_ca4f2b9c286214cd88fa97448f8a148f);
+        
+    
+        var popup_aad2ef50861871be4bd7149c7a68116a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a314e71d93ddfe734ab9cb1d6027c228 = $(`<div id="html_a314e71d93ddfe734ab9cb1d6027c228" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>PENGUATAN KELOMPOK USAHA TERNAK BERBASIS EKONOMI SIRKULAR MELALUI PEMANFAATAN KOTORAN TERNAK SAPI DAN KAMBING SEBAGAI BIOGAS DAN PUPUK ORGANIK DI DESA SANGATTA SELATAN, KABUPATEN KUTAI TIMUR, KALIMANTAN TIMUR</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Prof. Dr. Ir. SUSINGGIH WIJANA, S.U.<br>             <b>Skema:</b> Doktor Mengabdi Pengembangan Kemitraan<br>             <b>Alamat Mitra:</b> Gg. Kemakmuran RT 002 Sangatta selatan, Kutai Timur<br>             <b>Lokasi Mitra:</b> Sangatta Selatan, KAB. KUTAI TIMUR<br>             <b>Koordinat:</b> 0.5040745043850547, 117.49859869477406         </div>         </div>`)[0];
+                popup_aad2ef50861871be4bd7149c7a68116a.setContent(html_a314e71d93ddfe734ab9cb1d6027c228);
+            
+        
+
+        marker_2e523e54d1f06a60114fa11cbbc78f34.bindPopup(popup_aad2ef50861871be4bd7149c7a68116a)
+        ;
+
+        
+    
+    
+            feature_group_514a62c28a1e5b8028bb8d18d5269ba9.addTo(map_be4837645ba341208726dcab5e37863c);
+        
+    
+            var feature_group_382865d312d3599fd19f51b10f797de1 = L.featureGroup(
+                {}
+            );
+        
+    
+            var marker_ad8ed34a20f2d6c31123046dda309d31 = L.marker(
+                [-7.832959240875459, 112.72648551719196],
+                {}
+            ).addTo(feature_group_382865d312d3599fd19f51b10f797de1);
+        
+    
+            var icon_0d141769671500cebdc6eea1b2c7ae03 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_ad8ed34a20f2d6c31123046dda309d31.setIcon(icon_0d141769671500cebdc6eea1b2c7ae03);
+        
+    
+        var popup_bd8c7ad1221d62aef2dd06b4b9aebb42 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_eeecef13fdf0dc4f25ca6bf38dda5904 = $(`<div id="html_eeecef13fdf0dc4f25ca6bf38dda5904" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Circular Economy berbasis Edukasi Pengolahan Sampah Rumah Tangga melalui Pemberdayaan Masyarakat di Desa Sumber Ngepoh, Kecamatan Lawang, Kabupaten Malang</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> LUSY DEASYANA RAHMA DEVITA, SAB., MAB.<br>             <b>Skema:</b> Pengabdian Strategis<br>             <b>Alamat Mitra:</b> Krajan, Sumber Ngepoh, Lawang, Kabupaten Malang<br>             <b>Lokasi Mitra:</b> Lawang, KAB. MALANG<br>             <b>Koordinat:</b> -7.832959240875459, 112.72648551719196         </div>         </div>`)[0];
+                popup_bd8c7ad1221d62aef2dd06b4b9aebb42.setContent(html_eeecef13fdf0dc4f25ca6bf38dda5904);
+            
+        
+
+        marker_ad8ed34a20f2d6c31123046dda309d31.bindPopup(popup_bd8c7ad1221d62aef2dd06b4b9aebb42)
+        ;
+
+        
+    
+    
+            var marker_1a9edf364d93abd542350f5ebfa0b1f9 = L.marker(
+                [-7.89551413261585, 112.63231473735809],
+                {}
+            ).addTo(feature_group_382865d312d3599fd19f51b10f797de1);
+        
+    
+            var icon_8ab45c0dc27694bd7b6426fc3fff9e45 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_1a9edf364d93abd542350f5ebfa0b1f9.setIcon(icon_8ab45c0dc27694bd7b6426fc3fff9e45);
+        
+    
+        var popup_7f3294eb806ddb8da8b84ea854f49153 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_aa07d26a6d7d69081db14c4f01ef594a = $(`<div id="html_aa07d26a6d7d69081db14c4f01ef594a" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>COMPANION MODELLING: PENDEKATAN PARTISIPATIF UNTUK EDUKASI DAN PENGUATAN PERAN KELEMBAGAAN DALAM PENGELOLAAN SAMPAH BERKELANJUTAN MENJADI PRODUK BERNILAI EKONOMI PRODUKTIF</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> IMANIAR ILMI PARIASA, S.P., M.P.<br>             <b>Skema:</b> Pengabdian Strategis<br>             <b>Alamat Mitra:</b> DESA LANG LANG SINGOSARI<br>             <b>Lokasi Mitra:</b> Singosari, KAB. MALANG<br>             <b>Koordinat:</b> -7.89551413261585, 112.63231473735809         </div>         </div>`)[0];
+                popup_7f3294eb806ddb8da8b84ea854f49153.setContent(html_aa07d26a6d7d69081db14c4f01ef594a);
+            
+        
+
+        marker_1a9edf364d93abd542350f5ebfa0b1f9.bindPopup(popup_7f3294eb806ddb8da8b84ea854f49153)
+        ;
+
+        
+    
+    
+            var marker_30fd034f8adf28e52c756a72cecae4d4 = L.marker(
+                [-7.690549660218625, 113.00537109375],
+                {}
+            ).addTo(feature_group_382865d312d3599fd19f51b10f797de1);
+        
+    
+            var icon_37b49d459da993e72966fc52f55dfe7d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_30fd034f8adf28e52c756a72cecae4d4.setIcon(icon_37b49d459da993e72966fc52f55dfe7d);
+        
+    
+        var popup_2a8ae0f525c5853cf6990fb83e717821 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_396930e56c846cafa91fdce530491d51 = $(`<div id="html_396930e56c846cafa91fdce530491d51" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Digitalisasi Pohon untuk Edukasi dan Wisata Masyarakat dan Daur Ulang Limbah Plastik menjadi Produk Bernilai Ekonomi Produktif</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> SUSENOHAJI, S.E., M.Si.<br>             <b>Skema:</b> Pengabdian Strategis<br>             <b>Alamat Mitra:</b> Jl. Kebun Bibit No. 14 Ds Jarangan<br>             <b>Lokasi Mitra:</b> Rejoso, KAB. PASURUAN<br>             <b>Koordinat:</b> -7.690549660218625, 113.00537109375         </div>         </div>`)[0];
+                popup_2a8ae0f525c5853cf6990fb83e717821.setContent(html_396930e56c846cafa91fdce530491d51);
+            
+        
+
+        marker_30fd034f8adf28e52c756a72cecae4d4.bindPopup(popup_2a8ae0f525c5853cf6990fb83e717821)
+        ;
+
+        
+    
+    
+            var marker_8a060db8c15eafa4ae5c7b9f6eeb1479 = L.marker(
+                [-7.906344844591589, 112.63890167762496],
+                {}
+            ).addTo(feature_group_382865d312d3599fd19f51b10f797de1);
+        
+    
+            var icon_e6095d7385066e9095b72c180871b927 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_8a060db8c15eafa4ae5c7b9f6eeb1479.setIcon(icon_e6095d7385066e9095b72c180871b927);
+        
+    
+        var popup_09cee71116017fc677c443d75ec8c41b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_760266bd7e176bbd14baace5d40d7d6e = $(`<div id="html_760266bd7e176bbd14baace5d40d7d6e" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Diversifikasi Produk Olahan Daging sebagai Upaya Meningkatkan Nilai Tambah dan Branding Produk Hasil Ternak di Desa Tunjungtirto dan Desa Toyomarto, Kecamatan Singosari, Kabupaten Malang</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> POESPITASARI HAZANAH NDARU, S.Pt., MP.<br>             <b>Skema:</b> Pengabdian Strategis<br>             <b>Alamat Mitra:</b> Desa Tunjungtirto, Kecamatan Singosari, Kabupaten Malang<br>             <b>Lokasi Mitra:</b> Singosari, KAB. MALANG<br>             <b>Koordinat:</b> -7.906344844591589, 112.63890167762496         </div>         </div>`)[0];
+                popup_09cee71116017fc677c443d75ec8c41b.setContent(html_760266bd7e176bbd14baace5d40d7d6e);
+            
+        
+
+        marker_8a060db8c15eafa4ae5c7b9f6eeb1479.bindPopup(popup_09cee71116017fc677c443d75ec8c41b)
+        ;
+
+        
+    
+    
+            var marker_e4265deaa9d6b87650a5746f5ca06f65 = L.marker(
+                [-8.288959572374948, 114.28278622572203],
+                {}
+            ).addTo(feature_group_382865d312d3599fd19f51b10f797de1);
+        
+    
+            var icon_992dfdef952fd2b4805d4b5f23257a77 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_e4265deaa9d6b87650a5746f5ca06f65.setIcon(icon_992dfdef952fd2b4805d4b5f23257a77);
+        
+    
+        var popup_e530686767705132a951ac78217688cc = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8e5dd1e01f8b2654ea38cb8b9ec03324 = $(`<div id="html_8e5dd1e01f8b2654ea38cb8b9ec03324" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Implementasi Immersive Media dan Boardgame melalui Program TIRTHAYATRA Dalam Rangka Nostalgic Getaways di Desa Benelan Lor, Kecamatan Kabat, Kabupaten Banyuwangi</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> ERLANGGA SETYAWAN, SP., MM.<br>             <b>Skema:</b> Pengabdian Strategis<br>             <b>Alamat Mitra:</b> Kantor Desa Benelan Lor, Kabat, Dusun Krajan, Gombolirang, Banyuwangi, Kabupaten Banyuwangi, Jawa Timur 68461<br>             <b>Lokasi Mitra:</b> Kabat, KAB. BANYUWANGI<br>             <b>Koordinat:</b> -8.288959572374948, 114.28278622572203         </div>         </div>`)[0];
+                popup_e530686767705132a951ac78217688cc.setContent(html_8e5dd1e01f8b2654ea38cb8b9ec03324);
+            
+        
+
+        marker_e4265deaa9d6b87650a5746f5ca06f65.bindPopup(popup_e530686767705132a951ac78217688cc)
+        ;
+
+        
+    
+    
+            var marker_12a145771310b703beeb33dadd9cfb83 = L.marker(
+                [-7.894222979635912, 112.66654968378135],
+                {}
+            ).addTo(feature_group_382865d312d3599fd19f51b10f797de1);
+        
+    
+            var icon_e094f98c6ddf99a6cbe24a00bec6ad89 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_12a145771310b703beeb33dadd9cfb83.setIcon(icon_e094f98c6ddf99a6cbe24a00bec6ad89);
+        
+    
+        var popup_536f29a441d8e5fb7b4218ea09619c9b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8a5ec0b5c11cf587de8d12d301933654 = $(`<div id="html_8a5ec0b5c11cf587de8d12d301933654" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>IMPLEMENTASI MERDEKA BELAJAR DALAM MENINGKATKAN LITERASI MASYARAKAT BERDASARKAN POTENSI UNGGULAN DESA RANDUAGUNG  DAN DESA TAMANHARJO KECAMATAN SINGOSARI KABUPATEN MALANG</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Ir. ENDRA YUAFANEDI ARIFIANTO, ST., MT.<br>             <b>Skema:</b> Pengabdian Strategis<br>             <b>Alamat Mitra:</b> Jalan Balai Desa No.7<br>             <b>Lokasi Mitra:</b> Singosari, KAB. MALANG<br>             <b>Koordinat:</b> -7.894222979635912, 112.66654968378135         </div>         </div>`)[0];
+                popup_536f29a441d8e5fb7b4218ea09619c9b.setContent(html_8a5ec0b5c11cf587de8d12d301933654);
+            
+        
+
+        marker_12a145771310b703beeb33dadd9cfb83.bindPopup(popup_536f29a441d8e5fb7b4218ea09619c9b)
+        ;
+
+        
+    
+    
+            var marker_ea0fbda767166cc22f80e4f7633187b8 = L.marker(
+                [-8.083916433749247, 112.3706703183416],
+                {}
+            ).addTo(feature_group_382865d312d3599fd19f51b10f797de1);
+        
+    
+            var icon_3b1777cf973894b25871dcba57fe1049 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_ea0fbda767166cc22f80e4f7633187b8.setIcon(icon_3b1777cf973894b25871dcba57fe1049);
+        
+    
+        var popup_8371192ce25440b643883e5bf0d0c7dc = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b8b0a39599056c22349700f89bdb8efb = $(`<div id="html_b8b0a39599056c22349700f89bdb8efb" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Implementasi Sirkular Ekonomi Melalui Integrasi Pertanian dan Peternakan dalam Mewujudkan Ketahanan Pangan di Desa Kalimanis dan Desa  Sumberurip, Kecamatan Doko, Kabupaten Blitar</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> ANIE EKA KUSUMASTUTI, S.Pt., M.P., M.Sc.<br>             <b>Skema:</b> Pengabdian Strategis<br>             <b>Alamat Mitra:</b> Jl. Arjuno Tunggorono, Kalimanis, Doko 66186<br>             <b>Lokasi Mitra:</b> Doko, KAB. BLITAR<br>             <b>Koordinat:</b> -8.083916433749247, 112.3706703183416         </div>         </div>`)[0];
+                popup_8371192ce25440b643883e5bf0d0c7dc.setContent(html_b8b0a39599056c22349700f89bdb8efb);
+            
+        
+
+        marker_ea0fbda767166cc22f80e4f7633187b8.bindPopup(popup_8371192ce25440b643883e5bf0d0c7dc)
+        ;
+
+        
+    
+    
+            var marker_b00c19edf127c4a6cbe8397ba05294c9 = L.marker(
+                [-7.730648322423178, 113.52738792093018],
+                {}
+            ).addTo(feature_group_382865d312d3599fd19f51b10f797de1);
+        
+    
+            var icon_b798d41f8c4864e0089b3fcf07fc89d1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_b00c19edf127c4a6cbe8397ba05294c9.setIcon(icon_b798d41f8c4864e0089b3fcf07fc89d1);
+        
+    
+        var popup_f558e28d7e18be90c8e6fed31fa3ab59 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2b13ac499358784a94a79ae0966ce572 = $(`<div id="html_2b13ac499358784a94a79ae0966ce572" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Implementasi Strategi Pengembangan Bisnis Kelompok Usaha Kecil Mikro Desa Sumberanyar Menggunakan Business Model Canvas Dalam Upaya Meningkatkan Nilai Ekonomi</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Drs. DIDIK YUDIANTO, M.Si.<br>             <b>Skema:</b> Pengabdian Strategis<br>             <b>Alamat Mitra:</b> Desa Sumberanyar<br>             <b>Lokasi Mitra:</b> Paiton, KAB. PROBOLINGGO<br>             <b>Koordinat:</b> -7.730648322423178, 113.52738792093018         </div>         </div>`)[0];
+                popup_f558e28d7e18be90c8e6fed31fa3ab59.setContent(html_2b13ac499358784a94a79ae0966ce572);
+            
+        
+
+        marker_b00c19edf127c4a6cbe8397ba05294c9.bindPopup(popup_f558e28d7e18be90c8e6fed31fa3ab59)
+        ;
+
+        
+    
+    
+            var marker_5d1fb7b3ad3ec8992b28d3be567b6027 = L.marker(
+                [-7.8576, 112.596],
+                {}
+            ).addTo(feature_group_382865d312d3599fd19f51b10f797de1);
+        
+    
+            var icon_1b839256526f4d26d00ad8e97127aa4e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_5d1fb7b3ad3ec8992b28d3be567b6027.setIcon(icon_1b839256526f4d26d00ad8e97127aa4e);
+        
+    
+        var popup_7c8ea168aef07fc96fe0b5f89576e040 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e2705043f1240968d7065015af50b2a9 = $(`<div id="html_e2705043f1240968d7065015af50b2a9" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>IN DEPTH REVIEW PENGUATAN BRANDING PRODUK KOMPI (KOMPOS API) DALAM RANGKA PENGUATAN SUSTAINABLE DEVELOPMENT GOALS (SDGs) TERKAIT INFRASTRUKTUR DAN INOVASI DI DESA BOCEK</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> MOHAMAD RIF\`AN, S.H., M.H.<br>             <b>Skema:</b> Pengabdian Strategis<br>             <b>Alamat Mitra:</b> Bocek Krajan, Bocek, Karang Ploso, Malang Regency, East Java 65152<br>             <b>Lokasi Mitra:</b> Karang Ploso, KAB. MALANG<br>             <b>Koordinat:</b> -7.8576, 112.596         </div>         </div>`)[0];
+                popup_7c8ea168aef07fc96fe0b5f89576e040.setContent(html_e2705043f1240968d7065015af50b2a9);
+            
+        
+
+        marker_5d1fb7b3ad3ec8992b28d3be567b6027.bindPopup(popup_7c8ea168aef07fc96fe0b5f89576e040)
+        ;
+
+        
+    
+    
+            var marker_3394402523fd3ae3bcc2e4deaa9ce530 = L.marker(
+                [-8.122222, 114.387222],
+                {}
+            ).addTo(feature_group_382865d312d3599fd19f51b10f797de1);
+        
+    
+            var icon_fdc510aa198f9a1f03d3c7d4bce6f068 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_3394402523fd3ae3bcc2e4deaa9ce530.setIcon(icon_fdc510aa198f9a1f03d3c7d4bce6f068);
+        
+    
+        var popup_0bb283a2d5c8120bcc0d87bdf00a4973 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_9bde88de89747c31781625af237b665f = $(`<div id="html_9bde88de89747c31781625af237b665f" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Manajemen Kandang Ternak untuk Meningkatkan Kesehatan dan Hasil Produksi Ternak Desa Bulusan Kecamatan Kalipuro Kabupaten Banyuwangi Jawa Timur</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> ALBAR ADETARY HASIBUAN, S.Fil.I., M.Phil.<br>             <b>Skema:</b> Pengabdian Strategis<br>             <b>Alamat Mitra:</b> Kelurahan Bulusan, Kec Kalipuro, Kab Banyuwangi<br>             <b>Lokasi Mitra:</b> Kalipuro, KAB. BANYUWANGI<br>             <b>Koordinat:</b> -8.122222, 114.387222         </div>         </div>`)[0];
+                popup_0bb283a2d5c8120bcc0d87bdf00a4973.setContent(html_9bde88de89747c31781625af237b665f);
+            
+        
+
+        marker_3394402523fd3ae3bcc2e4deaa9ce530.bindPopup(popup_0bb283a2d5c8120bcc0d87bdf00a4973)
+        ;
+
+        
+    
+    
+            var marker_e38f6b7d540acb5aaa2fbf14c8929399 = L.marker(
+                [-8.16792149222483, 114.31531906127933],
+                {}
+            ).addTo(feature_group_382865d312d3599fd19f51b10f797de1);
+        
+    
+            var icon_32cd164be826d2e344e13623e8c34439 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_e38f6b7d540acb5aaa2fbf14c8929399.setIcon(icon_32cd164be826d2e344e13623e8c34439);
+        
+    
+        var popup_bf58cc5becf7d38c5365168384f1a506 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c07772f05aa461db2bc05470dbd76e57 = $(`<div id="html_c07772f05aa461db2bc05470dbd76e57" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Mewujudkan Gerakan Sakti (Gerakan Sadar Keterbukaan Informasi Publik) dan Desa Cantik (Cinta Statistik) Di Desa Pesucen dan Bulusari Kecamatan Kalipuro Banyuwangi</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> ZULFAIDAH PENATA GAMA, S.Si., M.Si., Ph.D.<br>             <b>Skema:</b> Pengabdian Strategis<br>             <b>Alamat Mitra:</b> Jl. Mahoni no.101, RT 02 RW 02 Dusun Padangbaru Desa Pesucen Kecamatan Kalipuro Kabupaten Banyuwangi<br>             <b>Lokasi Mitra:</b> Kalipuro, KAB. BANYUWANGI<br>             <b>Koordinat:</b> -8.16792149222483, 114.31531906127933         </div>         </div>`)[0];
+                popup_bf58cc5becf7d38c5365168384f1a506.setContent(html_c07772f05aa461db2bc05470dbd76e57);
+            
+        
+
+        marker_e38f6b7d540acb5aaa2fbf14c8929399.bindPopup(popup_bf58cc5becf7d38c5365168384f1a506)
+        ;
+
+        
+    
+    
+            var marker_38c83825c221eb4c2de608f373c494a4 = L.marker(
+                [-8.11133, 112.41135],
+                {}
+            ).addTo(feature_group_382865d312d3599fd19f51b10f797de1);
+        
+    
+            var icon_1137a7264d7bb90430b993397a41f13a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_38c83825c221eb4c2de608f373c494a4.setIcon(icon_1137a7264d7bb90430b993397a41f13a);
+        
+    
+        var popup_797900e2e4ed3063b84e149b13fd7160 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_5e9582ff051f170486df0588e291809f = $(`<div id="html_5e9582ff051f170486df0588e291809f" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Optimalisasi Pelayanan Desa Berbasis Digital Menuju Desa Dinamis dan Adaptif</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Dr. CANDRA DEWI, S.Kom., M.Sc.<br>             <b>Skema:</b> Pengabdian Strategis<br>             <b>Alamat Mitra:</b> Dsn Pakel RT 004 RW 002<br>             <b>Lokasi Mitra:</b> Selorejo, KAB. BLITAR<br>             <b>Koordinat:</b> -8.11133, 112.41135         </div>         </div>`)[0];
+                popup_797900e2e4ed3063b84e149b13fd7160.setContent(html_5e9582ff051f170486df0588e291809f);
+            
+        
+
+        marker_38c83825c221eb4c2de608f373c494a4.bindPopup(popup_797900e2e4ed3063b84e149b13fd7160)
+        ;
+
+        
+    
+    
+            var marker_974cbe0893a6ae342c33065d5ecb36c3 = L.marker(
+                [-7.848061327036464, 112.70286083221436],
+                {}
+            ).addTo(feature_group_382865d312d3599fd19f51b10f797de1);
+        
+    
+            var icon_d6c3590f0bbf67fdd65d162845fb0b3f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_974cbe0893a6ae342c33065d5ecb36c3.setIcon(icon_d6c3590f0bbf67fdd65d162845fb0b3f);
+        
+    
+        var popup_0d55ecfd56a8b67f5a55899d034d0982 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_6353f4b241c2d263340e74f92ef05b30 = $(`<div id="html_6353f4b241c2d263340e74f92ef05b30" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Optimalisasi Potensi Desa Wisata Melalui Pemberdayaan UMKM dan Teknologi Digital Pada Desa Kalirejo dan Ketindan, Kecamatan Lawang, Kabupaten Malang</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> SAPARILA WOROKINASIH, S.Sos., M.Si., Ph.D.<br>             <b>Skema:</b> Pengabdian Strategis<br>             <b>Alamat Mitra:</b> Jalan Walisongo No. 3 RT 2/RW 2<br>             <b>Lokasi Mitra:</b> Lawang, KAB. MALANG<br>             <b>Koordinat:</b> -7.848061327036464, 112.70286083221436         </div>         </div>`)[0];
+                popup_0d55ecfd56a8b67f5a55899d034d0982.setContent(html_6353f4b241c2d263340e74f92ef05b30);
+            
+        
+
+        marker_974cbe0893a6ae342c33065d5ecb36c3.bindPopup(popup_0d55ecfd56a8b67f5a55899d034d0982)
+        ;
+
+        
+    
+    
+            var marker_54af9e99136824682702eaa6a6253203 = L.marker(
+                [-8.045972062733982, 114.41694259643556],
+                {}
+            ).addTo(feature_group_382865d312d3599fd19f51b10f797de1);
+        
+    
+            var icon_9f2b586a62f2a96026642303285bab28 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_54af9e99136824682702eaa6a6253203.setIcon(icon_9f2b586a62f2a96026642303285bab28);
+        
+    
+        var popup_d63d503165d1f2ab7fed861c3215fcfd = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f855a6ffde30843bf0de1d1d6442cef5 = $(`<div id="html_f855a6ffde30843bf0de1d1d6442cef5" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Pelatihan Desain Grafis dan Konten Digital bagi Kelompok Pemuda  Untuk Mendukung Pengembangan UMKM Lokal</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> ANIK SUSANTI, S.Pd., M.Si.<br>             <b>Skema:</b> Pengabdian Strategis<br>             <b>Alamat Mitra:</b> Jl. PB. Sudirman No. 2001 Dusun Krajan, Rt.03, Rw.05, Desa Bangsring, Kecamatan Wongsorejo, Kabupaten Banyuwangi<br>             <b>Lokasi Mitra:</b> Wongsorejo, KAB. BANYUWANGI<br>             <b>Koordinat:</b> -8.045972062733982, 114.41694259643556         </div>         </div>`)[0];
+                popup_d63d503165d1f2ab7fed861c3215fcfd.setContent(html_f855a6ffde30843bf0de1d1d6442cef5);
+            
+        
+
+        marker_54af9e99136824682702eaa6a6253203.bindPopup(popup_d63d503165d1f2ab7fed861c3215fcfd)
+        ;
+
+        
+    
+    
+            var marker_6836c65d2259582129268fb74c9fcf8e = L.marker(
+                [-7.827478582764955, 113.31017017342676],
+                {}
+            ).addTo(feature_group_382865d312d3599fd19f51b10f797de1);
+        
+    
+            var icon_04f314cf2a2ee9e36c8a5099f58a60ca = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_6836c65d2259582129268fb74c9fcf8e.setIcon(icon_04f314cf2a2ee9e36c8a5099f58a60ca);
+        
+    
+        var popup_c308f5700478f35a8af23d83687765bd = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_02fbfecdfa1cb1ddceca1362cdc75996 = $(`<div id="html_02fbfecdfa1cb1ddceca1362cdc75996" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>PEMAHAMAN TATA KELOLA KELEMBAGAAN DAN STRATEGI PENCEGAHAN FRAUD DALAM PENGELOLAAN BADAN USAHA MILIK DESA (BUMDESA) DESA SUMBERKERANG DAN KARANG PRANTI KABUPATEN PROBOLINGGO</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> AZNA ABRORY WARDANA, S.H., M.H.<br>             <b>Skema:</b> Pengabdian Strategis<br>             <b>Alamat Mitra:</b> Jl. Banyu Biru Nomor 01 Kode Pos 67272<br>             <b>Lokasi Mitra:</b> Gending, KAB. PROBOLINGGO<br>             <b>Koordinat:</b> -7.827478582764955, 113.31017017342676         </div>         </div>`)[0];
+                popup_c308f5700478f35a8af23d83687765bd.setContent(html_02fbfecdfa1cb1ddceca1362cdc75996);
+            
+        
+
+        marker_6836c65d2259582129268fb74c9fcf8e.bindPopup(popup_c308f5700478f35a8af23d83687765bd)
+        ;
+
+        
+    
+    
+            var marker_3def52ffe245015d88684299fedf6a4d = L.marker(
+                [-7.87864531987447, 112.581445522231],
+                {}
+            ).addTo(feature_group_382865d312d3599fd19f51b10f797de1);
+        
+    
+            var icon_152a7df2d5f7a58d3919e6c35bd432a4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_3def52ffe245015d88684299fedf6a4d.setIcon(icon_152a7df2d5f7a58d3919e6c35bd432a4);
+        
+    
+        var popup_c05bacab5a32b88f2c2643493756869f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_4433711d88b8ee78b1cdadc61514cf32 = $(`<div id="html_4433711d88b8ee78b1cdadc61514cf32" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>PEMANFAATAN HASIL PRODUK LEBAH SEBAGAI SEDIAAN BAHAN BAKU dan PRODUK KOMESTIK di PT. KEMBANG JOYO SRIWIJAYA DALAM UPAYA PENINGKATAN KINERJA EKONOMI MALANG RAYA</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Dr. AGUS SUSILO, S.Pt., MP.<br>             <b>Skema:</b> Pengabdian Strategis<br>             <b>Alamat Mitra:</b> Jl. Raya Karangan No. 14 RT: 12 RW: 03<br>             <b>Lokasi Mitra:</b> Karang Ploso, KAB. MALANG<br>             <b>Koordinat:</b> -7.87864531987447, 112.581445522231         </div>         </div>`)[0];
+                popup_c05bacab5a32b88f2c2643493756869f.setContent(html_4433711d88b8ee78b1cdadc61514cf32);
+            
+        
+
+        marker_3def52ffe245015d88684299fedf6a4d.bindPopup(popup_c05bacab5a32b88f2c2643493756869f)
+        ;
+
+        
+    
+    
+            var marker_f9cbe34f861d2ab58dafff21a9cfdd6d = L.marker(
+                [-7.753696397360064, 113.16567599773408],
+                {}
+            ).addTo(feature_group_382865d312d3599fd19f51b10f797de1);
+        
+    
+            var icon_63ea26075b0ddff9ce27ce2264c91d85 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_f9cbe34f861d2ab58dafff21a9cfdd6d.setIcon(icon_63ea26075b0ddff9ce27ce2264c91d85);
+        
+    
+        var popup_128cb8dd8066552b27f41c91126235f1 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_77c62df5bb5265d30be18dae2579bf81 = $(`<div id="html_77c62df5bb5265d30be18dae2579bf81" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Pemanfaatan Limbah Domestik menjadi  Produk Agribisnis Migarium dan Kokedama sebagai Upaya Pemberdayaan Masyarakat Lokal  di Kabupaten Probolinggo</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> ALIA FIBRIANINGTYAS, S.P., M.P.<br>             <b>Skema:</b> Pengabdian Strategis<br>             <b>Alamat Mitra:</b> Dusun Melati II, Pesisir, Kec. Sumberasih, Kabupaten Probolinggo, Jawa Timur 67251<br>             <b>Lokasi Mitra:</b> Sumberasih, KAB. PROBOLINGGO<br>             <b>Koordinat:</b> -7.753696397360064, 113.16567599773408         </div>         </div>`)[0];
+                popup_128cb8dd8066552b27f41c91126235f1.setContent(html_77c62df5bb5265d30be18dae2579bf81);
+            
+        
+
+        marker_f9cbe34f861d2ab58dafff21a9cfdd6d.bindPopup(popup_128cb8dd8066552b27f41c91126235f1)
+        ;
+
+        
+    
+    
+            var marker_ab2398f9d59c78be585a1714b6723a80 = L.marker(
+                [-7.904463569340896, 112.6681367494004],
+                {}
+            ).addTo(feature_group_382865d312d3599fd19f51b10f797de1);
+        
+    
+            var icon_98f488baa64b7404330ae127c75432f1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_ab2398f9d59c78be585a1714b6723a80.setIcon(icon_98f488baa64b7404330ae127c75432f1);
+        
+    
+        var popup_c2ee45103fbceeefbfcbcf405f4abf37 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_730b9e5aebd908a0b03cde6000a00340 = $(`<div id="html_730b9e5aebd908a0b03cde6000a00340" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>PEMBENTUKAN LAYANAN BANTUAN HUKUM DALAM UPAYA ACCESS TO JUSTICE DAN PENINGKATAN KESADARAN HUKUM MASYARAKAT DESA</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> MUHAMMAD AKBAR NURSASMITA, S.H., M.H.<br>             <b>Skema:</b> Pengabdian Strategis<br>             <b>Alamat Mitra:</b> Jl. Watugede, Sanan, Watugede, Singosari, Malang<br>             <b>Lokasi Mitra:</b> Singosari, KAB. MALANG<br>             <b>Koordinat:</b> -7.904463569340896, 112.6681367494004         </div>         </div>`)[0];
+                popup_c2ee45103fbceeefbfcbcf405f4abf37.setContent(html_730b9e5aebd908a0b03cde6000a00340);
+            
+        
+
+        marker_ab2398f9d59c78be585a1714b6723a80.bindPopup(popup_c2ee45103fbceeefbfcbcf405f4abf37)
+        ;
+
+        
+    
+    
+            var marker_747716a2c894cbd3f6eb1c0cc28b1560 = L.marker(
+                [-8.14001, 114.34864],
+                {}
+            ).addTo(feature_group_382865d312d3599fd19f51b10f797de1);
+        
+    
+            var icon_eedeaef402c015dc8c1f98222aa2ae41 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_747716a2c894cbd3f6eb1c0cc28b1560.setIcon(icon_eedeaef402c015dc8c1f98222aa2ae41);
+        
+    
+        var popup_c698becb02c7bb6e468647d9f68ffdca = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_356adfd4e72675f063344490d5f409c8 = $(`<div id="html_356adfd4e72675f063344490d5f409c8" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Pembentukan StartUp Digital untuk Pengolahan Limbah Kelapa menjadi Produk Bernilai Ekonomis dan Katalog Produk Digital UMKM Banyuwangi</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> TIBYANI, S.T., M.T.<br>             <b>Skema:</b> Pengabdian Strategis<br>             <b>Alamat Mitra:</b> Jalan Ibrahimy Lingkungan Secang RT 01 RW01<br>             <b>Lokasi Mitra:</b> Kalipuro, KAB. BANYUWANGI<br>             <b>Koordinat:</b> -8.14001, 114.34864         </div>         </div>`)[0];
+                popup_c698becb02c7bb6e468647d9f68ffdca.setContent(html_356adfd4e72675f063344490d5f409c8);
+            
+        
+
+        marker_747716a2c894cbd3f6eb1c0cc28b1560.bindPopup(popup_c698becb02c7bb6e468647d9f68ffdca)
+        ;
+
+        
+    
+    
+            var marker_91a3c6f40eeb318b4f7609dbddf9f339 = L.marker(
+                [-7.892832943953498, 112.66197967372138],
+                {}
+            ).addTo(feature_group_382865d312d3599fd19f51b10f797de1);
+        
+    
+            var icon_3b816f935d7be03c3ee1542d33f79e3d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_91a3c6f40eeb318b4f7609dbddf9f339.setIcon(icon_3b816f935d7be03c3ee1542d33f79e3d);
+        
+    
+        var popup_470f5191190742b90cf4b2f5be7ad570 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a2099039a6e19b8b440a89205b148ee0 = $(`<div id="html_a2099039a6e19b8b440a89205b148ee0" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Pemberdayaan ibu-ibu PKK desa Dengkol dalam pemanfaatan sortasi cabe merah untuk mendukung  kesejahteraan keluarga.</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Dra. NUNUNG HARIJATI, MS., Ph.D.<br>             <b>Skema:</b> Pengabdian Strategis<br>             <b>Alamat Mitra:</b> kantor kelurahan desa Dengkol Singosari<br>             <b>Lokasi Mitra:</b> Singosari, KAB. MALANG<br>             <b>Koordinat:</b> -7.892832943953498, 112.66197967372138         </div>         </div>`)[0];
+                popup_470f5191190742b90cf4b2f5be7ad570.setContent(html_a2099039a6e19b8b440a89205b148ee0);
+            
+        
+
+        marker_91a3c6f40eeb318b4f7609dbddf9f339.bindPopup(popup_470f5191190742b90cf4b2f5be7ad570)
+        ;
+
+        
+    
+    
+            var marker_148b2531ae78719ed45adfc9b66db839 = L.marker(
+                [-7.887081021222241, 112.65086173989404],
+                {}
+            ).addTo(feature_group_382865d312d3599fd19f51b10f797de1);
+        
+    
+            var icon_eb7464170ed0c8c01f2efd614c8ab9f7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_148b2531ae78719ed45adfc9b66db839.setIcon(icon_eb7464170ed0c8c01f2efd614c8ab9f7);
+        
+    
+        var popup_c152416ab0825a782ec42365a86c1771 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_84c4d44344d1feb1d0db46eec72160f9 = $(`<div id="html_84c4d44344d1feb1d0db46eec72160f9" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>PEMBERDAYAAN PETANI DAN WARGA DALAM TEKNOLOGI PENGOLAHAN PAKAN DAN PUPUK ORGANIK  DI DESA KLAMPOK DAN GUNUNGREJO KECAMATAN SINGOSARI KABUPATEN MALANG</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Dra. SRI WARDHANI, M.Si.<br>             <b>Skema:</b> Pengabdian Strategis<br>             <b>Alamat Mitra:</b> Jl. Raya Klampok RT02/RW 05 desa Klampok<br>             <b>Lokasi Mitra:</b> Singosari, KAB. MALANG<br>             <b>Koordinat:</b> -7.887081021222241, 112.65086173989404         </div>         </div>`)[0];
+                popup_c152416ab0825a782ec42365a86c1771.setContent(html_84c4d44344d1feb1d0db46eec72160f9);
+            
+        
+
+        marker_148b2531ae78719ed45adfc9b66db839.bindPopup(popup_c152416ab0825a782ec42365a86c1771)
+        ;
+
+        
+    
+    
+            var marker_ae0a1e0b8e532e9050279348b55d477d = L.marker(
+                [-7.846934118833445, 112.29576109908524],
+                {}
+            ).addTo(feature_group_382865d312d3599fd19f51b10f797de1);
+        
+    
+            var icon_cc79cd880e5379b2f08eb524dfd21e36 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_ae0a1e0b8e532e9050279348b55d477d.setIcon(icon_cc79cd880e5379b2f08eb524dfd21e36);
+        
+    
+        var popup_814fa3e4bafcc44c03d289b091fa61af = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_52ebc01c4dc7e2e6ee20de06eb75bbba = $(`<div id="html_52ebc01c4dc7e2e6ee20de06eb75bbba" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>PEMBUATAN PUPUK ORGANIK DARI LIMBAH SEKTOR PETERNAKAN DAN PERTANIAN UNTUK BERBAGAI TANAMAN DI KECAMATAN KEPUNG KABUPATEN KEDIRI</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> ANIF MUKAROMAH WATI, S.Pt., M.Pt., M.Sc.<br>             <b>Skema:</b> Pengabdian Strategis<br>             <b>Alamat Mitra:</b> Jl. Raya Harinjing No.30 Kepung<br>             <b>Lokasi Mitra:</b> Kepung, KAB. KEDIRI<br>             <b>Koordinat:</b> -7.846934118833445, 112.29576109908524         </div>         </div>`)[0];
+                popup_814fa3e4bafcc44c03d289b091fa61af.setContent(html_52ebc01c4dc7e2e6ee20de06eb75bbba);
+            
+        
+
+        marker_ae0a1e0b8e532e9050279348b55d477d.bindPopup(popup_814fa3e4bafcc44c03d289b091fa61af)
+        ;
+
+        
+    
+    
+            var marker_87e52f9ceddf4bd5d48d62fa6588b733 = L.marker(
+                [-7.804468314756616, 113.32067088115524],
+                {}
+            ).addTo(feature_group_382865d312d3599fd19f51b10f797de1);
+        
+    
+            var icon_498e30c4041cbb1818f3e08b37e91e24 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_87e52f9ceddf4bd5d48d62fa6588b733.setIcon(icon_498e30c4041cbb1818f3e08b37e91e24);
+        
+    
+        var popup_3e5f5312aa26262ce288b18a69d52386 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_05205d09b7970f36c79ec6da3da399b9 = $(`<div id="html_05205d09b7970f36c79ec6da3da399b9" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Pendampingan Masyarakat Sadar Lingkungan dengan Pendekatan Eco Enzyme  di Desa Pikatan dan Desa Sebaung Kecamatan Gending Kabupaten Probolinggo.</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Dr. Dra. UMU SA\`ADAH, M.Si.<br>             <b>Skema:</b> Pengabdian Strategis<br>             <b>Alamat Mitra:</b> Jogo Kali, Desa Pikatan, Kecamatan Gending, Kabupaten Probolinggo, Jawa Timur 667272<br>             <b>Lokasi Mitra:</b> Gending, KAB. PROBOLINGGO<br>             <b>Koordinat:</b> -7.804468314756616, 113.32067088115524         </div>         </div>`)[0];
+                popup_3e5f5312aa26262ce288b18a69d52386.setContent(html_05205d09b7970f36c79ec6da3da399b9);
+            
+        
+
+        marker_87e52f9ceddf4bd5d48d62fa6588b733.bindPopup(popup_3e5f5312aa26262ce288b18a69d52386)
+        ;
+
+        
+    
+    
+            var marker_ded42af900cc678febdbf60e3ceb5cdb = L.marker(
+                [-7.896949844409358, 112.82211898277023],
+                {}
+            ).addTo(feature_group_382865d312d3599fd19f51b10f797de1);
+        
+    
+            var icon_3c82b348c645426329b769c7dacf4543 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_ded42af900cc678febdbf60e3ceb5cdb.setIcon(icon_3c82b348c645426329b769c7dacf4543);
+        
+    
+        var popup_999a5392e32d46c0583c36bf039ac19a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8047f704d85ec6ba2923720aea11c0c3 = $(`<div id="html_8047f704d85ec6ba2923720aea11c0c3" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Pendampingan Peningkatan Nilai Tambah Produk Pertanian Pada Keluarga Petani Apel  di Kecamatan Tutur, Kabupaten Pasuruan</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Dr. NURUL BADRIYAH, S.E., M.E.<br>             <b>Skema:</b> Pengabdian Strategis<br>             <b>Alamat Mitra:</b> Jl. Raya Nongkojajar - Purwosari Dusun Krajan II RT 05 RW 01 Tutur Pasuruan<br>             <b>Lokasi Mitra:</b> Tutur, KAB. PASURUAN<br>             <b>Koordinat:</b> -7.896949844409358, 112.82211898277023         </div>         </div>`)[0];
+                popup_999a5392e32d46c0583c36bf039ac19a.setContent(html_8047f704d85ec6ba2923720aea11c0c3);
+            
+        
+
+        marker_ded42af900cc678febdbf60e3ceb5cdb.bindPopup(popup_999a5392e32d46c0583c36bf039ac19a)
+        ;
+
+        
+    
+    
+            var marker_5130dae8c638ade42bd244b238e2f90b = L.marker(
+                [-7.890818022556743, 112.90930080387626],
+                {}
+            ).addTo(feature_group_382865d312d3599fd19f51b10f797de1);
+        
+    
+            var icon_70b65ba5f99c2078454de8778f2d733f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_5130dae8c638ade42bd244b238e2f90b.setIcon(icon_70b65ba5f99c2078454de8778f2d733f);
+        
+    
+        var popup_0bc2c912fae0805985ba173a470f412b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_5e08bd26da85b699cc5d238d49dafe5d = $(`<div id="html_5e08bd26da85b699cc5d238d49dafe5d" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Pendampingan Penyusunan Desain Tapak Wisata Tematik Desa Edelweiss Wonokitri Kabupaten Pasuruan</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Dr. Ir. ATIEK IRIANY, M.S.<br>             <b>Skema:</b> Pengabdian Strategis<br>             <b>Alamat Mitra:</b> Jl. Sekar Sari, Wonokitri, Kec. Tosari, Pasuruan, Jawa Timur 67177<br>             <b>Lokasi Mitra:</b> Tosari, KAB. PASURUAN<br>             <b>Koordinat:</b> -7.890818022556743, 112.90930080387626         </div>         </div>`)[0];
+                popup_0bc2c912fae0805985ba173a470f412b.setContent(html_5e08bd26da85b699cc5d238d49dafe5d);
+            
+        
+
+        marker_5130dae8c638ade42bd244b238e2f90b.bindPopup(popup_0bc2c912fae0805985ba173a470f412b)
+        ;
+
+        
+    
+    
+            var marker_ca252e7afd059a64eeb472ae8158ef94 = L.marker(
+                [-7.88634, 112.671664],
+                {}
+            ).addTo(feature_group_382865d312d3599fd19f51b10f797de1);
+        
+    
+            var icon_6827752383cca296559b1a725919433c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_ca252e7afd059a64eeb472ae8158ef94.setIcon(icon_6827752383cca296559b1a725919433c);
+        
+    
+        var popup_e68b7f327d8062de3a88210fecd23dc8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_fa2bc0cbdc01982cd07cfaa19d91ba5e = $(`<div id="html_fa2bc0cbdc01982cd07cfaa19d91ba5e" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Pendidikan Desa Berkualitas melalui Peningkatan Capacity Building berbasis Kolaborasi dengan Implementasi Konsep Sustainable Agriculture di Kecamatan Singosari Kabupaten Malang</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> FITROTUL LAILI, S.P., M.P.<br>             <b>Skema:</b> Pengabdian Strategis<br>             <b>Alamat Mitra:</b> Jalan Suropati No. 157<br>             <b>Lokasi Mitra:</b> Singosari, KAB. MALANG<br>             <b>Koordinat:</b> -7.88634, 112.671664         </div>         </div>`)[0];
+                popup_e68b7f327d8062de3a88210fecd23dc8.setContent(html_fa2bc0cbdc01982cd07cfaa19d91ba5e);
+            
+        
+
+        marker_ca252e7afd059a64eeb472ae8158ef94.bindPopup(popup_e68b7f327d8062de3a88210fecd23dc8)
+        ;
+
+        
+    
+    
+            var marker_68771ccd98d7835088a0a7e7629e23e7 = L.marker(
+                [-7.785152824719243, 112.73956874700433],
+                {}
+            ).addTo(feature_group_382865d312d3599fd19f51b10f797de1);
+        
+    
+            var icon_4e70a76786c4aaab8d32b6da6828be40 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_68771ccd98d7835088a0a7e7629e23e7.setIcon(icon_4e70a76786c4aaab8d32b6da6828be40);
+        
+    
+        var popup_36e58ed786881229ace7c4d366fa9bfa = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_0f7519b27713af25d3d1c6238f1241a8 = $(`<div id="html_0f7519b27713af25d3d1c6238f1241a8" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Penerapan Global Citizenship Education Melalui Penguatan Nilai Circular Economy sebagai Upaya Mewujudkan Ketahanan Keluarga Berkelanjutan di Desa Kertosari dan Desa Sukodermo, Kabupaten Pasuruan</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> ABDULLAH, S.Sos., M.Hub.Int.<br>             <b>Skema:</b> Pengabdian Strategis<br>             <b>Alamat Mitra:</b> Selokandan Kertosari<br>             <b>Lokasi Mitra:</b> Purwosari, KAB. PASURUAN<br>             <b>Koordinat:</b> -7.785152824719243, 112.73956874700433         </div>         </div>`)[0];
+                popup_36e58ed786881229ace7c4d366fa9bfa.setContent(html_0f7519b27713af25d3d1c6238f1241a8);
+            
+        
+
+        marker_68771ccd98d7835088a0a7e7629e23e7.bindPopup(popup_36e58ed786881229ace7c4d366fa9bfa)
+        ;
+
+        
+    
+    
+            var marker_daafdae8cb6f745bb090cab3d01dd3bc = L.marker(
+                [-8.043941223744689, 112.44508426954924],
+                {}
+            ).addTo(feature_group_382865d312d3599fd19f51b10f797de1);
+        
+    
+            var icon_15eb09a50f3ffb091d181b3e46dc3011 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_daafdae8cb6f745bb090cab3d01dd3bc.setIcon(icon_15eb09a50f3ffb091d181b3e46dc3011);
+        
+    
+        var popup_b90452aa877f13a66dee5444174596d8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_cc4aaf2a37b7273f43ff3d89db535738 = $(`<div id="html_cc4aaf2a37b7273f43ff3d89db535738" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>PENGEMBANGAN POTENSI DESA UNTUK MENDUKUNG PERTANIAN BERKELANJUTAN DAN KEMANDIRIAN ENERGI DI KECAMATAN SELOREJO KABUPATEN BLITAR</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> DEGO YUSA ALI, S.TP., M.Sc.<br>             <b>Skema:</b> Pengabdian Strategis<br>             <b>Alamat Mitra:</b> l. Raya, Tegalrejo, Ampelgading, Kec. Selorejo, Kabupaten Blitar, Jawa Timur 66192<br>             <b>Lokasi Mitra:</b> Selorejo, KAB. BLITAR<br>             <b>Koordinat:</b> -8.043941223744689, 112.44508426954924         </div>         </div>`)[0];
+                popup_b90452aa877f13a66dee5444174596d8.setContent(html_cc4aaf2a37b7273f43ff3d89db535738);
+            
+        
+
+        marker_daafdae8cb6f745bb090cab3d01dd3bc.bindPopup(popup_b90452aa877f13a66dee5444174596d8)
+        ;
+
+        
+    
+    
+            var marker_ba653c93970bd3ac74069c95cd385e2c = L.marker(
+                [-8.451131371524475, 114.19519063710592],
+                {}
+            ).addTo(feature_group_382865d312d3599fd19f51b10f797de1);
+        
+    
+            var icon_42959c072399f8c2013669d8af23ff5f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_ba653c93970bd3ac74069c95cd385e2c.setIcon(icon_42959c072399f8c2013669d8af23ff5f);
+        
+    
+        var popup_b3f04f07133deae4c7f1feba2a23df2b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_39c9c08d54429a7e43f7826168849dce = $(`<div id="html_39c9c08d54429a7e43f7826168849dce" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Pengembangan Produk Unggulan Buah Naga menjadi Kripik Buah metode Vacuum Frying: Program Pemberdayaan Ekonomi di Banyuwangi Bersama BUMDes Abadi, Desa Kaliploso, Cluring, Banyuwangi</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Dr. MOHAMAD KHOIRU RUSYDI, S.E., M.Ak., Ak.<br>             <b>Skema:</b> Pengabdian Strategis<br>             <b>Alamat Mitra:</b> Dusun Plosorejo, RT/RW 02/05, Desa Kaliploso, Kecamatan Cluring, Kebupaten Banyuwangi<br>             <b>Lokasi Mitra:</b> Cluring, KAB. BANYUWANGI<br>             <b>Koordinat:</b> -8.451131371524475, 114.19519063710592         </div>         </div>`)[0];
+                popup_b3f04f07133deae4c7f1feba2a23df2b.setContent(html_39c9c08d54429a7e43f7826168849dce);
+            
+        
+
+        marker_ba653c93970bd3ac74069c95cd385e2c.bindPopup(popup_b3f04f07133deae4c7f1feba2a23df2b)
+        ;
+
+        
+    
+    
+            var marker_07b3eba6e49ee7013dd3b547e0aa341d = L.marker(
+                [-7.709928015037904, 114.12594910127446],
+                {}
+            ).addTo(feature_group_382865d312d3599fd19f51b10f797de1);
+        
+    
+            var icon_4aa17bc5a0d35bc3bbe904ab9a08b8aa = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_07b3eba6e49ee7013dd3b547e0aa341d.setIcon(icon_4aa17bc5a0d35bc3bbe904ab9a08b8aa);
+        
+    
+        var popup_481e37ed0772d1559a62391da28142f8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2bb65e69c303f189ad7baa22bd13f894 = $(`<div id="html_2bb65e69c303f189ad7baa22bd13f894" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>PENGEMBANGAN TAMAN NASIONAL BALURAN SEBAGAI DESTINASI UNGGULAN DI JAWA TIMUR</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> EDRIANA PANGESTUTI, S.E., M.Si., DBA.<br>             <b>Skema:</b> Pengabdian Strategis<br>             <b>Alamat Mitra:</b> jl Raya Banyuwangi - Situbondo Km 35 Wonorejo Banyuputih , 68374<br>             <b>Lokasi Mitra:</b> Banyuputih, KAB. SITUBONDO<br>             <b>Koordinat:</b> -7.709928015037904, 114.12594910127446         </div>         </div>`)[0];
+                popup_481e37ed0772d1559a62391da28142f8.setContent(html_2bb65e69c303f189ad7baa22bd13f894);
+            
+        
+
+        marker_07b3eba6e49ee7013dd3b547e0aa341d.bindPopup(popup_481e37ed0772d1559a62391da28142f8)
+        ;
+
+        
+    
+    
+            var marker_948662b200646deb7f261fea504f31a6 = L.marker(
+                [-7.274883661574483, 114.38615809231072],
+                {}
+            ).addTo(feature_group_382865d312d3599fd19f51b10f797de1);
+        
+    
+            var icon_5d13aa9e844a3ce1a30472904e36b229 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_948662b200646deb7f261fea504f31a6.setIcon(icon_5d13aa9e844a3ce1a30472904e36b229);
+        
+    
+        var popup_bdfbc544ef1f458075ebd079b855ac4a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_79100b51a3b4df0a81122242345bbc3b = $(`<div id="html_79100b51a3b4df0a81122242345bbc3b" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>PENGUATAN KAPASITAS MASYARAKAT DALAM PEMAHAMAN DAN PENYELENGGARAAN AGROWISATA BERWAWASAN LINGKUNGAN BERKELANJUTAN SEKITAR KAWASAN STRATEGIS CAGAR BIOSFER  DI JAWA TIMUR</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> DIAN SISWANTO, S.Si., M.Sc., M.Si., Ph.D.<br>             <b>Skema:</b> Pengabdian Strategis<br>             <b>Alamat Mitra:</b> Jalan Wisata Menanggal, Dukuh Menanggal, Kecamatan Gayungan, Kota Surabaya<br>             <b>Lokasi Mitra:</b> Gayungan, KOTA SURABAYA<br>             <b>Koordinat:</b> -7.274883661574483, 114.38615809231072         </div>         </div>`)[0];
+                popup_bdfbc544ef1f458075ebd079b855ac4a.setContent(html_79100b51a3b4df0a81122242345bbc3b);
+            
+        
+
+        marker_948662b200646deb7f261fea504f31a6.bindPopup(popup_bdfbc544ef1f458075ebd079b855ac4a)
+        ;
+
+        
+    
+    
+            var marker_43ba5e29aff5636bc79b55a5b021aa96 = L.marker(
+                [1.6243753959031673, 103.64521380045744],
+                {}
+            ).addTo(feature_group_382865d312d3599fd19f51b10f797de1);
+        
+    
+            var icon_55c19bbc60856f5fed520bfebdb6ff11 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_43ba5e29aff5636bc79b55a5b021aa96.setIcon(icon_55c19bbc60856f5fed520bfebdb6ff11);
+        
+    
+        var popup_8668a30aeb54db5237aaf4ba2258b506 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1bee3c9d1256226d4d200e3810b9ddc5 = $(`<div id="html_1bee3c9d1256226d4d200e3810b9ddc5" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Penguatan Karakter Siswa Indonesia melalui Wawasan Kebangsaan, Wawasan Ekonomi, dan Wawasan Lingkungan di Sekolah Indonesia Johor Bahru (SIJB) Malaysia : Program Kuliah kerja Nyata (KKN) Internasional Kerjasama Universitas Brawijaya dan Universiti Teknologi Malaysia (UTM)</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Dr. EMY SUDARWATI, S.S., M.Pd.<br>             <b>Skema:</b> Pengabdian Strategis<br>             <b>Alamat Mitra:</b> Jalan Iman, 81310 Skudai, Johor, Malaysia<br>             <b>Lokasi Mitra:</b> Lain-lain, Malaysia<br>             <b>Koordinat:</b> 1.6243753959031673, 103.64521380045744         </div>         </div>`)[0];
+                popup_8668a30aeb54db5237aaf4ba2258b506.setContent(html_1bee3c9d1256226d4d200e3810b9ddc5);
+            
+        
+
+        marker_43ba5e29aff5636bc79b55a5b021aa96.bindPopup(popup_8668a30aeb54db5237aaf4ba2258b506)
+        ;
+
+        
+    
+    
+            var marker_bd6621cb7e5ab7ef0a66397c6a452965 = L.marker(
+                [-8.135129297766511, 112.43252849526472],
+                {}
+            ).addTo(feature_group_382865d312d3599fd19f51b10f797de1);
+        
+    
+            var icon_10ca19d316d9e29f47597be1138a6ebf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_bd6621cb7e5ab7ef0a66397c6a452965.setIcon(icon_10ca19d316d9e29f47597be1138a6ebf);
+        
+    
+        var popup_e0ffd92a820269ad6bf1dbc80c6eed6d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d805aed29ef08e758373cf286df6dd2a = $(`<div id="html_d805aed29ef08e758373cf286df6dd2a" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Peningkatan Ekonomi dan Kapasitas Melalui Pengolahan Hasil Peternakan dan Pertanian serta Inovasi Pengembangan Potensi Masyarakat Desa Olak Alen, Kecamatan Selorejo, Kabupaten Blitar</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> MOKHAMAD NUR, STP., M.Sc., Ph.D.<br>             <b>Skema:</b> Pengabdian Strategis<br>             <b>Alamat Mitra:</b> Jl. Masjid No.1<br>             <b>Lokasi Mitra:</b> Selorejo, KAB. BLITAR<br>             <b>Koordinat:</b> -8.135129297766511, 112.43252849526472         </div>         </div>`)[0];
+                popup_e0ffd92a820269ad6bf1dbc80c6eed6d.setContent(html_d805aed29ef08e758373cf286df6dd2a);
+            
+        
+
+        marker_bd6621cb7e5ab7ef0a66397c6a452965.bindPopup(popup_e0ffd92a820269ad6bf1dbc80c6eed6d)
+        ;
+
+        
+    
+    
+            var marker_c1d28b5974361a792ba09930d6def068 = L.marker(
+                [-7.8982945518726755, 112.62458809892826],
+                {}
+            ).addTo(feature_group_382865d312d3599fd19f51b10f797de1);
+        
+    
+            var icon_47ce392bdf99d37832c5e9fb8fb3c40f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_c1d28b5974361a792ba09930d6def068.setIcon(icon_47ce392bdf99d37832c5e9fb8fb3c40f);
+        
+    
+        var popup_8049e2918938ae4b5b159ef22b9cbe8d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f86b53087c1d87fc8e95a67fda11f741 = $(`<div id="html_f86b53087c1d87fc8e95a67fda11f741" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Peningkatan Ekonomi Masyarakat dengan Pendampingan Pengolahan dan Pemasaran  Hasil Tani di Kecamatan Karangploso Kabupaten Malang</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> NEZA FADIA RAYESA, S.TP., M.Sc.<br>             <b>Skema:</b> Pengabdian Strategis<br>             <b>Alamat Mitra:</b> DESA NGENEP<br>             <b>Lokasi Mitra:</b> Karang Ploso, KAB. MALANG<br>             <b>Koordinat:</b> -7.8982945518726755, 112.62458809892826         </div>         </div>`)[0];
+                popup_8049e2918938ae4b5b159ef22b9cbe8d.setContent(html_f86b53087c1d87fc8e95a67fda11f741);
+            
+        
+
+        marker_c1d28b5974361a792ba09930d6def068.bindPopup(popup_8049e2918938ae4b5b159ef22b9cbe8d)
+        ;
+
+        
+    
+    
+            var marker_e21f5ff13b96fa6623126d57e648821a = L.marker(
+                [-7.867546170149368, 112.75257110508392],
+                {}
+            ).addTo(feature_group_382865d312d3599fd19f51b10f797de1);
+        
+    
+            var icon_40a9a64d0bdf8c96cd1c60632b22b584 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_e21f5ff13b96fa6623126d57e648821a.setIcon(icon_40a9a64d0bdf8c96cd1c60632b22b584);
+        
+    
+        var popup_7c00d32a01a13c6a6c21c5577e91d547 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_47ad246427b7587a278fbb8967bed996 = $(`<div id="html_47ad246427b7587a278fbb8967bed996" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Peningkatan Kapasitas dan Kompetensi Pelaku UMKM di Desa Srigading dan Sumberporong Kecamatan Lawang Kabupaten Malang</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> SYAHRUL SAJIDIN, S.H., M.H.<br>             <b>Skema:</b> Pengabdian Strategis<br>             <b>Alamat Mitra:</b> JALAN INSPEKTUR POLISI SUWOTO NOMOR 11<br>             <b>Lokasi Mitra:</b> Lawang, KAB. MALANG<br>             <b>Koordinat:</b> -7.867546170149368, 112.75257110508392         </div>         </div>`)[0];
+                popup_7c00d32a01a13c6a6c21c5577e91d547.setContent(html_47ad246427b7587a278fbb8967bed996);
+            
+        
+
+        marker_e21f5ff13b96fa6623126d57e648821a.bindPopup(popup_7c00d32a01a13c6a6c21c5577e91d547)
+        ;
+
+        
+    
+    
+            var marker_2bbb0aeb81303528cdec6431a9b2141a = L.marker(
+                [-8.067452, 112.80653],
+                {}
+            ).addTo(feature_group_382865d312d3599fd19f51b10f797de1);
+        
+    
+            var icon_d5bd723b26d431db56afadd7d5f7505f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_2bbb0aeb81303528cdec6431a9b2141a.setIcon(icon_d5bd723b26d431db56afadd7d5f7505f);
+        
+    
+        var popup_256ead48867ffaa80a8668aad4147551 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8e5e4e9a250926223103fc78aad9b15e = $(`<div id="html_8e5e4e9a250926223103fc78aad9b15e" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Peningkatan kapasitas teknologi koservasi lahan, keanekaragaman hayati dan pertanian berkelanjutan melalui sekolah lapang pertanian berkelanjutan di Desa Pandasari Poncokusumo</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> YUSRON SUGIARTO, STP., MP. MSc., Ph.D.<br>             <b>Skema:</b> Pengabdian Strategis<br>             <b>Alamat Mitra:</b> Jl. Raya Padansari Kec.Poncokusumo<br>             <b>Lokasi Mitra:</b> Poncokusumo, KAB. MALANG<br>             <b>Koordinat:</b> -8.067452, 112.80653         </div>         </div>`)[0];
+                popup_256ead48867ffaa80a8668aad4147551.setContent(html_8e5e4e9a250926223103fc78aad9b15e);
+            
+        
+
+        marker_2bbb0aeb81303528cdec6431a9b2141a.bindPopup(popup_256ead48867ffaa80a8668aad4147551)
+        ;
+
+        
+    
+    
+            var marker_3e676e49f221dc3764fcc2ee49ec29b9 = L.marker(
+                [-7.684312743129573, 112.96220898628236],
+                {}
+            ).addTo(feature_group_382865d312d3599fd19f51b10f797de1);
+        
+    
+            var icon_855e98029af94686a9663d9c2178c787 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_3e676e49f221dc3764fcc2ee49ec29b9.setIcon(icon_855e98029af94686a9663d9c2178c787);
+        
+    
+        var popup_0f8b581c39610b0bea4ec3c189c9317f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ce00edb41d385616a9918a89ac32418a = $(`<div id="html_ce00edb41d385616a9918a89ac32418a" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Peningkatan Kualitas Hidup dan Lingkungan Melalui Pemberdayaan dan Keterlibatan Warga Desa Sambirejo dan Desa Patuguran, Kecamatan Rejoso, Kabupaten Pasuruan</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> ONNI MEIREZALDI, S.Sos., M.M.<br>             <b>Skema:</b> Pengabdian Strategis<br>             <b>Alamat Mitra:</b> Desa Patuguran<br>             <b>Lokasi Mitra:</b> Rejoso, KAB. PASURUAN<br>             <b>Koordinat:</b> -7.684312743129573, 112.96220898628236         </div>         </div>`)[0];
+                popup_0f8b581c39610b0bea4ec3c189c9317f.setContent(html_ce00edb41d385616a9918a89ac32418a);
+            
+        
+
+        marker_3e676e49f221dc3764fcc2ee49ec29b9.bindPopup(popup_0f8b581c39610b0bea4ec3c189c9317f)
+        ;
+
+        
+    
+    
+            var marker_f8509012e0ef35f18ac328b305478239 = L.marker(
+                [-8.052006008065824, 112.30789185035977],
+                {}
+            ).addTo(feature_group_382865d312d3599fd19f51b10f797de1);
+        
+    
+            var icon_08e2e4fd2ff010f9c584c1586a0215eb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_f8509012e0ef35f18ac328b305478239.setIcon(icon_08e2e4fd2ff010f9c584c1586a0215eb);
+        
+    
+        var popup_e8b04e021e30e37953e2e006edb4462b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2e443a983b56ef7444848fd60c484931 = $(`<div id="html_2e443a983b56ef7444848fd60c484931" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>PENINGKATAN PENDAPATAN MASYARAKAT  MENUJU DESA TANPA KEMISKINAN MELALUI PENGUATAN PRODUKTIVITAS UMKM DI DESA GANDUSARI  DAN DESA KALIMANIS KABUPATEN BLITAR</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Prof. Dr. WURYAN ANDAYANI, S.E., Ak., M.Si.<br>             <b>Skema:</b> Pengabdian Strategis<br>             <b>Alamat Mitra:</b> Dusun Manding Asem<br>             <b>Lokasi Mitra:</b> Gandusari, KAB. BLITAR<br>             <b>Koordinat:</b> -8.052006008065824, 112.30789185035977         </div>         </div>`)[0];
+                popup_e8b04e021e30e37953e2e006edb4462b.setContent(html_2e443a983b56ef7444848fd60c484931);
+            
+        
+
+        marker_f8509012e0ef35f18ac328b305478239.bindPopup(popup_e8b04e021e30e37953e2e006edb4462b)
+        ;
+
+        
+    
+    
+            var marker_455eccad094e42e094bd91be18adadd3 = L.marker(
+                [-7.879513393836842, 112.6331965192931],
+                {}
+            ).addTo(feature_group_382865d312d3599fd19f51b10f797de1);
+        
+    
+            var icon_29de3354fc531be1239ae85bc42f2bdd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_455eccad094e42e094bd91be18adadd3.setIcon(icon_29de3354fc531be1239ae85bc42f2bdd);
+        
+    
+        var popup_51d75a32c637325044df125c7074e7ec = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f92b36d64758b602ca0248433ecdf7bc = $(`<div id="html_f92b36d64758b602ca0248433ecdf7bc" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Peningkatan Perilaku Hidup Bersih dan Sehat (PHBS) di PAUD dan SD Desa Wonorejo dan Purwoasri, Kecamatan Singosari, Kabupaten Malang Melalui Media Pembelajaran Interaktif dan Edukatif</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> drh. AJENG ERIKA PRIHASTUTI HASKITO, M.Si.<br>             <b>Skema:</b> Pengabdian Strategis<br>             <b>Alamat Mitra:</b> Dusun Pasrepan RT-01 RW-03<br>             <b>Lokasi Mitra:</b> Singosari, KAB. MALANG<br>             <b>Koordinat:</b> -7.879513393836842, 112.6331965192931         </div>         </div>`)[0];
+                popup_51d75a32c637325044df125c7074e7ec.setContent(html_f92b36d64758b602ca0248433ecdf7bc);
+            
+        
+
+        marker_455eccad094e42e094bd91be18adadd3.bindPopup(popup_51d75a32c637325044df125c7074e7ec)
+        ;
+
+        
+    
+    
+            var marker_4aecc1ae489446687a96a7fbccb6589f = L.marker(
+                [-8.080965178341494, 112.668561],
+                {}
+            ).addTo(feature_group_382865d312d3599fd19f51b10f797de1);
+        
+    
+            var icon_28cd72671410ed1a20bd61bd052ff57c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_4aecc1ae489446687a96a7fbccb6589f.setIcon(icon_28cd72671410ed1a20bd61bd052ff57c);
+        
+    
+        var popup_2700b4ce05b535b46c7f9d47661c73c8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d248303cb2030ad0c91bd7af551da4ea = $(`<div id="html_d248303cb2030ad0c91bd7af551da4ea" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Peningkatan Produktivitas Peternakan Kambing melalui Diseminasi Teknologi Tepat Guna di Desa Jambearjo, Tajinan, Malang</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Dr. Ir. SANDRA, M.P.<br>             <b>Skema:</b> Pengabdian Strategis<br>             <b>Alamat Mitra:</b> Jl. Madura RT 23 RW 05 Desa Jambearjo  Kecamatan  Tajinan<br>             <b>Lokasi Mitra:</b> Tajinan, KAB. MALANG<br>             <b>Koordinat:</b> -8.080965178341494, 112.668561         </div>         </div>`)[0];
+                popup_2700b4ce05b535b46c7f9d47661c73c8.setContent(html_d248303cb2030ad0c91bd7af551da4ea);
+            
+        
+
+        marker_4aecc1ae489446687a96a7fbccb6589f.bindPopup(popup_2700b4ce05b535b46c7f9d47661c73c8)
+        ;
+
+        
+    
+    
+            var marker_bd9dbe2d68f8f640f862b8ce4b6f17e8 = L.marker(
+                [-7.887915, 112.680523],
+                {}
+            ).addTo(feature_group_382865d312d3599fd19f51b10f797de1);
+        
+    
+            var icon_213cec1fdf32a527a543e328e7daadd1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_bd9dbe2d68f8f640f862b8ce4b6f17e8.setIcon(icon_213cec1fdf32a527a543e328e7daadd1);
+        
+    
+        var popup_eecd30568859608a48fb0c228e7fa52a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f5c7ed83d8a983a05948f3cbd57b73ae = $(`<div id="html_f5c7ed83d8a983a05948f3cbd57b73ae" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Pojok Sejahtera Jiwa (POSJI) Sebagai Upaya Penguatan Kesejahteraan Psikologis Dan Pencegahan Bunuh Diri Di Desa Pengrajin Rotan Ardimulyo, Singosari Kabupaten Malang</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Dr. Ns. LILIK SUPRIATI, S.Kep., M.Kep.<br>             <b>Skema:</b> Pengabdian Strategis<br>             <b>Alamat Mitra:</b> Dusun Randugembolo, Desa Ardimulyo, Singosari<br>             <b>Lokasi Mitra:</b> Singosari, KAB. MALANG<br>             <b>Koordinat:</b> -7.887915, 112.680523         </div>         </div>`)[0];
+                popup_eecd30568859608a48fb0c228e7fa52a.setContent(html_f5c7ed83d8a983a05948f3cbd57b73ae);
+            
+        
+
+        marker_bd9dbe2d68f8f640f862b8ce4b6f17e8.bindPopup(popup_eecd30568859608a48fb0c228e7fa52a)
+        ;
+
+        
+    
+    
+            var marker_763ab4c2ee6407bbf4f711b69677f03e = L.marker(
+                [-7.952423838255939, 112.6138973236084],
+                {}
+            ).addTo(feature_group_382865d312d3599fd19f51b10f797de1);
+        
+    
+            var icon_ff2da635acbce78a54acb7a659dc6ed9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_763ab4c2ee6407bbf4f711b69677f03e.setIcon(icon_ff2da635acbce78a54acb7a659dc6ed9);
+        
+    
+        var popup_6933fe537c6a4ef158779bf4416bc800 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8c789e8c6904040668f3019dcecf73e9 = $(`<div id="html_8c789e8c6904040668f3019dcecf73e9" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Sehat Bersama Universitas Brawijaya: Program Klinik Kesehatan Keliling di Desa Kalirejo</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Ns. ELVIRA SARI DEWI, S.Kep., M.Biomed.<br>             <b>Skema:</b> Pengabdian Strategis<br>             <b>Alamat Mitra:</b> kalirejo<br>             <b>Lokasi Mitra:</b> Lawang, KAB. MALANG<br>             <b>Koordinat:</b> -7.952423838255939, 112.6138973236084         </div>         </div>`)[0];
+                popup_6933fe537c6a4ef158779bf4416bc800.setContent(html_8c789e8c6904040668f3019dcecf73e9);
+            
+        
+
+        marker_763ab4c2ee6407bbf4f711b69677f03e.bindPopup(popup_6933fe537c6a4ef158779bf4416bc800)
+        ;
+
+        
+    
+    
+            var marker_ce69f5b056bdae787e2167e1f68edf59 = L.marker(
+                [-7.874930321995193, 112.67618280778848],
+                {}
+            ).addTo(feature_group_382865d312d3599fd19f51b10f797de1);
+        
+    
+            var icon_869f264c81392100184b2f1129a00fad = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_ce69f5b056bdae787e2167e1f68edf59.setIcon(icon_869f264c81392100184b2f1129a00fad);
+        
+    
+        var popup_167843aa9daf13a59878fe219a9fd04b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f85253c961b4909e316252a3f869cb83 = $(`<div id="html_f85253c961b4909e316252a3f869cb83" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>STRATEGI PENINGKATAN KETAHANAN EKONOMI MASYARAKAT DENGAN PENINGKATAN DAYA SAING USAHA KECIL MENENGAH (UKM) DI DESA ARDIMULYO KECAMATAN SINGOSARI KABUPATEN MALANG</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> Dr. ALFI HARIS WANTO, SAP., M.AP., MMG.<br>             <b>Skema:</b> Pengabdian Strategis<br>             <b>Alamat Mitra:</b> JL DIPONEGORO 65 KARANGJATI  DESA ARDIMULYO SINGOSARI KAB MALANG<br>             <b>Lokasi Mitra:</b> Singosari, KAB. MALANG<br>             <b>Koordinat:</b> -7.874930321995193, 112.67618280778848         </div>         </div>`)[0];
+                popup_167843aa9daf13a59878fe219a9fd04b.setContent(html_f85253c961b4909e316252a3f869cb83);
+            
+        
+
+        marker_ce69f5b056bdae787e2167e1f68edf59.bindPopup(popup_167843aa9daf13a59878fe219a9fd04b)
+        ;
+
+        
+    
+    
+            var marker_c3578e01a2a088dfb168e0fc13b70efe = L.marker(
+                [-8.076041, 112.410039],
+                {}
+            ).addTo(feature_group_382865d312d3599fd19f51b10f797de1);
+        
+    
+            var icon_86a62ac4693222ea9202c61fbbc3c920 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_c3578e01a2a088dfb168e0fc13b70efe.setIcon(icon_86a62ac4693222ea9202c61fbbc3c920);
+        
+    
+        var popup_fe172e8365356e4fbd75e1c65194eea1 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_921fc9955b11fbba1446d18300be3044 = $(`<div id="html_921fc9955b11fbba1446d18300be3044" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial; font-size: 13px;'>             <h4 style='margin: 0; padding: 0;'>Transformasi Manajerial BUMDesa Kemirigede untuk Mendukung Pengembangan Wisata Berkelanjutan di Kabupaten Blitar</h4>             <hr style='margin: 5px 0;'>             <b>Ketua:</b> TAUFIQ ISMAIL, S.S., S.E., M.M., Ph.D.<br>             <b>Skema:</b> Pengabdian Strategis<br>             <b>Alamat Mitra:</b> Jl. Kawi No.04, Sumbersari, Kemirigede, Kec. Kesamben, Kabupaten Blitar, Jawa Timur 66191<br>             <b>Lokasi Mitra:</b> Kesamben, KAB. BLITAR<br>             <b>Koordinat:</b> -8.076041, 112.410039         </div>         </div>`)[0];
+                popup_fe172e8365356e4fbd75e1c65194eea1.setContent(html_921fc9955b11fbba1446d18300be3044);
+            
+        
+
+        marker_c3578e01a2a088dfb168e0fc13b70efe.bindPopup(popup_fe172e8365356e4fbd75e1c65194eea1)
+        ;
+
+        
+    
+    
+            feature_group_382865d312d3599fd19f51b10f797de1.addTo(map_be4837645ba341208726dcab5e37863c);
+        
+    
+            var layer_control_14d48ba2aeed124074e3dc6a7a97b603_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_761d6801dfdfb7156aaf35c8079458d8,
+                },
+                overlays :  {
+                    "Doktor Mengabdi (DM)" : feature_group_c9e1a4999e48637122477b2cdefa8741,
+                    "Doktor Mengabdi Pengembangan Kemitraan" : feature_group_514a62c28a1e5b8028bb8d18d5269ba9,
+                    "Pengabdian Strategis" : feature_group_382865d312d3599fd19f51b10f797de1,
+                },
+            };
+            let layer_control_14d48ba2aeed124074e3dc6a7a97b603 = L.control.layers(
+                layer_control_14d48ba2aeed124074e3dc6a7a97b603_layers.base_layers,
+                layer_control_14d48ba2aeed124074e3dc6a7a97b603_layers.overlays,
+                {"autoZIndex": true, "collapsed": false, "position": "topright"}
+            ).addTo(map_be4837645ba341208726dcab5e37863c);
+
+        
+</script>
+</html>
